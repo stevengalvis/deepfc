@@ -25,7 +25,7 @@ class Prediction:
     match: Match
     expected_total: float
     over_probabilities: dict[float, float]
-    dispersion: float
+    negative_binomial_dispersion: float
 
 
 def poisson_over_probability(expected_total: float, line: float) -> float:
@@ -45,10 +45,23 @@ def poisson_over_probability(expected_total: float, line: float) -> float:
     return max(0.0, min(1.0, 1.0 - cumulative_probability))
 
 
+def _negative_binomial_parameters(
+    expected_total: float,
+    negative_binomial_dispersion: float,
+) -> tuple[float, float]:
+    """Convert a mean and dispersion into Negative Binomial parameters."""
+
+    distribution_shape = 1.0 / negative_binomial_dispersion
+    distribution_probability = distribution_shape / (
+        distribution_shape + expected_total
+    )
+    return distribution_shape, distribution_probability
+
+
 def negative_binomial_over_probability(
     expected_total: float,
     line: float,
-    dispersion: float,
+    negative_binomial_dispersion: float,
 ) -> float:
     """Return P(total corners > line) under a Negative Binomial distribution."""
 
@@ -56,19 +69,23 @@ def negative_binomial_over_probability(
         raise ValueError("expected_total must be greater than zero")
     if line < 0 or not math.isclose(line % 1, 0.5):
         raise ValueError("line must be a non-negative half line")
-    if dispersion < 0:
-        raise ValueError("dispersion must not be negative")
-    if math.isclose(dispersion, 0.0, abs_tol=1e-12):
+    if negative_binomial_dispersion < 0:
+        raise ValueError("negative_binomial_dispersion must not be negative")
+    if math.isclose(negative_binomial_dispersion, 0.0, abs_tol=1e-12):
         return poisson_over_probability(expected_total, line)
 
-    size = 1.0 / dispersion
-    success_probability = size / (size + expected_total)
-    probability = success_probability**size
+    distribution_shape, distribution_probability = (
+        _negative_binomial_parameters(
+            expected_total,
+            negative_binomial_dispersion,
+        )
+    )
+    probability = distribution_probability**distribution_shape
     cumulative_probability = probability
     for total in range(1, math.floor(line) + 1):
         probability *= (
-            (total - 1 + size) / total
-        ) * (1.0 - success_probability)
+            (total - 1 + distribution_shape) / total
+        ) * (1.0 - distribution_probability)
         cumulative_probability += probability
     return max(0.0, min(1.0, 1.0 - cumulative_probability))
 
@@ -76,7 +93,7 @@ def negative_binomial_over_probability(
 def negative_binomial_negative_log_loss(
     actual_total: int,
     expected_total: float,
-    dispersion: float,
+    negative_binomial_dispersion: float,
 ) -> float:
     """Return the Negative Binomial negative log likelihood for one total."""
 
@@ -86,28 +103,32 @@ def negative_binomial_negative_log_loss(
         raise ValueError("actual_total must be a non-negative integer")
     if expected_total <= 0:
         raise ValueError("expected_total must be greater than zero")
-    if dispersion < 0:
-        raise ValueError("dispersion must not be negative")
-    if math.isclose(dispersion, 0.0, abs_tol=1e-12):
+    if negative_binomial_dispersion < 0:
+        raise ValueError("negative_binomial_dispersion must not be negative")
+    if math.isclose(negative_binomial_dispersion, 0.0, abs_tol=1e-12):
         return (
             expected_total
             - actual_total * math.log(expected_total)
             + math.lgamma(actual_total + 1)
         )
 
-    size = 1.0 / dispersion
-    success_probability = size / (size + expected_total)
+    distribution_shape, distribution_probability = (
+        _negative_binomial_parameters(
+            expected_total,
+            negative_binomial_dispersion,
+        )
+    )
     log_probability = (
-        math.lgamma(actual_total + size)
-        - math.lgamma(size)
+        math.lgamma(actual_total + distribution_shape)
+        - math.lgamma(distribution_shape)
         - math.lgamma(actual_total + 1)
-        + size * math.log(success_probability)
-        + actual_total * math.log1p(-success_probability)
+        + distribution_shape * math.log(distribution_probability)
+        + actual_total * math.log1p(-distribution_probability)
     )
     return -log_probability
 
 
-def _estimate_dispersion(
+def _estimate_negative_binomial_dispersion(
     match_count: int,
     corner_sum: int,
     squared_corner_sum: int,
@@ -135,25 +156,25 @@ def walk_forward_predictions(
     for match in matches:
         matches_by_date[match.match_date].append(match)
 
-    historical_total = 0
-    historical_squared_total = 0
-    historical_matches = 0
+    historical_corner_sum = 0
+    historical_squared_corner_sum = 0
+    historical_match_count = 0
     predictions: list[Prediction] = []
 
     for match_date in sorted(matches_by_date):
         same_date_matches = matches_by_date[match_date]
-        if match_date >= evaluation_start and historical_matches:
-            expected_total = historical_total / historical_matches
-            dispersion = _estimate_dispersion(
-                historical_matches,
-                historical_total,
-                historical_squared_total,
+        if match_date >= evaluation_start and historical_match_count:
+            expected_total = historical_corner_sum / historical_match_count
+            negative_binomial_dispersion = _estimate_negative_binomial_dispersion(
+                historical_match_count,
+                historical_corner_sum,
+                historical_squared_corner_sum,
             )
             over_probabilities = {
                 line: negative_binomial_over_probability(
                     expected_total,
                     line,
-                    dispersion,
+                    negative_binomial_dispersion,
                 )
                 for line in CORNER_LINES
             }
@@ -162,16 +183,18 @@ def walk_forward_predictions(
                     match=match,
                     expected_total=expected_total,
                     over_probabilities=over_probabilities,
-                    dispersion=dispersion,
+                    negative_binomial_dispersion=negative_binomial_dispersion,
                 )
                 for match in same_date_matches
             )
 
-        historical_total += sum(match.total_corners for match in same_date_matches)
-        historical_squared_total += sum(
+        historical_corner_sum += sum(
+            match.total_corners for match in same_date_matches
+        )
+        historical_squared_corner_sum += sum(
             match.total_corners**2 for match in same_date_matches
         )
-        historical_matches += len(same_date_matches)
+        historical_match_count += len(same_date_matches)
 
     return predictions
 
@@ -193,7 +216,7 @@ def evaluate_predictions(predictions: Iterable[Prediction]) -> dict[str, object]
         negative_binomial_negative_log_loss(
             prediction.match.total_corners,
             prediction.expected_total,
-            prediction.dispersion,
+            prediction.negative_binomial_dispersion,
         )
         for prediction in prediction_list
     ]

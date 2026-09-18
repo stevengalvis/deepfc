@@ -8,7 +8,7 @@ import pytest
 from deepfc.match_data import Match
 from deepfc.total_corners import (
     CORNER_LINES,
-    _estimate_dispersion,
+    _estimate_negative_binomial_dispersion,
     evaluate_predictions,
     negative_binomial_negative_log_loss,
     negative_binomial_over_probability,
@@ -56,9 +56,11 @@ def test_negative_binomial_assigns_more_probability_to_high_total() -> None:
 
 
 def test_dispersion_estimate_uses_only_observed_variance() -> None:
-    assert _estimate_dispersion(2, 20, 400) == pytest.approx(1.9)
-    assert _estimate_dispersion(1, 10, 100) == 0.0
-    assert _estimate_dispersion(2, 0, 0) == 0.0
+    assert _estimate_negative_binomial_dispersion(2, 20, 400) == pytest.approx(
+        1.9
+    )
+    assert _estimate_negative_binomial_dispersion(1, 10, 100) == 0.0
+    assert _estimate_negative_binomial_dispersion(2, 0, 0) == 0.0
 
 
 def test_walk_forward_does_not_leak_same_date_results() -> None:
@@ -88,7 +90,9 @@ def test_walk_forward_estimates_dispersion_without_same_date_leakage() -> None:
     )
 
     assert [prediction.expected_total for prediction in predictions] == [10.0, 10.0]
-    assert [prediction.dispersion for prediction in predictions] == [
+    assert [
+        prediction.negative_binomial_dispersion for prediction in predictions
+    ] == [
         pytest.approx(1.9),
         pytest.approx(1.9),
     ]
