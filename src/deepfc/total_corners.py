@@ -170,8 +170,7 @@ def run_evaluation(
         "data_quality": {
             "rows_read": loaded.rows_read,
             "rows_loaded": loaded.rows_loaded,
-            "rows_missing_corners": loaded.rows_missing_corners,
-            "rows_invalid": loaded.rows_invalid,
+            "rows_without_corner_results": loaded.rows_without_corner_results,
         },
         "evaluation": metrics,
     }

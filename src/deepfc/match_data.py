@@ -24,7 +24,7 @@ class Match:
             if not value.strip():
                 raise ValueError(f"{field_name} must not be empty")
 
-        if self.home_team.strip() == self.away_team.strip():
+        if self.home_team.strip().casefold() == self.away_team.strip().casefold():
             raise ValueError("home_team and away_team must be different")
 
         for field_name in ("home_corners", "away_corners"):

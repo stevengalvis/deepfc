@@ -26,8 +26,7 @@ def test_reports_row_quality_counts() -> None:
 
     assert result.rows_read == 6
     assert result.rows_loaded == 5
-    assert result.rows_missing_corners == 1
-    assert result.rows_invalid == 0
+    assert result.rows_without_corner_results == 1
 
 
 def test_rejects_csv_without_required_columns(tmp_path: Path) -> None:
@@ -35,4 +34,28 @@ def test_rejects_csv_without_required_columns(tmp_path: Path) -> None:
     csv_path.write_text("Date,HomeTeam,AwayTeam\n01/01/2026,A,B\n", encoding="utf-8")
 
     with pytest.raises(ValueError, match="missing required columns"):
+        load_football_data_csv([csv_path])
+
+
+def test_reports_file_and_row_for_invalid_completed_match(tmp_path: Path) -> None:
+    csv_path = tmp_path / "invalid-corners.csv"
+    csv_path.write_text(
+        "Div,Date,HomeTeam,AwayTeam,HC,AC\n"
+        "E1,05/08/2017,Alpha,Beta,not-a-number,4\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match=r"invalid-corners\.csv row 2"):
+        load_football_data_csv([csv_path])
+
+
+def test_rejects_partially_missing_corner_result(tmp_path: Path) -> None:
+    csv_path = tmp_path / "partial-result.csv"
+    csv_path.write_text(
+        "Div,Date,HomeTeam,AwayTeam,HC,AC\n"
+        "E1,05/08/2017,Alpha,Beta,6,\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="corner count is missing"):
         load_football_data_csv([csv_path])
