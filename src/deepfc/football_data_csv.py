@@ -55,7 +55,10 @@ def _is_missing_corner_result(row: dict[str, str | None]) -> bool:
     return not (row["HC"] or "").strip() and not (row["AC"] or "").strip()
 
 
-def _parse_match(row: dict[str, str | None]) -> Match:
+def _parse_match(
+    row: dict[str, str | None],
+    season_start_year: int,
+) -> Match:
     """Convert one Football-Data row into a canonical Match."""
 
     return Match(
@@ -65,6 +68,15 @@ def _parse_match(row: dict[str, str | None]) -> Match:
         away_team=(row["AwayTeam"] or "").strip(),
         home_corners=_parse_corners(row["HC"] or ""),
         away_corners=_parse_corners(row["AC"] or ""),
+        season_start_year=season_start_year,
+    )
+
+
+def _season_start_year(earliest_match_date: date) -> int:
+    return (
+        earliest_match_date.year
+        if earliest_match_date.month >= 7
+        else earliest_match_date.year - 1
     )
 
 
@@ -85,14 +97,26 @@ def load_football_data_csv(paths: Iterable[str | Path]) -> LoadResult:
                 missing = ", ".join(sorted(missing_columns))
                 raise ValueError(f"{path} is missing required columns: {missing}")
 
-            for row_number, row in enumerate(reader, start=2):
-                rows_read += 1
-                if _is_missing_corner_result(row):
-                    rows_without_corner_results += 1
-                    continue
+            numbered_rows = list(enumerate(reader, start=2))
+            rows_read += len(numbered_rows)
+            if not numbered_rows:
+                continue
 
+            try:
+                earliest_match_date = min(
+                    _parse_date(row["Date"] or "")
+                    for _, row in numbered_rows
+                )
+            except (TypeError, ValueError) as error:
+                raise ValueError(f"{path}: {error}") from error
+            season_start_year = _season_start_year(earliest_match_date)
+
+            for row_number, row in numbered_rows:
                 try:
-                    matches.append(_parse_match(row))
+                    if _is_missing_corner_result(row):
+                        rows_without_corner_results += 1
+                        continue
+                    matches.append(_parse_match(row, season_start_year))
                 except (TypeError, ValueError) as error:
                     raise ValueError(f"{path} row {row_number}: {error}") from error
 

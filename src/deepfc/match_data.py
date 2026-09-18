@@ -14,6 +14,7 @@ class Match:
     away_team: str
     home_corners: int
     away_corners: int
+    season_start_year: int
 
     def __post_init__(self) -> None:
         if not isinstance(self.match_date, date):
@@ -31,6 +32,13 @@ class Match:
             value = getattr(self, field_name)
             if isinstance(value, bool) or not isinstance(value, int) or value < 0:
                 raise ValueError(f"{field_name} must be a non-negative integer")
+
+        if (
+            isinstance(self.season_start_year, bool)
+            or not isinstance(self.season_start_year, int)
+            or self.season_start_year < 1800
+        ):
+            raise ValueError("season_start_year must be a valid year")
 
     @property
     def total_corners(self) -> int:

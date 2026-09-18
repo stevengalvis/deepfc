@@ -19,6 +19,7 @@ def test_loads_and_maps_football_data_columns() -> None:
     assert first_match.away_team == "Beta"
     assert first_match.home_corners == 6
     assert first_match.away_corners == 4
+    assert first_match.season_start_year == 2017
 
 
 def test_reports_row_quality_counts() -> None:
@@ -59,3 +60,19 @@ def test_rejects_partially_missing_corner_result(tmp_path: Path) -> None:
 
     with pytest.raises(ValueError, match="corner count is missing"):
         load_football_data_csv([csv_path])
+
+
+def test_infers_season_from_earliest_date_when_rows_are_out_of_order(
+    tmp_path: Path,
+) -> None:
+    csv_path = tmp_path / "extended-season.csv"
+    csv_path.write_text(
+        "Div,Date,HomeTeam,AwayTeam,HC,AC\n"
+        "E1,01/07/2020,Alpha,Beta,6,4\n"
+        "E1,03/08/2019,Beta,Alpha,5,5\n",
+        encoding="utf-8",
+    )
+
+    result = load_football_data_csv([csv_path])
+
+    assert {match.season_start_year for match in result.matches} == {2019}

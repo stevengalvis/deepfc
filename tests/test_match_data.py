@@ -6,7 +6,7 @@ from deepfc.match_data import Match
 
 
 def test_match_calculates_total_corners() -> None:
-    match = Match(date(2026, 8, 8), "E1", "Birmingham", "Millwall", 7, 4)
+    match = Match(date(2026, 8, 8), "E1", "Birmingham", "Millwall", 7, 4, 2026)
 
     assert match.total_corners == 11
 
@@ -20,6 +20,7 @@ def test_match_calculates_total_corners() -> None:
         ("away_team", ""),
         ("home_corners", -1),
         ("away_corners", 2.5),
+        ("season_start_year", 0),
     ],
 )
 def test_match_rejects_invalid_values(field: str, value: object) -> None:
@@ -30,6 +31,7 @@ def test_match_rejects_invalid_values(field: str, value: object) -> None:
         "away_team": "Millwall",
         "home_corners": 7,
         "away_corners": 4,
+        "season_start_year": 2026,
     }
     values[field] = value
 
@@ -39,4 +41,4 @@ def test_match_rejects_invalid_values(field: str, value: object) -> None:
 
 def test_match_rejects_same_home_and_away_team() -> None:
     with pytest.raises(ValueError, match="must be different"):
-        Match(date(2026, 8, 8), "E1", "Millwall", "MILLWALL", 7, 4)
+        Match(date(2026, 8, 8), "E1", "Millwall", "MILLWALL", 7, 4, 2026)
