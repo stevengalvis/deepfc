@@ -23,7 +23,7 @@ Metrics include:
 
 - mean absolute error;
 - root mean squared error;
-- Poisson negative log loss;
+- Negative Binomial negative log loss;
 - Brier score for each supported line;
 - predicted probabilities and actual hit rates;
 - input row-quality counts.
