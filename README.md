@@ -11,7 +11,9 @@ baseline estimate full-match corner totals and over/under probabilities at
 
 The baseline uses the expanding mean of all earlier Championship matches as
 the expected corner total. It converts that expectation into probabilities
-with a Poisson distribution.
+with a Negative Binomial distribution. The distribution's dispersion is also
+estimated from earlier matches because observed corner totals vary more than a
+Poisson distribution allows.
 
 Evaluation is walk-forward. Matches played on the same date cannot influence
 one another, preventing same-day data leakage. The 2017-18 season is intended
@@ -21,7 +23,7 @@ Metrics include:
 
 - mean absolute error;
 - root mean squared error;
-- Poisson negative log loss;
+- Negative Binomial negative log loss;
 - Brier score for each supported line;
 - predicted probabilities and actual hit rates;
 - input row-quality counts.
@@ -47,22 +49,24 @@ and evaluation begins on July 1, 2018.
 | Mean actual total | 10.170 |
 | Mean absolute error | 2.714 |
 | Root mean squared error | 3.388 |
-| Poisson negative log loss | 2.634 |
+| Negative Binomial negative log loss | 2.630 |
 
 | Line | Brier score | Predicted over | Actual over |
 | --- | ---: | ---: | ---: |
-| 8.5 | 0.2211 | 69.14% | 67.11% |
-| 9.5 | 0.2482 | 56.93% | 54.88% |
-| 10.5 | 0.2458 | 44.46% | 43.60% |
-| 11.5 | 0.2228 | 32.87% | 33.52% |
+| 8.5 | 0.2208 | 67.70% | 67.11% |
+| 9.5 | 0.2479 | 56.04% | 54.88% |
+| 10.5 | 0.2458 | 44.28% | 43.60% |
+| 11.5 | 0.2227 | 33.39% | 33.52% |
 
 One fixture was excluded because the source contains no corner result:
 Bolton vs Brentford on April 27, 2019. No malformed completed rows were found.
 
 The aggregate predicted total is close to the actual average, but an MAE of
-2.714 corners leaves substantial match-level error. This result is the
-no-team-strength benchmark that future models must beat on the same evaluation
-window.
+2.714 corners leaves substantial match-level error. Negative Binomial
+probabilities modestly improved mean Brier score from 0.234465 to 0.234303 and
+count negative log loss from 2.633579 to 2.629960 compared with Poisson on the
+same fixtures. This result remains the no-team-strength benchmark that future
+models must beat on the same evaluation window.
 
 ## Structure
 
