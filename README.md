@@ -30,6 +30,40 @@ This is a baseline, not evidence of profitable predictions. DeepFC does not
 calculate picks, expected value, return on investment, or betting performance
 without verified historical market prices.
 
+## Real-data baseline
+
+The first benchmark was run on September 18, 2026 using the EFL Championship
+CSV files published in the
+[Football-Data England archive](https://www.football-data.co.uk/englandm.php).
+It covers 2017-18 through 2025-26. The 2017-18 season supplies warm-up history,
+and evaluation begins on July 1, 2018.
+
+| Evaluation result | Value |
+| --- | ---: |
+| Rows read | 4,968 |
+| Completed matches loaded | 4,967 |
+| Evaluated matches | 4,415 |
+| Mean predicted total | 10.221 |
+| Mean actual total | 10.170 |
+| Mean absolute error | 2.714 |
+| Root mean squared error | 3.388 |
+| Poisson negative log loss | 2.634 |
+
+| Line | Brier score | Predicted over | Actual over |
+| --- | ---: | ---: | ---: |
+| 8.5 | 0.2211 | 69.14% | 67.11% |
+| 9.5 | 0.2482 | 56.93% | 54.88% |
+| 10.5 | 0.2458 | 44.46% | 43.60% |
+| 11.5 | 0.2228 | 32.87% | 33.52% |
+
+One fixture was excluded because the source contains no corner result:
+Bolton vs Brentford on April 27, 2019. No malformed completed rows were found.
+
+The aggregate predicted total is close to the actual average, but an MAE of
+2.714 corners leaves substantial match-level error. This result is the
+no-team-strength benchmark that future models must beat on the same evaluation
+window.
+
 ## Structure
 
 ```text
@@ -48,7 +82,16 @@ do not depend on CSV column names.
 ```bash
 python -m pip install -e ".[test]"
 pytest
-python -m deepfc.total_corners E1_1718.csv E1_1819.csv E1_1920.csv
+python -m deepfc.total_corners \
+  data/E1_1718.csv \
+  data/E1_1819.csv \
+  data/E1_1920.csv \
+  data/E1_2021.csv \
+  data/E1_2122.csv \
+  data/E1_2223.csv \
+  data/E1_2324.csv \
+  data/E1_2425.csv \
+  data/E1_2526.csv
 ```
 
 The command prints a short human-readable summary followed by the complete
