@@ -39,4 +39,4 @@ def test_match_rejects_invalid_values(field: str, value: object) -> None:
 
 def test_match_rejects_same_home_and_away_team() -> None:
     with pytest.raises(ValueError, match="must be different"):
-        Match(date(2026, 8, 8), "E1", "Millwall", "Millwall", 7, 4)
+        Match(date(2026, 8, 8), "E1", "Millwall", "MILLWALL", 7, 4)

@@ -71,6 +71,7 @@ def test_run_evaluation_is_json_serializable() -> None:
     assert result["competition"] == "EFL Championship"
     assert result["target"] == "full_match_total_corners"
     assert result["data_quality"]["rows_loaded"] == 5
+    assert result["data_quality"]["rows_without_corner_results"] == 1
     json.dumps(result)
 
 
