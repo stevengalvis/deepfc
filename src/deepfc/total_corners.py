@@ -37,12 +37,13 @@ def poisson_over_probability(expected_total: float, line: float) -> float:
         raise ValueError("line must be a non-negative half line")
 
     largest_under_total = math.floor(line)
-    probability = math.exp(-expected_total)
-    cumulative_probability = probability
-    for total in range(1, largest_under_total + 1):
-        probability *= expected_total / total
-        cumulative_probability += probability
-    return max(0.0, min(1.0, 1.0 - cumulative_probability))
+    current_total_probability = math.exp(-expected_total)
+    probability_at_or_below_line = current_total_probability
+    # Start with P(X=0), then derive each higher corner-count probability.
+    for corner_total in range(1, largest_under_total + 1):
+        current_total_probability *= expected_total / corner_total
+        probability_at_or_below_line += current_total_probability
+    return max(0.0, min(1.0, 1.0 - probability_at_or_below_line))
 
 
 def _negative_binomial_parameters(
@@ -80,14 +81,17 @@ def negative_binomial_over_probability(
             negative_binomial_dispersion,
         )
     )
-    probability = distribution_probability**distribution_shape
-    cumulative_probability = probability
-    for total in range(1, math.floor(line) + 1):
-        probability *= (
-            (total - 1 + distribution_shape) / total
+    current_total_probability = (
+        distribution_probability**distribution_shape
+    )
+    probability_at_or_below_line = current_total_probability
+    # Start with P(X=0), then derive each higher corner-count probability.
+    for corner_total in range(1, math.floor(line) + 1):
+        current_total_probability *= (
+            (corner_total - 1 + distribution_shape) / corner_total
         ) * (1.0 - distribution_probability)
-        cumulative_probability += probability
-    return max(0.0, min(1.0, 1.0 - cumulative_probability))
+        probability_at_or_below_line += current_total_probability
+    return max(0.0, min(1.0, 1.0 - probability_at_or_below_line))
 
 
 def negative_binomial_negative_log_loss(
@@ -188,13 +192,11 @@ def walk_forward_predictions(
                 for match in same_date_matches
             )
 
-        historical_corner_sum += sum(
-            match.total_corners for match in same_date_matches
-        )
-        historical_squared_corner_sum += sum(
-            match.total_corners**2 for match in same_date_matches
-        )
-        historical_match_count += len(same_date_matches)
+        for match in same_date_matches:
+            corner_total = match.total_corners
+            historical_corner_sum += corner_total
+            historical_squared_corner_sum += corner_total**2
+            historical_match_count += 1
 
     return predictions
 
