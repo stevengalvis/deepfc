@@ -9,6 +9,12 @@ from datetime import date
 from pathlib import Path
 from typing import Iterable
 
+from deepfc.corner_distribution import (
+    estimate_dispersion,
+    negative_binomial_negative_log_loss,
+    negative_binomial_over_probability,
+    poisson_over_probability,
+)
 from deepfc.football_data_csv import LoadResult, load_football_data_csv
 from deepfc.match_data import Match
 
@@ -26,128 +32,6 @@ class Prediction:
     expected_total: float
     over_probabilities: dict[float, float]
     negative_binomial_dispersion: float
-
-
-def poisson_over_probability(expected_total: float, line: float) -> float:
-    """Return P(total corners > line) under a Poisson distribution."""
-
-    if expected_total <= 0:
-        raise ValueError("expected_total must be greater than zero")
-    if line < 0 or not math.isclose(line % 1, 0.5):
-        raise ValueError("line must be a non-negative half line")
-
-    largest_under_total = math.floor(line)
-    current_total_probability = math.exp(-expected_total)
-    probability_at_or_below_line = current_total_probability
-    # Start with P(X=0), then derive each higher corner-count probability.
-    for corner_total in range(1, largest_under_total + 1):
-        current_total_probability *= expected_total / corner_total
-        probability_at_or_below_line += current_total_probability
-    return max(0.0, min(1.0, 1.0 - probability_at_or_below_line))
-
-
-def _negative_binomial_parameters(
-    expected_total: float,
-    negative_binomial_dispersion: float,
-) -> tuple[float, float]:
-    """Convert a mean and dispersion into Negative Binomial parameters."""
-
-    distribution_shape = 1.0 / negative_binomial_dispersion
-    distribution_probability = distribution_shape / (
-        distribution_shape + expected_total
-    )
-    return distribution_shape, distribution_probability
-
-
-def negative_binomial_over_probability(
-    expected_total: float,
-    line: float,
-    negative_binomial_dispersion: float,
-) -> float:
-    """Return P(total corners > line) under a Negative Binomial distribution."""
-
-    if expected_total <= 0:
-        raise ValueError("expected_total must be greater than zero")
-    if line < 0 or not math.isclose(line % 1, 0.5):
-        raise ValueError("line must be a non-negative half line")
-    if negative_binomial_dispersion < 0:
-        raise ValueError("negative_binomial_dispersion must not be negative")
-    if math.isclose(negative_binomial_dispersion, 0.0, abs_tol=1e-12):
-        return poisson_over_probability(expected_total, line)
-
-    distribution_shape, distribution_probability = (
-        _negative_binomial_parameters(
-            expected_total,
-            negative_binomial_dispersion,
-        )
-    )
-    current_total_probability = (
-        distribution_probability**distribution_shape
-    )
-    probability_at_or_below_line = current_total_probability
-    # Start with P(X=0), then derive each higher corner-count probability.
-    for corner_total in range(1, math.floor(line) + 1):
-        current_total_probability *= (
-            (corner_total - 1 + distribution_shape) / corner_total
-        ) * (1.0 - distribution_probability)
-        probability_at_or_below_line += current_total_probability
-    return max(0.0, min(1.0, 1.0 - probability_at_or_below_line))
-
-
-def negative_binomial_negative_log_loss(
-    actual_total: int,
-    expected_total: float,
-    negative_binomial_dispersion: float,
-) -> float:
-    """Return the Negative Binomial negative log likelihood for one total."""
-
-    if isinstance(actual_total, bool) or not isinstance(actual_total, int):
-        raise ValueError("actual_total must be a non-negative integer")
-    if actual_total < 0:
-        raise ValueError("actual_total must be a non-negative integer")
-    if expected_total <= 0:
-        raise ValueError("expected_total must be greater than zero")
-    if negative_binomial_dispersion < 0:
-        raise ValueError("negative_binomial_dispersion must not be negative")
-    if math.isclose(negative_binomial_dispersion, 0.0, abs_tol=1e-12):
-        return (
-            expected_total
-            - actual_total * math.log(expected_total)
-            + math.lgamma(actual_total + 1)
-        )
-
-    distribution_shape, distribution_probability = (
-        _negative_binomial_parameters(
-            expected_total,
-            negative_binomial_dispersion,
-        )
-    )
-    log_probability = (
-        math.lgamma(actual_total + distribution_shape)
-        - math.lgamma(distribution_shape)
-        - math.lgamma(actual_total + 1)
-        + distribution_shape * math.log(distribution_probability)
-        + actual_total * math.log1p(-distribution_probability)
-    )
-    return -log_probability
-
-
-def _estimate_negative_binomial_dispersion(
-    match_count: int,
-    corner_sum: int,
-    squared_corner_sum: int,
-) -> float:
-    """Estimate prior-match overdispersion with the method of moments."""
-
-    if match_count < 2:
-        return 0.0
-    expected_total = corner_sum / match_count
-    if expected_total <= 0:
-        return 0.0
-    sample_variance = (
-        squared_corner_sum - corner_sum**2 / match_count
-    ) / (match_count - 1)
-    return max(0.0, (sample_variance - expected_total) / expected_total**2)
 
 
 def walk_forward_predictions(
@@ -169,7 +53,7 @@ def walk_forward_predictions(
         same_date_matches = matches_by_date[match_date]
         if match_date >= evaluation_start and historical_match_count:
             expected_total = historical_corner_sum / historical_match_count
-            negative_binomial_dispersion = _estimate_negative_binomial_dispersion(
+            negative_binomial_dispersion = estimate_dispersion(
                 historical_match_count,
                 historical_corner_sum,
                 historical_squared_corner_sum,

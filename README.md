@@ -1,13 +1,12 @@
 # DeepFC
 
-DeepFC is a focused, public experiment in predicting full-match total corners
+DeepFC is a focused, public experiment in predicting full-match corner markets
 in the EFL Championship.
 
-V1 deliberately answers one question: how well does a simple, chronological
-baseline estimate full-match corner totals and over/under probabilities at
-8.5, 9.5, 10.5, and 11.5 corners?
+V1 evaluates full-match totals and individual team totals using chronological
+predictions made only from earlier matches.
 
-## Current model
+## Full-match baseline
 
 The baseline uses the expanding mean of all earlier Championship matches as
 the expected corner total. It converts that expectation into probabilities
@@ -31,6 +30,39 @@ Metrics include:
 This is a baseline, not evidence of profitable predictions. DeepFC does not
 calculate picks, expected value, return on investment, or betting performance
 without verified historical market prices.
+
+## Team-corner model
+
+The team-corner comparison produces two predictions for every fixture: one
+for the home team and one for the away team. Its baseline uses the historical
+Championship home or away average. The challenger combines:
+
+- the team's smoothed corners won in the same venue role; and
+- the opponent's smoothed corners allowed in the opposite venue role.
+
+Each history starts with a five-match prior at the corresponding league
+average. This prevents one or two early observations from producing extreme
+estimates. The expected count is the average of the team's attacking history
+and the opponent's defensive history.
+
+On the same 2017-18 through 2025-26 dataset, the challenger improved every
+reported aggregate metric:
+
+| Metric | Venue-average baseline | Team + opponent | Difference |
+| --- | ---: | ---: | ---: |
+| Mean absolute error | 2.1701 | 2.1258 | -0.0444 |
+| Root mean squared error | 2.7323 | 2.6864 | -0.0459 |
+| Negative Binomial negative log loss | 2.3757 | 2.3591 | -0.0166 |
+| Mean Brier score | 0.2203 | 0.2158 | -0.0045 |
+
+The direction of the improvement remained the same with smoothing priors of
+2, 5, and 10 matches. In 2,000 paired fixture bootstrap samples, the
+challenger beat the baseline in every sample for both MAE and mean Brier
+score. The 95% bootstrap intervals for challenger-minus-baseline were
+`[-0.0524, -0.0365]` for MAE and `[-0.0054, -0.0036]` for mean Brier score.
+
+These results justify retaining the model, but they do not demonstrate an
+edge against sportsbook prices.
 
 ## Real-data baseline
 
@@ -74,7 +106,9 @@ models must beat on the same evaluation window.
 src/deepfc/
 ├── match_data.py          # canonical source-independent Match record
 ├── football_data_csv.py   # Football-Data CSV adapter
-└── total_corners.py       # baseline, probabilities, evaluation, and CLI
+├── corner_distribution.py # shared count probabilities and loss functions
+├── total_corners.py       # full-match total model and evaluation
+└── team_corners.py        # team-total models, evaluation, and robustness
 ```
 
 Raw Football-Data columns such as `HC` and `AC` are translated immediately to
@@ -96,6 +130,17 @@ python -m deepfc.total_corners \
   data/E1_2324.csv \
   data/E1_2425.csv \
   data/E1_2526.csv
+
+python -m deepfc.team_corners \
+  data/E1_1718.csv \
+  data/E1_1819.csv \
+  data/E1_1920.csv \
+  data/E1_2021.csv \
+  data/E1_2122.csv \
+  data/E1_2223.csv \
+  data/E1_2324.csv \
+  data/E1_2425.csv \
+  data/E1_2526.csv
 ```
 
 The command prints a short human-readable summary followed by the complete
@@ -107,8 +152,9 @@ DeepFC currently supports only:
 
 - EFL Championship historical data;
 - completed full-match corner counts;
-- full-match total-corners evaluation.
+- full-match total-corners evaluation;
+- individual full-match team-corner evaluation.
 
 There is no frontend, API, database, LLM, live fixture provider, team-corner
-model, first-half model, or multi-league framework. Those should be added only
-after the baseline demonstrates a justified next step.
+production service, first-half model, or multi-league framework. Those should
+be added only after evaluation demonstrates a justified next step.
