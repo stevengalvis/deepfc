@@ -9,6 +9,9 @@ from deepfc.match_data import Match
 from deepfc.total_corners import (
     CORNER_LINES,
     evaluate_predictions,
+    negative_binomial_negative_log_loss,
+    negative_binomial_over_probability,
+    poisson_over_probability,
     run_evaluation,
     walk_forward_predictions,
 )
@@ -19,6 +22,20 @@ FIXTURE_PATH = Path(__file__).parent / "fixtures" / "football_data_sample.csv"
 
 def make_match(match_date: date, home: str, away: str, total: int) -> Match:
     return Match(match_date, "E1", home, away, total, 0)
+
+
+def test_public_probability_helpers_preserve_original_keyword_arguments() -> None:
+    assert poisson_over_probability(
+        expected_total=2.0, line=0.5,
+    ) == pytest.approx(1.0 - math.exp(-2.0))
+
+    # With shape=1 this is geometric: P(X>=2)=(2/3)^2, P(X=1)=2/9.
+    assert negative_binomial_over_probability(
+        expected_total=2.0, line=1.5, negative_binomial_dispersion=1.0,
+    ) == pytest.approx(4.0 / 9.0)
+    assert negative_binomial_negative_log_loss(
+        actual_total=1, expected_total=2.0, negative_binomial_dispersion=1.0,
+    ) == pytest.approx(-math.log(2.0 / 9.0))
 
 
 def test_walk_forward_does_not_leak_same_date_results() -> None:

@@ -3,36 +3,36 @@
 import math
 
 
-def poisson_over_probability(expected_corners: float, line: float) -> float:
+def poisson_over_probability(expected_total: float, line: float) -> float:
     """Return P(corners > line) under a Poisson distribution."""
 
-    _validate_probability_inputs(expected_corners, line)
+    _validate_probability_inputs(expected_total, line)
 
     largest_under_total = math.floor(line)
-    current_total_probability = math.exp(-expected_corners)
+    current_total_probability = math.exp(-expected_total)
     probability_at_or_below_line = current_total_probability
     for corner_total in range(1, largest_under_total + 1):
-        current_total_probability *= expected_corners / corner_total
+        current_total_probability *= expected_total / corner_total
         probability_at_or_below_line += current_total_probability
     return _bounded_probability(1.0 - probability_at_or_below_line)
 
 
 def negative_binomial_over_probability(
-    expected_corners: float,
+    expected_total: float,
     line: float,
-    dispersion: float,
+    negative_binomial_dispersion: float,
 ) -> float:
     """Return P(corners > line) under a Negative Binomial distribution."""
 
-    _validate_probability_inputs(expected_corners, line)
-    if dispersion < 0:
-        raise ValueError("dispersion must not be negative")
-    if math.isclose(dispersion, 0.0, abs_tol=1e-12):
-        return poisson_over_probability(expected_corners, line)
+    _validate_probability_inputs(expected_total, line)
+    if negative_binomial_dispersion < 0:
+        raise ValueError("negative_binomial_dispersion must not be negative")
+    if math.isclose(negative_binomial_dispersion, 0.0, abs_tol=1e-12):
+        return poisson_over_probability(expected_total, line)
 
     shape, success_probability = _negative_binomial_parameters(
-        expected_corners,
-        dispersion,
+        expected_total,
+        negative_binomial_dispersion,
     )
     current_total_probability = success_probability**shape
     probability_at_or_below_line = current_total_probability
@@ -45,37 +45,37 @@ def negative_binomial_over_probability(
 
 
 def negative_binomial_negative_log_loss(
-    actual_corners: int,
-    expected_corners: float,
-    dispersion: float,
+    actual_total: int,
+    expected_total: float,
+    negative_binomial_dispersion: float,
 ) -> float:
     """Return Negative Binomial negative log likelihood for one observation."""
 
-    if isinstance(actual_corners, bool) or not isinstance(actual_corners, int):
-        raise ValueError("actual_corners must be a non-negative integer")
-    if actual_corners < 0:
-        raise ValueError("actual_corners must be a non-negative integer")
-    if expected_corners <= 0:
-        raise ValueError("expected_corners must be greater than zero")
-    if dispersion < 0:
-        raise ValueError("dispersion must not be negative")
-    if math.isclose(dispersion, 0.0, abs_tol=1e-12):
+    if isinstance(actual_total, bool) or not isinstance(actual_total, int):
+        raise ValueError("actual_total must be a non-negative integer")
+    if actual_total < 0:
+        raise ValueError("actual_total must be a non-negative integer")
+    if expected_total <= 0:
+        raise ValueError("expected_total must be greater than zero")
+    if negative_binomial_dispersion < 0:
+        raise ValueError("negative_binomial_dispersion must not be negative")
+    if math.isclose(negative_binomial_dispersion, 0.0, abs_tol=1e-12):
         return (
-            expected_corners
-            - actual_corners * math.log(expected_corners)
-            + math.lgamma(actual_corners + 1)
+            expected_total
+            - actual_total * math.log(expected_total)
+            + math.lgamma(actual_total + 1)
         )
 
     shape, success_probability = _negative_binomial_parameters(
-        expected_corners,
-        dispersion,
+        expected_total,
+        negative_binomial_dispersion,
     )
     log_probability = (
-        math.lgamma(actual_corners + shape)
+        math.lgamma(actual_total + shape)
         - math.lgamma(shape)
-        - math.lgamma(actual_corners + 1)
+        - math.lgamma(actual_total + 1)
         + shape * math.log(success_probability)
-        + actual_corners * math.log1p(-success_probability)
+        + actual_total * math.log1p(-success_probability)
     )
     return -log_probability
 
