@@ -55,6 +55,42 @@ def test_weighted_expected_corners_favor_recent_results() -> None:
     assert weighted > equal
 
 
+def test_weighted_attack_and_concessions_use_effective_match_counts() -> None:
+    prediction_date = date(2020, 1, 1)
+    old = Match(prediction_date - timedelta(days=360), "E1", "A", "B", 2, 4)
+    recent = Match(prediction_date - timedelta(days=180), "E1", "A", "C", 10, 3)
+    opponent = Match(prediction_date - timedelta(days=180), "E1", "D", "B", 8, 6)
+    history = [
+        CornerObservation(old, "A", "B", "home", 2, 4),
+        CornerObservation(old, "B", "A", "away", 4, 2),
+        CornerObservation(recent, "A", "C", "home", 10, 3),
+        CornerObservation(recent, "C", "A", "away", 3, 10),
+        CornerObservation(opponent, "D", "B", "home", 8, 6),
+        CornerObservation(opponent, "B", "D", "away", 6, 8),
+    ]
+    # League home rates use all three home teams: weights 1/4, 1/2, 1/2.
+    league_rate = (2 * .25 + 10 * .5 + 8 * .5 + 5) / (.25 + .5 + .5 + 5)
+    attack_rate = (2 * .25 + 10 * .5 + 5 * league_rate) / (.25 + .5 + 5)
+    concession_rate = (2 * .25 + 8 * .5 + 5 * league_rate) / (.25 + .5 + 5)
+    expected = attack_rate * concession_rate / league_rate
+
+    assert expected_team_corners(
+        history, "A", "B", "home", prediction_date, half_life_days=180,
+    ) == pytest.approx(expected)
+
+
+@pytest.mark.parametrize("half_life", [None, HALF_LIFE_DAYS])
+def test_expected_corners_reject_same_date_and_future_history(half_life: int | None) -> None:
+    prediction_date = date(2020, 1, 1)
+    match = Match(prediction_date, "E1", "A", "B", 3, 4)
+    history = [CornerObservation(match, "A", "B", "home", 3, 4)]
+    with pytest.raises(ValueError, match="precede"):
+        expected_team_corners(
+            history, "A", "B", "home", prediction_date,
+            half_life_days=half_life,
+        )
+
+
 def test_all_models_use_the_same_fixture_cohort() -> None:
     compared = compare_models(match_history())
     identities = lambda values: [(item.match, item.venue) for item in values]

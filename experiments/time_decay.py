@@ -67,6 +67,8 @@ def expected_team_corners(
 ) -> float:
     """Estimate venue attack × opposing concessions relative to the league."""
     observations = list(history)
+    if any(item.match.match_date >= prediction_date for item in observations):
+        raise ValueError("historical matches must precede the prediction date")
     opposite: Venue = "away" if venue == "home" else "home"
 
     def totals(items: Iterable[CornerObservation], field: str) -> tuple[float, float]:
