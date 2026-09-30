@@ -64,10 +64,9 @@ score. The 95% bootstrap intervals for challenger-minus-baseline were
 These results justify retaining the model, but they do not demonstrate an
 edge against sportsbook prices.
 
-An isolated [comparison with Zeno FC and fixed 180-day weighting](experiments/README.md)
-now uses a common eligible cohort and verifies the Zeno baseline against its
-production forecast function. [Results and limitations](experiments/results/championship_comparison.md)
-are recorded separately; this experiment does not change either default model.
+An isolated [fixed 180-day weighting experiment](experiments/README.md) uses a
+common eligible cohort for every model. [Results and limitations](experiments/results/championship_time_decay.md)
+are recorded separately; the experiment does not change the retained model.
 
 ## Real-data baseline
 
