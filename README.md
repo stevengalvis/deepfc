@@ -64,6 +64,11 @@ score. The 95% bootstrap intervals for challenger-minus-baseline were
 These results justify retaining the model, but they do not demonstrate an
 edge against sportsbook prices.
 
+An isolated [comparison with Zeno FC and fixed 180-day weighting](experiments/README.md)
+now uses a common eligible cohort and verifies the Zeno baseline against its
+production forecast function. [Results and limitations](experiments/results/championship_comparison.md)
+are recorded separately; this experiment does not change either default model.
+
 ## Real-data baseline
 
 The first benchmark was run on September 18, 2026 using the EFL Championship
