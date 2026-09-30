@@ -64,6 +64,10 @@ score. The 95% bootstrap intervals for challenger-minus-baseline were
 These results justify retaining the model, but they do not demonstrate an
 edge against sportsbook prices.
 
+An isolated [fixed 180-day weighting experiment](experiments/README.md) uses a
+common eligible cohort for every model. [Results and limitations](experiments/results/championship_time_decay.md)
+are recorded separately; the experiment does not change the retained model.
+
 ## Real-data baseline
 
 The first benchmark was run on September 18, 2026 using the EFL Championship
