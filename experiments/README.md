@@ -33,3 +33,15 @@ The concise recorded result and its limitations are in
 [`results/championship_time_decay.md`](results/championship_time_decay.md).
 
 Normal `pytest` runs the experiment's focused tests with the rest of DeepFC.
+
+## Championship probability calibration
+
+[`probability_calibration.py`](probability_calibration.py) fits a separate
+logistic correction for the fixed 180-day model's 3.5, 4.5, 5.5 and 6.5 over
+probabilities. It trains before 2023/24, freezes the mappings, and reports later
+Brier, binary log loss, calibration error and paired block intervals.
+
+Run `python -m experiments.probability_calibration` with the same nine CSV paths
+above. The [recorded result](results/championship_probability_calibration.md)
+rejects the layer because it worsened probability quality in both later
+periods. The retained model remains unchanged.
