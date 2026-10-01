@@ -33,3 +33,14 @@ The concise recorded result and its limitations are in
 [`results/championship_time_decay.md`](results/championship_time_decay.md).
 
 Normal `pytest` runs the experiment's focused tests with the rest of DeepFC.
+
+## Championship dispersion
+
+[`dispersion.py`](dispersion.py) keeps the fixed 180-day expected-corner means
+and compares the current pooled all-history Negative Binomial dispersion with
+venue-specific, recent-weighted, and venue-plus-recent alternatives. It selects
+an alternative before 2023/24 and freezes it for later evaluation.
+
+Run `python -m experiments.dispersion` with the same nine CSV paths above. The
+[recorded result](results/championship_dispersion.md) retains the current method:
+the selected recent-weighted dispersion worsened later Brier and count NLL.
