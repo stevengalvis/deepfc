@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from datetime import date
 from itertools import groupby
 import json
+import math
 from pathlib import Path
 import random
 from typing import Iterable, Literal
@@ -64,9 +65,13 @@ def expected_team_corners(
     *,
     half_life_days: int | None,
     smoothing_matches: float = 5.0,
+    team_prior_matches: float | None = None,
 ) -> float:
     """Estimate venue attack × opposing concessions relative to the league."""
     observations = list(history)
+    team_prior = smoothing_matches if team_prior_matches is None else team_prior_matches
+    if not math.isfinite(team_prior) or team_prior <= 0:
+        raise ValueError("team prior must be finite and positive")
     if any(item.match.match_date >= prediction_date for item in observations):
         raise ValueError("historical matches must precede the prediction date")
     opposite: Venue = "away" if venue == "home" else "home"
@@ -95,11 +100,11 @@ def expected_team_corners(
     )
     league_rate = (league_sum + smoothing_matches) / (league_count + smoothing_matches)
     attack_rate = (
-        attack_sum + smoothing_matches * league_rate
-    ) / (attack_count + smoothing_matches)
+        attack_sum + team_prior * league_rate
+    ) / (attack_count + team_prior)
     allowed_rate = (
-        allowed_sum + smoothing_matches * league_rate
-    ) / (allowed_count + smoothing_matches)
+        allowed_sum + team_prior * league_rate
+    ) / (allowed_count + team_prior)
     return attack_rate * allowed_rate / league_rate
 
 
@@ -109,6 +114,7 @@ def compare_models(
     evaluation_start: date = EVALUATION_START,
     min_history: int = 100,
     min_venue_history: int = 5,
+    time_weighted_prior_matches: float = 5.0,
 ) -> ComparedPredictions:
     """Compare three models on one common, leakage-safe fixture cohort."""
     ordered = sorted(matches, key=lambda match: match.match_date)
@@ -158,6 +164,8 @@ def compare_models(
                         expected = expected_team_corners(
                             history, team, opponent, venue, match_date,
                             half_life_days=half_life,
+                            team_prior_matches=(time_weighted_prior_matches
+                                                if half_life is not None else None),
                         )
                         destination.append(TeamCornerPrediction(
                             match=match,

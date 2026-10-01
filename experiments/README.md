@@ -33,3 +33,19 @@ The concise recorded result and its limitations are in
 [`results/championship_time_decay.md`](results/championship_time_decay.md).
 
 Normal `pytest` runs the experiment's focused tests with the rest of DeepFC.
+
+## Championship team-prior shrinkage
+
+[`shrinkage.py`](shrinkage.py) tests whether changing the existing 180-day
+model's team prior helps. League smoothing remains fixed at five matches.
+The settings 1, 2, 5, 10 and 20 use identical eligible fixtures; selection uses
+earlier-season Brier only, followed by separate later-season evaluation.
+
+Run `python -m experiments.shrinkage` with the same nine CSV paths above.
+Its JSON output includes probability/count metrics, calibration, season/venue
+breakdowns, paired block intervals and CSV hashes.
+
+The [recorded result](results/championship_shrinkage.md) rejects the selected
+ten-match prior: its probability improvement on tuning did not carry through
+to later seasons. Retain the current five-match baseline. This is retrospective
+research on previously inspected seasons, not evidence of a betting edge.
