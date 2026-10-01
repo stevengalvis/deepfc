@@ -33,3 +33,15 @@ The concise recorded result and its limitations are in
 [`results/championship_time_decay.md`](results/championship_time_decay.md).
 
 Normal `pytest` runs the experiment's focused tests with the rest of DeepFC.
+
+## Championship attack/concession signal strength
+
+[`signal_strength.py`](signal_strength.py) keeps the fixed 180-day model and
+tests a small grid of exponents controlling how strongly team attack and
+opponent concessions move the expected count away from the league rate. It
+selects before 2023/24 and freezes one candidate for later evaluation.
+
+Run `python -m experiments.signal_strength` with the same nine CSV paths above.
+The [recorded result](results/championship_signal_strength.md) retains the
+original full-strength formula because the selected damped candidate worsened
+later Brier and count NLL.

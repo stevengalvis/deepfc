@@ -55,6 +55,55 @@ def test_weighted_expected_corners_favor_recent_results() -> None:
     assert weighted > equal
 
 
+def test_signal_strengths_at_one_preserve_existing_formula() -> None:
+    prediction_date = date(2020, 1, 1)
+    old = Match(date(2019, 1, 6), "E1", "A", "B", 2, 4)
+    recent = Match(date(2019, 12, 22), "E1", "A", "B", 10, 4)
+    history = [
+        CornerObservation(old, "A", "B", "home", 2, 4),
+        CornerObservation(old, "B", "A", "away", 4, 2),
+        CornerObservation(recent, "A", "B", "home", 10, 4),
+        CornerObservation(recent, "B", "A", "away", 4, 10),
+    ]
+    original = expected_team_corners(
+        history, "A", "B", "home", prediction_date, half_life_days=180,
+    )
+    explicit = expected_team_corners(
+        history, "A", "B", "home", prediction_date, half_life_days=180,
+        attack_strength=1, concession_strength=1,
+    )
+    assert explicit == original
+
+
+def test_lower_signal_strength_pulls_estimate_toward_league_rate() -> None:
+    prediction_date = date(2020, 1, 1)
+    match = Match(date(2019, 12, 22), "E1", "A", "B", 10, 10)
+    history = [
+        CornerObservation(match, "A", "B", "home", 10, 10),
+        CornerObservation(match, "B", "A", "away", 10, 10),
+        CornerObservation(match, "C", "D", "home", 2, 2),
+        CornerObservation(match, "D", "C", "away", 2, 2),
+    ]
+    full = expected_team_corners(
+        history, "A", "B", "home", prediction_date, half_life_days=None,
+    )
+    reduced = expected_team_corners(
+        history, "A", "B", "home", prediction_date, half_life_days=None,
+        attack_strength=0.5, concession_strength=0.5,
+    )
+    league_rate = (10 + 2 + 5) / (2 + 5)
+    assert league_rate < reduced < full
+
+
+@pytest.mark.parametrize("strength", [0, -1, float("nan"), float("inf")])
+def test_invalid_signal_strength_is_rejected(strength: float) -> None:
+    with pytest.raises(ValueError, match="finite and positive"):
+        expected_team_corners(
+            [], "A", "B", "home", date(2020, 1, 1),
+            half_life_days=180, attack_strength=strength,
+        )
+
+
 def test_weighted_attack_and_concessions_use_effective_match_counts() -> None:
     prediction_date = date(2020, 1, 1)
     old = Match(prediction_date - timedelta(days=360), "E1", "A", "B", 2, 4)

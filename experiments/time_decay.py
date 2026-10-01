@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from datetime import date
 from itertools import groupby
 import json
+import math
 from pathlib import Path
 import random
 from typing import Iterable, Literal
@@ -64,9 +65,14 @@ def expected_team_corners(
     *,
     half_life_days: int | None,
     smoothing_matches: float = 5.0,
+    attack_strength: float = 1.0,
+    concession_strength: float = 1.0,
 ) -> float:
     """Estimate venue attack × opposing concessions relative to the league."""
     observations = list(history)
+    if (not math.isfinite(attack_strength) or attack_strength <= 0
+            or not math.isfinite(concession_strength) or concession_strength <= 0):
+        raise ValueError("signal strengths must be finite and positive")
     if any(item.match.match_date >= prediction_date for item in observations):
         raise ValueError("historical matches must precede the prediction date")
     opposite: Venue = "away" if venue == "home" else "home"
@@ -100,7 +106,11 @@ def expected_team_corners(
     allowed_rate = (
         allowed_sum + smoothing_matches * league_rate
     ) / (allowed_count + smoothing_matches)
-    return attack_rate * allowed_rate / league_rate
+    return (
+        league_rate
+        * (attack_rate / league_rate) ** attack_strength
+        * (allowed_rate / league_rate) ** concession_strength
+    )
 
 
 def compare_models(
@@ -109,6 +119,8 @@ def compare_models(
     evaluation_start: date = EVALUATION_START,
     min_history: int = 100,
     min_venue_history: int = 5,
+    time_weighted_attack_strength: float = 1.0,
+    time_weighted_concession_strength: float = 1.0,
 ) -> ComparedPredictions:
     """Compare three models on one common, leakage-safe fixture cohort."""
     ordered = sorted(matches, key=lambda match: match.match_date)
@@ -151,13 +163,20 @@ def compare_models(
                     (match.away_team, match.home_team, "away", match.away_corners),
                 ):
                     deepfc.append(deepfc_by_team[match, venue])
-                    for destination, half_life in (
-                        (equal_weight, None),
-                        (time_weighted, HALF_LIFE_DAYS),
+                    for destination, half_life, attack_strength, concession_strength in (
+                        (equal_weight, None, 1.0, 1.0),
+                        (
+                            time_weighted,
+                            HALF_LIFE_DAYS,
+                            time_weighted_attack_strength,
+                            time_weighted_concession_strength,
+                        ),
                     ):
                         expected = expected_team_corners(
                             history, team, opponent, venue, match_date,
                             half_life_days=half_life,
+                            attack_strength=attack_strength,
+                            concession_strength=concession_strength,
                         )
                         destination.append(TeamCornerPrediction(
                             match=match,
