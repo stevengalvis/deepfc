@@ -1,0 +1,12 @@
+{
+  "artifact_id": "deepfc-home-slope-test-2026-10-02-stop-nonpositive",
+  "base_commit": "7e8ad0acdcea13f5778e107882c36e5d6922fbd3",
+  "status": "stop_nonpositive_delta",
+  "delta": -0.13152183178153348,
+  "historical_fit_runs": 1,
+  "later_scoring_executed": false,
+  "clean_install_tests_passed": 111,
+  "code_sha256": "c5fdb23d18f1a386fa657eabf4b3d4458cab98b574d46a80986ffcbb9ba1b20a",
+  "earlier_results_sha256": "f7783ab034e29356eb07bdc824c8d92dd4713c84c85b3276ecafd3ac426e4fcf",
+  "oof_predictions_sha256": "1c62324c58f568e278cb0ad0f53c9fd3e99fabe2860d375120cd2dabfc3593d6"
+}

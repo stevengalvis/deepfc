@@ -1,0 +1,65 @@
+{
+  "E1": {
+    "groups_checked": 30,
+    "max_metric_or_tail_error": 7.105427357601002e-15,
+    "later_joint_over_errors": [
+      0.021807205145043404,
+      0.021274976690041025,
+      0.01938858740693778,
+      0.01035329800629047
+    ]
+  },
+  "certificates": {
+    "joint_gradient_max": 1.1835814030247693e-09,
+    "joint_hessian_min_eigenvalue": 184.78308841451278,
+    "original_gradient": -2.0637658249000879e-13
+  },
+  "E0": {
+    "groups_checked": 36,
+    "max_metric_or_tail_error": 2.6645352591003757e-15,
+    "later_joint_over_errors": [
+      0.030169214401496683,
+      0.014687520079256626,
+      0.02535984701587577,
+      0.015871649070205426
+    ]
+  },
+  "frozen_hash_checks": [
+    {
+      "path": "experiments/market_strength_spec.md",
+      "matches": true
+    },
+    {
+      "path": "experiments/market_strength.py",
+      "matches": true
+    },
+    {
+      "path": "experiments/joint_market_calibration_spec.md",
+      "matches": true
+    },
+    {
+      "path": "experiments/joint_market_calibration.py",
+      "matches": true
+    },
+    {
+      "path": "experiments/e0_transfer.py",
+      "matches": true
+    },
+    {
+      "path": "experiments/e0_transfer_spec.md",
+      "matches": true
+    },
+    {
+      "path": "experiments/time_decay.py",
+      "matches": true
+    },
+    {
+      "path": "experiments/results/market_strength/results.json",
+      "matches": true
+    },
+    {
+      "path": "experiments/results/joint_market_calibration/results.json",
+      "matches": true
+    }
+  ]
+}

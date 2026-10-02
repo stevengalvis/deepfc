@@ -1,0 +1,139 @@
+{
+  "status": "stop_nonpositive_delta",
+  "later_scoring_executed": false,
+  "folds": [
+    {
+      "iterations": 3,
+      "success": true,
+      "message": "independent score/curvature certified",
+      "reduced_gradient_max": 2.890587699755365e-10,
+      "newton_step_max": 3.521217384747176e-13,
+      "newton_decrement_squared": 8.563473999317928e-23,
+      "linear_solve_residual": 0.0,
+      "independent_gradient_max": 2.8901883772532166e-10,
+      "hessian_min_eigenvalue": 36.912221369557315,
+      "training_n": 892,
+      "training_fixtures": 446,
+      "latest_training_date": "2020-06-30",
+      "cutoff": "2020-07-01",
+      "theta": [
+        0.029783821045052658,
+        0.02778534669666865,
+        -0.6725456004786339,
+        0.47424405780292905
+      ],
+      "oof_support": {
+        "home_n": 592,
+        "below5": {
+          "n": 145,
+          "blocks": 11
+        },
+        "above5": {
+          "n": 447,
+          "blocks": 11
+        },
+        "passes": false
+      },
+      "oof_team_n": 1184
+    },
+    {
+      "iterations": 3,
+      "success": true,
+      "message": "independent score/curvature certified",
+      "reduced_gradient_max": 1.0152101381777356e-10,
+      "newton_step_max": 1.3359985570220115e-13,
+      "newton_decrement_squared": 8.720751783047028e-24,
+      "linear_solve_residual": 6.462348535570529e-27,
+      "independent_gradient_max": 1.0155546954597472e-10,
+      "hessian_min_eigenvalue": 93.27372681765057,
+      "training_n": 2076,
+      "training_fixtures": 1038,
+      "latest_training_date": "2021-05-08",
+      "cutoff": "2021-07-01",
+      "theta": [
+        -0.010629355786106175,
+        -0.02318813465470182,
+        -0.5603305597707959,
+        0.3001541721397978
+      ],
+      "oof_support": {
+        "home_n": 532,
+        "below5": {
+          "n": 222,
+          "blocks": 11
+        },
+        "above5": {
+          "n": 310,
+          "blocks": 11
+        },
+        "passes": false
+      },
+      "oof_team_n": 1064
+    },
+    {
+      "iterations": 3,
+      "success": true,
+      "message": "independent score/curvature certified",
+      "reduced_gradient_max": 4.406382134169995e-10,
+      "newton_step_max": 2.2130921421348055e-13,
+      "newton_decrement_squared": 8.269554643821832e-23,
+      "linear_solve_residual": 5.169878828456423e-26,
+      "independent_gradient_max": 4.4068962259773137e-10,
+      "hessian_min_eigenvalue": 140.1265324502656,
+      "training_n": 3140,
+      "training_fixtures": 1570,
+      "latest_training_date": "2022-05-07",
+      "cutoff": "2022-07-01",
+      "theta": [
+        -0.012661727151245231,
+        -0.02055558560831592,
+        -0.6488359296583796,
+        0.3715271246557063
+      ],
+      "oof_support": {
+        "home_n": 542,
+        "below5": {
+          "n": 169,
+          "blocks": 11
+        },
+        "above5": {
+          "n": 373,
+          "blocks": 11
+        },
+        "passes": false
+      },
+      "oof_team_n": 1084
+    }
+  ],
+  "source_quality": {
+    "rows_read": 3312,
+    "rows_loaded": 3311,
+    "excluded_quotes": []
+  },
+  "support": {
+    "home_n": 1666,
+    "below5": {
+      "n": 536,
+      "blocks": 33
+    },
+    "above5": {
+      "n": 1130,
+      "blocks": 33
+    },
+    "passes": true
+  },
+  "scalar_fit": {
+    "delta": -0.13152183178153348,
+    "objective": 3933.252528621838,
+    "gradient": -4.440892098500626e-15,
+    "independent_gradient": -7.506148480551644e-15,
+    "hessian": 139.4713440711327,
+    "boundary": false,
+    "score_at_zero": 18.392906137463918,
+    "endpoint_scores": [
+      -50.97610915395023,
+      89.1271208619697
+    ]
+  },
+  "oof_predictions_sha256": "1c62324c58f568e278cb0ad0f53c9fd3e99fabe2860d375120cd2dabfc3593d6"
+}

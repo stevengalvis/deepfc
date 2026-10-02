@@ -1,0 +1,92 @@
+[
+  {
+    "league": "E1",
+    "path": "E1/E1_1718.csv",
+    "sha256": "04d07d578d818bdcd6b95d43e79f10a6a26be01b45be6190b09ebdeaeba0a7ce"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_1819.csv",
+    "sha256": "112eedf787e26e00aac1442ef86e7fee5d4a43f86552ff2dac31ceb95a849487"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_1920.csv",
+    "sha256": "f31450c623c0b74b89692584a85924cc652d33ec89757acf4b2dda5e26261d57"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_2021.csv",
+    "sha256": "cf93295e310c60e5b97ae7466d772f8ec6a908ad401e38fceb7e8617369d5073"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_2122.csv",
+    "sha256": "a181451be4801b9f838daf5f6aaf21e9f09d36042be9e6c15388e71001e772ea"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_2223.csv",
+    "sha256": "cd38ab0586ea8cb4d573c363ff70749117f116da5b2741e5b0ea37da05860b1b"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_2324.csv",
+    "sha256": "5737f6cc95c95092b28317f41d3123e2fb09345434efc1c84bbdf15830849ab3"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_2425.csv",
+    "sha256": "f34c340446c916374be66bdc2fb25b87ee7f2662712ca009653d03ac705535f9"
+  },
+  {
+    "league": "E1",
+    "path": "E1/E1_2526.csv",
+    "sha256": "98954c319950f19158624b17a154ef1c56eb7b8d169ef317f28f06d11d0b9a74"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2017-2018.csv",
+    "sha256": "4bf936f365715a6c296762610cd0063fc72cd9fbc653428eb8217d37959fe2a7"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2018-2019.csv",
+    "sha256": "4a44573970f0f693b98889cf5667aafb422d19f185ee63e20022c31b132fe881"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2019-2020.csv",
+    "sha256": "92bf96bebc4fdd4412c5f99ee40b0a5131815ca07150b17e34690d8fcfa217a8"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2020-2021.csv",
+    "sha256": "5fe0773d57db8d4598db8e567543bd44bccedd08b4af3f6cb647d25852417ecf"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2021-2022.csv",
+    "sha256": "95d1dd4afacfb96754b232d958b4972929a5828daa7b6a957edd7690edfc0481"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2022-2023.csv",
+    "sha256": "e51361323bcdcdcec2faf8f58e7bcfc4f5b193ed6017b284c71538ed70d98ea2"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2023-2024.csv",
+    "sha256": "0b669038e94bf305603d841f02006c7d35ebd41c8722c76e479f2393079b995f"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2024-2025.csv",
+    "sha256": "316173b11634e5fdb836b0f3f9b4728df5044a44e1539361b6bdf18f0d3909a1"
+  },
+  {
+    "league": "E0",
+    "path": "E0/2025-2026.csv",
+    "sha256": "e7b387ac3ee2eda59d9e1f31f95457362e29cfbb956e686e939a58e32b23eb11"
+  }
+]

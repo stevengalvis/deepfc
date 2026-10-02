@@ -1,0 +1,34 @@
+{
+  "published_commit": "7e8ad0acdcea13f5778e107882c36e5d6922fbd3",
+  "code_sha256": "c5fdb23d18f1a386fa657eabf4b3d4458cab98b574d46a80986ffcbb9ba1b20a",
+  "plan_sha256": "ba4d1d90a74c912a99c88b3b3e7c609bee84690b32e16c3bd0e4138cfd6fe62f",
+  "final_joint_coefficients_sha256": "4df6fb4c6ba0ef71d5db8d6dfc4d4de423f35c37154636ac4c4b435f2d08c612",
+  "source_hashes": {
+    "E1_1718.csv": "04d07d578d818bdcd6b95d43e79f10a6a26be01b45be6190b09ebdeaeba0a7ce",
+    "E1_1819.csv": "112eedf787e26e00aac1442ef86e7fee5d4a43f86552ff2dac31ceb95a849487",
+    "E1_1920.csv": "f31450c623c0b74b89692584a85924cc652d33ec89757acf4b2dda5e26261d57",
+    "E1_2021.csv": "cf93295e310c60e5b97ae7466d772f8ec6a908ad401e38fceb7e8617369d5073",
+    "E1_2122.csv": "a181451be4801b9f838daf5f6aaf21e9f09d36042be9e6c15388e71001e772ea",
+    "E1_2223.csv": "cd38ab0586ea8cb4d573c363ff70749117f116da5b2741e5b0ea37da05860b1b"
+  },
+  "bounds": [
+    -0.5,
+    0.5
+  ],
+  "prior_sd": 0.25,
+  "pivot": 5.0,
+  "folds": [
+    [
+      "2020-07-01",
+      "2021-07-01"
+    ],
+    [
+      "2021-07-01",
+      "2022-07-01"
+    ],
+    [
+      "2022-07-01",
+      "2023-07-01"
+    ]
+  ]
+}

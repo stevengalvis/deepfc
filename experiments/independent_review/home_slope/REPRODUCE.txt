@@ -1,0 +1,15 @@
+Use Python 3.12 and an unchanged checkout of stevengalvis/deepfc at commit 7e8ad0acdcea13f5778e107882c36e5d6922fbd3.
+Install the repository test extra and experiments/joint_strength_requirements.txt into a fresh environment. No plotting dependencies are required for this stopped run.
+
+Run from the repository root, substituting your local paths.
+
+PYTHONPATH=/path/to/repo/src:/path/to/repo:/path/to/artifact OPENBLAS_NUM_THREADS=1 python -m pytest -q /path/to/artifact/test_home_slope.py tests
+
+To reproduce the earlier stage, use a NEW output directory, copy APPROVED_PLAN.md into it, and provide the six hash-matching E1_1718.csv through E1_2223.csv files in --data-root. The implementation validates their published hashes before fitting. Provider datasets are not bundled.
+
+PYTHONPATH=/path/to/repo/src:/path/to/repo:/path/to/artifact OPENBLAS_NUM_THREADS=1 python /path/to/artifact/home_slope.py --repo /path/to/repo --data-root /path/to/E1_data --out /path/to/new_output
+
+Expected decision is stop_nonpositive_delta with fitted delta approximately -0.13152183178153348. Do not modify the sign, pivot, bounds, penalty or plan to continue to later scoring. This artifact intentionally contains the earlier-stage implementation only because the conditional later-stage execution was stopped.
+
+The original frozen final joint result hash is 4df6fb4c6ba0ef71d5db8d6dfc4d4de423f35c37154636ac4c4b435f2d08c612.
+The experiment code hash recorded before the fit is c5fdb23d18f1a386fa657eabf4b3d4458cab98b574d46a80986ffcbb9ba1b20a.

@@ -1,0 +1,8 @@
+{
+  "input_hashes_unchanged": true,
+  "bin_partition_and_aggregate_checks": "passed all 48 cohort/venue/line/model groups",
+  "primary_Brier_matches_audit": true,
+  "decomposition_max_identity_error": 5.551115123125783e-17,
+  "empty_or_sparse_bins": 106,
+  "total_bins": 240
+}

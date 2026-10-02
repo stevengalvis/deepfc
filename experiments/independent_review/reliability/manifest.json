@@ -1,0 +1,12 @@
+{
+  "commit": "7e8ad0acdcea13f5778e107882c36e5d6922fbd3",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "inputs": {
+    "protocol.txt": "c5e891effe73ea35ee7f9dd4a52ff770d8875574d348fbaa7e96607fd3d3341b",
+    "deepfc-review-E1.npz": "e762ebe98f2098a46a51179f6633f949151a953abcfbd4975a1ea0c46e642eb8",
+    "deepfc-review-E0.npz": "7366b4f20d49499c13d79e95232ba6c1902d4f0c947a9a2d68fa342aa8225631"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "script_sha256": "453d477f3cf999825ac132be6512b0d236e1a75918eda042ae8017fa25247df0",
+  "bootstrap_draws": 20000,
+  "seed": 7,
+  "decomposition_identity_max_error": 5.551115123125783e-17
+}

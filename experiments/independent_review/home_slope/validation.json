@@ -1,0 +1,23 @@
+{
+  "decision": "stop_nonpositive_delta",
+  "later_scoring_executed": false,
+  "oof_team_rows": 3332,
+  "oof_home_rows": 1666,
+  "complete_fixture_pairs": 1666,
+  "first_oof_date": "2020-07-01",
+  "last_oof_date": "2023-05-08",
+  "chronology_and_pairing_checked": true,
+  "experiment_code_unchanged_since_pre_fit_manifest": true,
+  "approved_plan_unchanged": true,
+  "published_coefficients_unchanged": true,
+  "published_tracked_files_checked": 124,
+  "published_tracked_files_changed": [],
+  "dependency_hashes": {
+    "experiments/joint_market_calibration.py": "920d2680f7c7a4de16879f59344d8d1f4d78d0f4e17ded525d1eb45b24aa2d9b",
+    "experiments/joint_strength.py": "dbb71e6225e7c9a2c6c97d326f02ea00f9cda2fe0e514592d4a6f7a90e888d0e",
+    "experiments/time_decay.py": "6c410fb12632060ffe74ad84b51b8192dd975eac2666a8e7c6f165f099c77632",
+    "experiments/market_strength.py": "b8b840884cb1d0f7c47f2f890bc98a9afa4e624a3193456e35d1ddb721614d06",
+    "src/deepfc/corner_distribution.py": "5f6ac4dcc7cf2a049e8037a55c7e1e7179d10cc5da8f8a6f50fe1f248c7b438c",
+    "src/deepfc/football_data_csv.py": "8107da533315c6f7381559fc4355d41c57fd2468c377b404ba1ca105c2a80803"
+  }
+}

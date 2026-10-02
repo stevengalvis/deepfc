@@ -1,0 +1,26 @@
+[
+  {
+    "file": "audit/reproduce.py",
+    "original_sha256": "6c2e9dc5ba7dfe349e663d607fae2bd853fa590350fd7f1a0b40deeb145a89ad",
+    "published_sha256": "b776a5cdc4e057a6e37c5491b0753fd38ad9894712c16ab35c61be2a545fe6d7",
+    "change": "CLI path parameters and observed_over output-key clarification only; no numerical changes"
+  },
+  {
+    "file": "audit/fetch_sources.py",
+    "original_sha256": "d4e96410a80fb93b8d80cc96ca6d25d7908c402579e2926a608d3b35413531f7",
+    "published_sha256": "69b333c740e348d72943b9e2f01343e6f3c1b26303ed9e7f128a03c2545588fc",
+    "change": "CLI path parameters only; original mathematical calculations preserved"
+  },
+  {
+    "file": "audit/check_slices.py",
+    "original_sha256": "c5fcb01120c1d72aa2d67f2f4a98259957e91d604a9e991e95a276cf8f586a2c",
+    "published_sha256": "515fb4dce59233be7e018ae6fe0a617026cad4b1315020b4366f2dea808a7041",
+    "change": "CLI path parameters only; original mathematical calculations preserved"
+  },
+  {
+    "file": "reliability/write_report.py",
+    "original_sha256": "cfe55711b7b335c36e6e41cf8d63af563b3e95cc61df94a5ab4d73f94f3bf319",
+    "published_sha256": "dd358b67e2d53e3f905ff5833aef08ade5eff9e3d4a42ebb08bc26e203a3f595",
+    "change": "report links, retained-table locations and publication-status wording only"
+  }
+]

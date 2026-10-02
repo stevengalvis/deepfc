@@ -1,0 +1,2 @@
+# Preserve original CSV bytes because the execution certificate hashes CRLF data.
+home_slope/oof_predictions.csv -text whitespace=cr-at-eol

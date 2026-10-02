@@ -1,0 +1,12 @@
+{
+  "deepfc-review-E1.npz": {
+    "original_sha256": "0537c2224cc7b539d50ca7544688e798b7d3d50fb97ba0f02f2184d4bfb41760",
+    "published_sha256": "e762ebe98f2098a46a51179f6633f949151a953abcfbd4975a1ea0c46e642eb8",
+    "transformation": "lossless np.savez_compressed; every array verified identical"
+  },
+  "deepfc-review-E0.npz": {
+    "original_sha256": "3178386a952830fc6ef1685f1322888373149380d40cfca5a9990ec8532f9349",
+    "published_sha256": "7366b4f20d49499c13d79e95232ba6c1902d4f0c947a9a2d68fa342aa8225631",
+    "transformation": "lossless np.savez_compressed; every array verified identical"
+  }
+}
