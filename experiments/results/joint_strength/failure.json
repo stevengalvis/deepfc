@@ -1,0 +1,3 @@
+{
+  "error": "fit failure: {\"date\": \"2018-10-24\", \"history_fixtures\": 715, \"teams\": 30, \"iterations\": 4, \"objective\": -1587.3046269739946, \"gradient_max\": 9.874791574437936e-07, \"success\": false, \"message\": \"A bad approximation caused failure to predict improvement.\"}"
+}

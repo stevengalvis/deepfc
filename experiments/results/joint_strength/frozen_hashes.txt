@@ -1,0 +1,2 @@
+03f6536121e4b73f06b9037e51b788e67d783663c9d5c05ccf859f4603933a36  experiments/joint_strength_spec.md
+e9738fd1be6c2055398668117a0d5b87bdb4a452b5a994daf7e6fdcb411c10ba  experiments/joint_strength.py

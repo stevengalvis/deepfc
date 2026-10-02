@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 155, in <module>
+    try:print(json.dumps(run(),indent=2))
+                         ^^^^^
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 130, in run
+    candidate, fits=generate(loaded.matches,baseline)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 89, in generate
+    model=fit(history,day,alpha);fits.append(model.diagnostics)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 77, in fit
+    raise RuntimeError('fit failure: '+json.dumps(info))
+RuntimeError: fit failure: {"date": "2018-08-31", "history_fixtures": 612, "teams": 30, "iterations": 75, "objective": -1345.5704479958042, "gradient_max": 0.00010471468372230675, "success": true, "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"}

@@ -1,0 +1,183 @@
+"""Single frozen joint venue attack/defence NB candidate; research only."""
+from __future__ import annotations
+import json, hashlib, sys
+from pathlib import Path
+from dataclasses import dataclass, replace
+from itertools import groupby
+import numpy as np
+import scipy
+from scipy.optimize import minimize
+from scipy.special import expit
+from scipy.linalg import helmert
+from deepfc.football_data_csv import load_football_data_csv
+from deepfc.corner_distribution import negative_binomial_over_probability
+from deepfc.team_corners import TEAM_CORNER_LINES, evaluate_predictions
+from experiments.time_decay import compare_models
+from experiments.signal_strength import _comparison
+from experiments.weakness_diagnostic import intervals
+
+@dataclass
+class Fit:
+    teams: tuple
+    intercept: np.ndarray
+    effects: np.ndarray
+    diagnostics: dict
+
+    def predict(self, team, opponent, venue):
+        v=0 if venue=='home' else 1
+        index={t:i for i,t in enumerate(self.teams)}
+        a=self.effects[v,index[team]] if team in index else 0.0
+        d=self.effects[2+1-v,index[opponent]] if opponent in index else 0.0
+        mean=float(np.exp(self.intercept[v]+a+d))
+        if not np.isfinite(mean) or mean<=0:raise ValueError('invalid fitted mean')
+        return mean
+
+
+def design(history, when):
+    if not history or any(m.match_date>=when for m in history):
+        raise ValueError('nonempty history must strictly precede prediction date')
+    teams=tuple(sorted({t for m in history for t in (m.home_team,m.away_team)}))
+    index={t:i for i,t in enumerate(teams)};n=len(teams)
+    y=[];w=[];venue=[];attack=[];defence=[]
+    for m in history:
+        for v,t,o,count in [(0,m.home_team,m.away_team,m.home_corners),(1,m.away_team,m.home_team,m.away_corners)]:
+            y.append(count);w.append(2**(-(when-m.match_date).days/180))
+            venue.append(v);attack.append(v*n+index[t]);defence.append((3-v)*n+index[o])
+    return teams,tuple(np.asarray(x) for x in (y,w,venue,attack,defence))
+
+
+def objective(theta, arrays, alpha):
+    y,w,v,a,d=arrays;n=(len(theta)-2)//4
+    effects=theta[2:].reshape(4,n);effects=effects-effects.mean(axis=1,keepdims=True)
+    flat=effects.ravel();eta=theta[v]+flat[a]+flat[d]
+    if alpha<=1e-12:
+        mu=np.exp(eta);loss=mu-y*eta;deriv=mu-y
+    else:
+        shape=1/alpha;z=eta-np.log(shape)
+        loss=(y+shape)*np.logaddexp(0,z)-y*eta
+        deriv=(y+shape)*expit(z)-y
+    weighted=w*deriv
+    eg=(np.bincount(a,weights=weighted,minlength=4*n)+np.bincount(d,weights=weighted,minlength=4*n)).reshape(4,n)+effects
+    eg-=eg.mean(axis=1,keepdims=True)
+    grad=np.r_[np.bincount(v,weights=weighted,minlength=2),eg.ravel()]
+    return float(np.dot(w,loss)+.5*np.sum(effects**2)),grad
+
+
+def fit(history, when, alpha):
+    if not np.isfinite(alpha) or alpha<0:raise ValueError('invalid dispersion')
+    teams,arrays=design(history,when);y,w,v,_,_=arrays
+    n=len(teams)
+    # Orthonormal contrasts eliminate the redundant four constant directions.
+    basis=helmert(n,full=False).T
+    transform=np.zeros((2+4*n,2+4*(n-1)));transform[:2,:2]=np.eye(2)
+    for family in range(4):
+        transform[2+family*n:2+(family+1)*n,2+family*(n-1):2+(family+1)*(n-1)]=basis
+    initial=np.zeros(transform.shape[1])
+    for venue in (0,1):
+        mask=v==venue;initial[venue]=np.log(max(1e-6,float(np.dot(w[mask],y[mask])/w[mask].sum())))
+    def reduced(x):
+        value,gradient=objective(transform@x,arrays,alpha)
+        return value,transform.T@gradient
+    def hessian(x):
+        theta=transform@x;_,_,venues,attack,defence=arrays
+        eta=theta[venues]+theta[2+attack]+theta[2+defence]
+        if alpha<=1e-12: curvature=w*np.exp(eta)
+        else:
+            probability=expit(eta+np.log(alpha))
+            curvature=w*(y+1/alpha)*probability*(1-probability)
+        # Each observation has exactly three unit entries in the raw design.
+        columns=[venues,2+attack,2+defence]
+        full=np.zeros((2+4*n,2+4*n))
+        for left in columns:
+            for right in columns:np.add.at(full,(left,right),curvature)
+        full[2:,2:]+=np.eye(4*n)
+        return transform.T@full@transform
+    result=minimize(reduced,initial,jac=True,hess=hessian,method='trust-exact',
+        options={'maxiter':1000,'gtol':1e-6})
+    result.x=transform@result.x
+    loss,grad=objective(result.x,arrays,alpha);norm=float(np.max(np.abs(grad)))
+    info={'date':str(when),'history_fixtures':len(history),'teams':len(teams),'iterations':int(result.nit),
+          'objective':loss,'gradient_max':norm,'success':bool(result.success),'message':str(result.message)}
+    if not result.success or not np.isfinite(loss) or not np.all(np.isfinite(result.x)) or norm>1e-4:
+        raise RuntimeError('fit failure: '+json.dumps(info))
+    effects=result.x[2:].reshape(4,len(teams));effects=effects-effects.mean(axis=1,keepdims=True)
+    return Fit(teams,result.x[:2],effects,info)
+
+
+def generate(matches, baseline):
+    by_day={day:list(group) for day,group in groupby(baseline,key=lambda p:p.match.match_date)}
+    history=[];candidate=[];fits=[]
+    for day,group in groupby(sorted(matches,key=lambda m:m.match_date),key=lambda m:m.match_date):
+        if day in by_day:
+            values=by_day[day];alpha=values[0].dispersion
+            assert all(p.dispersion==alpha for p in values)
+            model=fit(history,day,alpha);fits.append(model.diagnostics)
+            for before in values:
+                opponent=before.match.away_team if before.venue=='home' else before.match.home_team
+                mean=model.predict(before.team,opponent,before.venue)
+                candidate.append(replace(before,expected_corners=mean,over_probabilities={l:negative_binomial_over_probability(mean,l,alpha) for l in TEAM_CORNER_LINES}))
+            if len(fits)%100==0:print(f'Completed {len(fits)} forecast-date fits through {day}',file=sys.stderr,flush=True)
+        history.extend(group)
+    assert [(p.match,p.venue,p.actual_corners,p.dispersion) for p in baseline]==[(p.match,p.venue,p.actual_corners,p.dispersion) for p in candidate]
+    return tuple(candidate),fits
+
+
+def comparison(before,after):
+    result=_comparison(tuple(before),tuple(after))
+    bias=lambda values:sum(p.actual_corners-p.expected_corners for p in values)/len(values)
+    result['baseline']['bias']=bias(before);result['candidate']['bias']=bias(after)
+    result['bias_intervals']=dict(zip(['baseline','candidate','candidate_minus_baseline'],intervals([
+        (b.match.match_date,[b.actual_corners-b.expected_corners,a.actual_corners-a.expected_corners,b.expected_corners-a.expected_corners]) for b,a in zip(before,after,strict=True)])))
+    return result
+
+
+def gates(group,seasons):
+    delta=group['overall']['candidate_minus_baseline'];ci=group['overall']['paired_28_day_intervals']
+    result={'brier_material_improvement':delta['mean_brier_score']<=-.001,
+            'brier_interval_below_zero':ci['mean_brier_score']['upper_95']<0,
+            'each_later_season_improves':all(s['candidate_minus_baseline']['mean_brier_score']<0 for s in seasons),
+            'nll_not_worse':delta['negative_binomial_negative_log_loss']<=0,
+            'nll_upper_bound':ci['negative_binomial_negative_log_loss']['upper_95']<=.005,
+            'venue_guardrail':all(v['candidate_minus_baseline']['mean_brier_score']<=.001 for v in group['venue'].values())}
+    for label in ['lt4','ge6']:
+        b=group['band'][label];result['halve_bias_'+label]=abs(b['candidate']['bias'])<=.5*abs(b['baseline']['bias'])
+    return result
+
+
+def run():
+    from datetime import date
+    paths=sorted(Path('data').glob('E1_*.csv'))
+    manifest=json.loads(Path('experiments/results/shot_reconstruction/verified_data_manifest.json').read_text())
+    digests={r['path']:r['sha256'] for r in manifest['files']}
+    assert len(paths)==9
+    for p in paths:assert hashlib.sha256(p.read_bytes()).hexdigest()==digests[str(p)]
+    loaded=load_football_data_csv(paths);compared=compare_models(loaded.matches);baseline=compared.time_weighted
+    candidate, fits=generate(loaded.matches,baseline)
+    seasons={m:2000+int(p.stem.split('_')[1][:2]) for p in paths for m in load_football_data_csv([p]).matches}
+    band=lambda p:'lt4' if p.expected_corners<4 else 'ge6' if p.expected_corners>=6 else '4to6'
+    def sliced(predicate):
+        pairs=[(b,a) for b,a in zip(baseline,candidate,strict=True) if predicate(b)]
+        return comparison([b for b,a in pairs],[a for b,a in pairs])
+    def cohort(predicate):
+        return {'overall':sliced(predicate),'venue':{v:sliced(lambda p:predicate(p) and p.venue==v) for v in ['home','away']},
+            'band':{label:sliced(lambda p:predicate(p) and band(p)==label) for label in ['lt4','4to6','ge6']}}
+    periods={'development':lambda p:p.match.match_date<date(2023,7,1),
+        'validation':lambda p:date(2023,7,1)<=p.match.match_date<date(2024,7,1),
+        'test':lambda p:p.match.match_date>=date(2024,7,1),
+        'combined_later':lambda p:p.match.match_date>=date(2023,7,1),'all':lambda p:True}
+    out={'periods':{name:cohort(fn) for name,fn in periods.items()},
+        'seasons':{str(s):sliced(lambda p:seasons[p.match]==s) for s in sorted({seasons[p.match] for p in baseline})},
+        'retained_main':{name:evaluate_predictions(p for p in compared.deepfc if fn(p)) for name,fn in periods.items()},
+        'fits':fits,'source_hashes':digests,'versions':{'numpy':np.__version__,'scipy':scipy.__version__,'python':sys.version},
+        'spec_sha256':hashlib.sha256(Path('experiments/joint_strength_spec.md').read_bytes()).hexdigest(),
+        'code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+    out['gates']=gates(out['periods']['combined_later'],[out['seasons'][str(y)] for y in [2023,2024,2025]])
+    out['test_only_gates']=gates(out['periods']['test'],[out['seasons'][str(y)] for y in [2024,2025]])
+    out['decision']='research_only_pending_prospective' if all(out['gates'].values()) else 'reject_candidate'
+    return out
+
+if __name__=='__main__':
+    try:print(json.dumps(run(),indent=2))
+    except Exception as error:
+        Path('experiments/results/joint_strength/failure.json').write_text(json.dumps({'error':str(error)},indent=2))
+        raise

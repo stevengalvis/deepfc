@@ -1,0 +1,3 @@
+{
+  "error": "fit failure: {\"date\": \"2018-08-31\", \"history_fixtures\": 612, \"teams\": 30, \"iterations\": 75, \"objective\": -1345.5704479958042, \"gradient_max\": 0.00010471468372230675, \"success\": true, \"message\": \"CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH\"}"
+}
