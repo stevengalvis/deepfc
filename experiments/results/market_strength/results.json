@@ -1,0 +1,2372 @@
+{
+  "beta": 0.11376584000060998,
+  "coefficient_certificate": {
+    "training_observations": 4224,
+    "latest_training_date": "2023-05-08",
+    "fit_cutoff": "2023-07-01",
+    "score": 2.545880173343562e-13,
+    "curvature": 879.4151061607022,
+    "objective_omitting_constants": -8798.522670666589,
+    "iterations": 6,
+    "converged": true,
+    "bracket_limit": 1
+  },
+  "periods": {
+    "validation": {
+      "overall": {
+        "baseline": {
+          "evaluated_team_observations": 1048,
+          "mean_predicted_corners": 5.255430973047989,
+          "mean_actual_corners": 5.283396946564886,
+          "mae": 2.200642309596683,
+          "rmse": 2.8123720009099524,
+          "negative_binomial_negative_log_loss": 2.4064429644564096,
+          "mean_brier_score": 0.21045121912536108,
+          "lines": {
+            "3.5": {
+              "brier_score": 0.18909028628729577,
+              "mean_predicted_over_probability": 0.6923792423761409,
+              "actual_over_rate": 0.7127862595419847
+            },
+            "4.5": {
+              "brier_score": 0.23069266830287743,
+              "mean_predicted_over_probability": 0.5484842984666685,
+              "actual_over_rate": 0.5639312977099237
+            },
+            "5.5": {
+              "brier_score": 0.22726992868833581,
+              "mean_predicted_over_probability": 0.4125445287443025,
+              "actual_over_rate": 0.43225190839694655
+            },
+            "6.5": {
+              "brier_score": 0.19475199322293535,
+              "mean_predicted_over_probability": 0.29649343746175544,
+              "actual_over_rate": 0.29866412213740456
+            }
+          },
+          "bias": 0.02796597351689606
+        },
+        "candidate": {
+          "evaluated_team_observations": 1048,
+          "mean_predicted_corners": 5.280820206931897,
+          "mean_actual_corners": 5.283396946564886,
+          "mae": 2.1961736717996856,
+          "rmse": 2.802789549476548,
+          "negative_binomial_negative_log_loss": 2.4015941561137315,
+          "mean_brier_score": 0.2094284990748125,
+          "lines": {
+            "3.5": {
+              "brier_score": 0.18757217503074783,
+              "mean_predicted_over_probability": 0.6904628525096612,
+              "actual_over_rate": 0.7127862595419847
+            },
+            "4.5": {
+              "brier_score": 0.22995831291559432,
+              "mean_predicted_over_probability": 0.5482416534077065,
+              "actual_over_rate": 0.5639312977099237
+            },
+            "5.5": {
+              "brier_score": 0.22596574245940235,
+              "mean_predicted_over_probability": 0.41429842519924565,
+              "actual_over_rate": 0.43225190839694655
+            },
+            "6.5": {
+              "brier_score": 0.1942177658935055,
+              "mean_predicted_over_probability": 0.2998999964818028,
+              "actual_over_rate": 0.29866412213740456
+            }
+          },
+          "bias": 0.002576739632989015
+        },
+        "candidate_minus_baseline": {
+          "mae": -0.004468637796997577,
+          "rmse": -0.009582451433404415,
+          "negative_binomial_negative_log_loss": -0.00484880834267809,
+          "mean_brier_score": -0.00102272005054857
+        },
+        "paired_28_day_intervals": {
+          "mean_brier_score": {
+            "lower_95": -0.0018078063085557505,
+            "upper_95": -0.0002760677170829252,
+            "fraction_below_zero": 0.9985
+          },
+          "negative_binomial_negative_log_loss": {
+            "lower_95": -0.009072806952265257,
+            "upper_95": -0.0009479195838971855,
+            "fraction_below_zero": 0.993
+          },
+          "mae": {
+            "lower_95": -0.013712154276285365,
+            "upper_95": 0.00440892571259937,
+            "fraction_below_zero": 0.836
+          }
+        },
+        "bias_intervals": {
+          "baseline": [
+            -0.06665766099751104,
+            0.12940797192108083
+          ],
+          "candidate": [
+            -0.09269184172175281,
+            0.10604272496302546
+          ],
+          "candidate_minus_baseline": [
+            -0.027529904750271873,
+            -0.022993969053327873
+          ]
+        }
+      },
+      "venue": {
+        "home": {
+          "baseline": {
+            "evaluated_team_observations": 524,
+            "mean_predicted_corners": 5.8092296562431125,
+            "mean_actual_corners": 5.866412213740458,
+            "mae": 2.3588759684736123,
+            "rmse": 3.0179918482919446,
+            "negative_binomial_negative_log_loss": 2.4903879221961454,
+            "mean_brier_score": 0.21480810337400305,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.15937786692081143,
+                "mean_predicted_over_probability": 0.7578739100657189,
+                "actual_over_rate": 0.7958015267175572
+              },
+              "4.5": {
+                "brier_score": 0.22670754710422514,
+                "mean_predicted_over_probability": 0.6244369788202827,
+                "actual_over_rate": 0.6431297709923665
+              },
+              "5.5": {
+                "brier_score": 0.24489351726175182,
+                "mean_predicted_over_probability": 0.4886446456236548,
+                "actual_over_rate": 0.5152671755725191
+              },
+              "6.5": {
+                "brier_score": 0.2282534822092238,
+                "mean_predicted_over_probability": 0.3648096183841765,
+                "actual_over_rate": 0.37213740458015265
+              }
+            },
+            "bias": 0.057182557497346145
+          },
+          "candidate": {
+            "evaluated_team_observations": 524,
+            "mean_predicted_corners": 5.909063480134547,
+            "mean_actual_corners": 5.866412213740458,
+            "mae": 2.3662761949114453,
+            "rmse": 3.0131427787802014,
+            "negative_binomial_negative_log_loss": 2.486969507526125,
+            "mean_brier_score": 0.21409637231600534,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.15811199103228538,
+                "mean_predicted_over_probability": 0.7637504228830136,
+                "actual_over_rate": 0.7958015267175572
+              },
+              "4.5": {
+                "brier_score": 0.2265026984509245,
+                "mean_predicted_over_probability": 0.6331073325577081,
+                "actual_over_rate": 0.6431297709923665
+              },
+              "5.5": {
+                "brier_score": 0.24375097112222763,
+                "mean_predicted_over_probability": 0.4994351476216018,
+                "actual_over_rate": 0.5152671755725191
+              },
+              "6.5": {
+                "brier_score": 0.22801982865858386,
+                "mean_predicted_over_probability": 0.37662095292795583,
+                "actual_over_rate": 0.37213740458015265
+              }
+            },
+            "bias": -0.042651266394088894
+          },
+          "candidate_minus_baseline": {
+            "mae": 0.007400226437833002,
+            "rmse": -0.0048490695117431315,
+            "negative_binomial_negative_log_loss": -0.0034184146700204643,
+            "mean_brier_score": -0.000711731057997711
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.001991581470681792,
+              "upper_95": 0.0004294449391220116,
+              "fraction_below_zero": 0.8875
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.008181349371636759,
+              "upper_95": 0.0013845090200470184,
+              "fraction_below_zero": 0.9095
+            },
+            "mae": {
+              "lower_95": -0.01024942521159788,
+              "upper_95": 0.02161880829799703,
+              "fraction_below_zero": 0.1775
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.12380109558991899,
+              0.24496780469605692
+            ],
+            "candidate": [
+              -0.22164272122052772,
+              0.1440333908780558
+            ],
+            "candidate_minus_baseline": [
+              -0.10408318261711073,
+              -0.09561720773639536
+            ]
+          }
+        },
+        "away": {
+          "baseline": {
+            "evaluated_team_observations": 524,
+            "mean_predicted_corners": 4.701632289852867,
+            "mean_actual_corners": 4.700381679389313,
+            "mae": 2.042408650719754,
+            "rmse": 2.5904821455952693,
+            "negative_binomial_negative_log_loss": 2.3224980067166734,
+            "mean_brier_score": 0.20609433487671913,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.21880270565378013,
+                "mean_predicted_over_probability": 0.6268845746865628,
+                "actual_over_rate": 0.6297709923664122
+              },
+              "4.5": {
+                "brier_score": 0.23467778950152976,
+                "mean_predicted_over_probability": 0.4725316181130541,
+                "actual_over_rate": 0.4847328244274809
+              },
+              "5.5": {
+                "brier_score": 0.20964634011491978,
+                "mean_predicted_over_probability": 0.3364444118649501,
+                "actual_over_rate": 0.34923664122137404
+              },
+              "6.5": {
+                "brier_score": 0.16125050423664689,
+                "mean_predicted_over_probability": 0.22817725653933438,
+                "actual_over_rate": 0.22519083969465647
+              }
+            },
+            "bias": -0.0012506104635540308
+          },
+          "candidate": {
+            "evaluated_team_observations": 524,
+            "mean_predicted_corners": 4.652576933729246,
+            "mean_actual_corners": 4.700381679389313,
+            "mae": 2.0260711486879255,
+            "rmse": 2.575311459220929,
+            "negative_binomial_negative_log_loss": 2.3162188047013386,
+            "mean_brier_score": 0.20476062583361965,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.2170323590292103,
+                "mean_predicted_over_probability": 0.6171752821363086,
+                "actual_over_rate": 0.6297709923664122
+              },
+              "4.5": {
+                "brier_score": 0.23341392738026415,
+                "mean_predicted_over_probability": 0.4633759742577048,
+                "actual_over_rate": 0.4847328244274809
+              },
+              "5.5": {
+                "brier_score": 0.20818051379657704,
+                "mean_predicted_over_probability": 0.32916170277688955,
+                "actual_over_rate": 0.34923664122137404
+              },
+              "6.5": {
+                "brier_score": 0.1604157031284271,
+                "mean_predicted_over_probability": 0.22317904003564984,
+                "actual_over_rate": 0.22519083969465647
+              }
+            },
+            "bias": 0.04780474566006692
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.0163375020318286,
+            "rmse": -0.01517068637434038,
+            "negative_binomial_negative_log_loss": -0.006279202015334828,
+            "mean_brier_score": -0.0013337090430994847
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0023240530120151354,
+              "upper_95": -0.00018520420493885997,
+              "fraction_below_zero": 0.991
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.011128613696333068,
+              "upper_95": -0.001760059220504036,
+              "fraction_below_zero": 0.999
+            },
+            "mae": {
+              "lower_95": -0.02391325164678661,
+              "upper_95": -0.007096045472446019,
+              "fraction_below_zero": 0.9995
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.1567559082654943,
+              0.1420326852650134
+            ],
+            "candidate": [
+              -0.10712870066981221,
+              0.1914398268967528
+            ],
+            "candidate_minus_baseline": [
+              0.04358267218906812,
+              0.054739054674784696
+            ]
+          }
+        }
+      },
+      "band": {
+        "lt4": {
+          "baseline": {
+            "evaluated_team_observations": 122,
+            "mean_predicted_corners": 3.638675590362696,
+            "mean_actual_corners": 3.5737704918032787,
+            "mae": 1.6877945213302104,
+            "rmse": 2.0884240125522937,
+            "negative_binomial_negative_log_loss": 2.1438426809414874,
+            "mean_brier_score": 0.1685702124364271,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.24584150648969166,
+                "mean_predicted_over_probability": 0.4720520329593587,
+                "actual_over_rate": 0.4918032786885246
+              },
+              "4.5": {
+                "brier_score": 0.22252824729880458,
+                "mean_predicted_over_probability": 0.3092001615161109,
+                "actual_over_rate": 0.3360655737704918
+              },
+              "5.5": {
+                "brier_score": 0.1378700756166719,
+                "mean_predicted_over_probability": 0.1875767969646089,
+                "actual_over_rate": 0.16393442622950818
+              },
+              "6.5": {
+                "brier_score": 0.0680410203405403,
+                "mean_predicted_over_probability": 0.10650498258240006,
+                "actual_over_rate": 0.07377049180327869
+              }
+            },
+            "bias": -0.06490509855941709
+          },
+          "candidate": {
+            "evaluated_team_observations": 122,
+            "mean_predicted_corners": 3.517298503139473,
+            "mean_actual_corners": 3.5737704918032787,
+            "mae": 1.6773799913550727,
+            "rmse": 2.0676922445274686,
+            "negative_binomial_negative_log_loss": 2.13523605250011,
+            "mean_brier_score": 0.16694651990580114,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.24357572580035594,
+                "mean_predicted_over_probability": 0.449685598986415,
+                "actual_over_rate": 0.4918032786885246
+              },
+              "4.5": {
+                "brier_score": 0.22111480102633604,
+                "mean_predicted_over_probability": 0.2890723393193851,
+                "actual_over_rate": 0.3360655737704918
+              },
+              "5.5": {
+                "brier_score": 0.13623196480286667,
+                "mean_predicted_over_probability": 0.17202925107102396,
+                "actual_over_rate": 0.16393442622950818
+              },
+              "6.5": {
+                "brier_score": 0.06686358799364592,
+                "mean_predicted_over_probability": 0.0958177278676615,
+                "actual_over_rate": 0.07377049180327869
+              }
+            },
+            "bias": 0.05647198866380547
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.010414529975137699,
+            "rmse": -0.020731768024825126,
+            "negative_binomial_negative_log_loss": -0.008606628441377495,
+            "mean_brier_score": -0.0016236925306259697
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0048290805122043895,
+              "upper_95": 0.00200588619244763,
+              "fraction_below_zero": 0.8085
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.024785703663664036,
+              "upper_95": 0.006426615840331524,
+              "fraction_below_zero": 0.857
+            },
+            "mae": {
+              "lower_95": -0.03909181860331849,
+              "upper_95": 0.019446116458502593,
+              "fraction_below_zero": 0.752
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.3085259263330435,
+              0.09613111074433137
+            ],
+            "candidate": [
+              -0.183840856676986,
+              0.21578108170884772
+            ],
+            "candidate_minus_baseline": [
+              0.11294213478906272,
+              0.13179892355984824
+            ]
+          }
+        },
+        "4to6": {
+          "baseline": {
+            "evaluated_team_observations": 672,
+            "mean_predicted_corners": 5.028475332432346,
+            "mean_actual_corners": 5.221726190476191,
+            "mae": 2.1926150123115735,
+            "rmse": 2.8225972900786296,
+            "negative_binomial_negative_log_loss": 2.41038209257413,
+            "mean_brier_score": 0.21861693379472624,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.20154113787105485,
+                "mean_predicted_over_probability": 0.6797475378320561,
+                "actual_over_rate": 0.7023809523809523
+              },
+              "4.5": {
+                "brier_score": 0.23788127045543359,
+                "mean_predicted_over_probability": 0.527246219555091,
+                "actual_over_rate": 0.5610119047619048
+              },
+              "5.5": {
+                "brier_score": 0.23714700631239832,
+                "mean_predicted_over_probability": 0.38479984365366915,
+                "actual_over_rate": 0.43005952380952384
+              },
+              "6.5": {
+                "brier_score": 0.19789832054001824,
+                "mean_predicted_over_probability": 0.2659202043418037,
+                "actual_over_rate": 0.28422619047619047
+              }
+            },
+            "bias": 0.1932508580438444
+          },
+          "candidate": {
+            "evaluated_team_observations": 672,
+            "mean_predicted_corners": 5.016084757445081,
+            "mean_actual_corners": 5.221726190476191,
+            "mae": 2.172886105563797,
+            "rmse": 2.801066783083172,
+            "negative_binomial_negative_log_loss": 2.4023824574659796,
+            "mean_brier_score": 0.2168765611327515,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.19991461204280742,
+                "mean_predicted_over_probability": 0.6765326242268639,
+                "actual_over_rate": 0.7023809523809523
+              },
+              "4.5": {
+                "brier_score": 0.23624412380675525,
+                "mean_predicted_over_probability": 0.5243182935968398,
+                "actual_over_rate": 0.5610119047619048
+              },
+              "5.5": {
+                "brier_score": 0.23493032738289651,
+                "mean_predicted_over_probability": 0.382680593144492,
+                "actual_over_rate": 0.43005952380952384
+              },
+              "6.5": {
+                "brier_score": 0.19641718129854688,
+                "mean_predicted_over_probability": 0.2647415474091962,
+                "actual_over_rate": 0.28422619047619047
+              }
+            },
+            "bias": 0.20564143303111002
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.01972890674777661,
+            "rmse": -0.021530506995457444,
+            "negative_binomial_negative_log_loss": -0.007999635108150382,
+            "mean_brier_score": -0.0017403726619747428
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.002489665902183088,
+              "upper_95": -0.0009298277902293295,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.011777454772879704,
+              "upper_95": -0.004527420057967331,
+              "fraction_below_zero": 1.0
+            },
+            "mae": {
+              "lower_95": -0.027978270781693,
+              "upper_95": -0.010181337568547671,
+              "fraction_below_zero": 0.999
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              0.056520074130428796,
+              0.3405836763893315
+            ],
+            "candidate": [
+              0.06903419398527197,
+              0.3505572267786082
+            ],
+            "candidate_minus_baseline": [
+              0.005834562795643464,
+              0.018815644435335524
+            ]
+          }
+        },
+        "ge6": {
+          "baseline": {
+            "evaluated_team_observations": 254,
+            "mean_predicted_corners": 6.6324323399035725,
+            "mean_actual_corners": 6.267716535433071,
+            "mae": 2.468208348746696,
+            "rmse": 3.075892501961826,
+            "negative_binomial_negative_log_loss": 2.5221521789985832,
+            "mean_brier_score": 0.20896351266172553,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.12889099050391625,
+                "mean_predicted_over_probability": 0.8316250101024102,
+                "actual_over_rate": 0.8464566929133859
+              },
+              "4.5": {
+                "brier_score": 0.2155954978933466,
+                "mean_predicted_over_probability": 0.7196049824688263,
+                "actual_over_rate": 0.6811023622047244
+              },
+              "5.5": {
+                "brier_score": 0.24407853463862328,
+                "mean_predicted_over_probability": 0.5940031573192168,
+                "actual_over_rate": 0.5669291338582677
+              },
+              "6.5": {
+                "brier_score": 0.24728902761101595,
+                "mean_predicted_over_probability": 0.4686343986896647,
+                "actual_over_rate": 0.4448818897637795
+              }
+            },
+            "bias": -0.36471580447050195
+          },
+          "candidate": {
+            "evaluated_team_observations": 254,
+            "mean_predicted_corners": 6.828268513694952,
+            "mean_actual_corners": 6.267716535433071,
+            "mae": 2.5069692368577954,
+            "rmse": 3.098520939774777,
+            "negative_binomial_negative_log_loss": 2.5274443534844053,
+            "mean_brier_score": 0.21012812016018406,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.12801882516462107,
+                "mean_predicted_over_probability": 0.8429665467453925,
+                "actual_over_rate": 0.8464566929133859
+              },
+              "4.5": {
+                "brier_score": 0.2175758071346076,
+                "mean_predicted_over_probability": 0.7360178506977758,
+                "actual_over_rate": 0.6811023622047244
+              },
+              "5.5": {
+                "brier_score": 0.24534889129999002,
+                "mean_predicted_over_probability": 0.6143142613584486,
+                "actual_over_rate": 0.5669291338582677
+              },
+              "6.5": {
+                "brier_score": 0.24956895704151755,
+                "mean_predicted_over_probability": 0.490941392338956,
+                "actual_over_rate": 0.4448818897637795
+              }
+            },
+            "bias": -0.5605519782618807
+          },
+          "candidate_minus_baseline": {
+            "mae": 0.038760888111099234,
+            "rmse": 0.022628437812950875,
+            "negative_binomial_negative_log_loss": 0.005292174485822088,
+            "mean_brier_score": 0.0011646074984585364
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0007948188606024732,
+              "upper_95": 0.0024289312450444375,
+              "fraction_below_zero": 0.106
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.0037014416133830004,
+              "upper_95": 0.013036628249625927,
+              "fraction_below_zero": 0.1115
+            },
+            "mae": {
+              "lower_95": 0.0015102105997648857,
+              "upper_95": 0.06712511595577508,
+              "fraction_below_zero": 0.0205
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.5792181137125731,
+              -0.14208193323754567
+            ],
+            "candidate": [
+              -0.7722640804505619,
+              -0.3392594105922896
+            ],
+            "candidate_minus_baseline": [
+              -0.2044643679385288,
+              -0.18747584422840236
+            ]
+          }
+        }
+      }
+    },
+    "test": {
+      "overall": {
+        "baseline": {
+          "evaluated_team_observations": 2150,
+          "mean_predicted_corners": 5.199063159076844,
+          "mean_actual_corners": 5.126511627906977,
+          "mae": 2.1207667727866437,
+          "rmse": 2.716848642180642,
+          "negative_binomial_negative_log_loss": 2.3540731035842533,
+          "mean_brier_score": 0.2085593214158884,
+          "lines": {
+            "3.5": {
+              "brier_score": 0.20348497195487072,
+              "mean_predicted_over_probability": 0.6831028529318015,
+              "actual_over_rate": 0.6827906976744186
+            },
+            "4.5": {
+              "brier_score": 0.22917200408812835,
+              "mean_predicted_over_probability": 0.5389349476905821,
+              "actual_over_rate": 0.5325581395348837
+            },
+            "5.5": {
+              "brier_score": 0.21869507484760833,
+              "mean_predicted_over_probability": 0.40411355961726403,
+              "actual_over_rate": 0.38883720930232557
+            },
+            "6.5": {
+              "brier_score": 0.18288523477294616,
+              "mean_predicted_over_probability": 0.2899084642331438,
+              "actual_over_rate": 0.26976744186046514
+            }
+          },
+          "bias": -0.07255153116986725
+        },
+        "candidate": {
+          "evaluated_team_observations": 2150,
+          "mean_predicted_corners": 5.222462036029039,
+          "mean_actual_corners": 5.126511627906977,
+          "mae": 2.111617502218226,
+          "rmse": 2.703592823222261,
+          "negative_binomial_negative_log_loss": 2.3487498424774085,
+          "mean_brier_score": 0.20668347137702617,
+          "lines": {
+            "3.5": {
+              "brier_score": 0.20168276328301343,
+              "mean_predicted_over_probability": 0.6814222987676226,
+              "actual_over_rate": 0.6827906976744186
+            },
+            "4.5": {
+              "brier_score": 0.22679554713201297,
+              "mean_predicted_over_probability": 0.5388107552274124,
+              "actual_over_rate": 0.5325581395348837
+            },
+            "5.5": {
+              "brier_score": 0.21667541204273771,
+              "mean_predicted_over_probability": 0.40580117402300897,
+              "actual_over_rate": 0.38883720930232557
+            },
+            "6.5": {
+              "brier_score": 0.18158016305034055,
+              "mean_predicted_over_probability": 0.2930694879643112,
+              "actual_over_rate": 0.26976744186046514
+            }
+          },
+          "bias": -0.09595040812206174
+        },
+        "candidate_minus_baseline": {
+          "mae": -0.009149270568417744,
+          "rmse": -0.013255818958381127,
+          "negative_binomial_negative_log_loss": -0.005323261106844779,
+          "mean_brier_score": -0.0018758500388622312
+        },
+        "paired_28_day_intervals": {
+          "mean_brier_score": {
+            "lower_95": -0.0025337579081063546,
+            "upper_95": -0.0012525679786941101,
+            "fraction_below_zero": 1.0
+          },
+          "negative_binomial_negative_log_loss": {
+            "lower_95": -0.00785098955188324,
+            "upper_95": -0.002957342026677504,
+            "fraction_below_zero": 1.0
+          },
+          "mae": {
+            "lower_95": -0.018159819967122855,
+            "upper_95": -0.0005072833470200325,
+            "fraction_below_zero": 0.982
+          }
+        },
+        "bias_intervals": {
+          "baseline": [
+            -0.21259410387092037,
+            0.06492872808548783
+          ],
+          "candidate": [
+            -0.2378090053570001,
+            0.04316728656236345
+          ],
+          "candidate_minus_baseline": [
+            -0.025745207930704134,
+            -0.02103871079574659
+          ]
+        }
+      },
+      "venue": {
+        "home": {
+          "baseline": {
+            "evaluated_team_observations": 1075,
+            "mean_predicted_corners": 5.858768124637725,
+            "mean_actual_corners": 5.787906976744186,
+            "mae": 2.336359474607658,
+            "rmse": 2.9587214760116427,
+            "negative_binomial_negative_log_loss": 2.456434050074244,
+            "mean_brier_score": 0.2149327214596236,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.1793467700949233,
+                "mean_predicted_over_probability": 0.758585066074828,
+                "actual_over_rate": 0.7553488372093023
+              },
+              "4.5": {
+                "brier_score": 0.22211656269494584,
+                "mean_predicted_over_probability": 0.6270146516468552,
+                "actual_over_rate": 0.6269767441860465
+              },
+              "5.5": {
+                "brier_score": 0.23797231326176058,
+                "mean_predicted_over_probability": 0.4931480762570972,
+                "actual_over_rate": 0.49116279069767443
+              },
+              "6.5": {
+                "brier_score": 0.22029523978686477,
+                "mean_predicted_over_probability": 0.37073671462750035,
+                "actual_over_rate": 0.36093023255813955
+              }
+            },
+            "bias": -0.07086114789353833
+          },
+          "candidate": {
+            "evaluated_team_observations": 1075,
+            "mean_predicted_corners": 5.958845047851403,
+            "mean_actual_corners": 5.787906976744186,
+            "mae": 2.334917312465561,
+            "rmse": 2.945636078002945,
+            "negative_binomial_negative_log_loss": 2.451020463143525,
+            "mean_brier_score": 0.21287299431669604,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.17738802657994543,
+                "mean_predicted_over_probability": 0.764767480518135,
+                "actual_over_rate": 0.7553488372093023
+              },
+              "4.5": {
+                "brier_score": 0.21966240052057937,
+                "mean_predicted_over_probability": 0.6358923360485798,
+                "actual_over_rate": 0.6269767441860465
+              },
+              "5.5": {
+                "brier_score": 0.235744876890462,
+                "mean_predicted_over_probability": 0.5039875938464933,
+                "actual_over_rate": 0.49116279069767443
+              },
+              "6.5": {
+                "brier_score": 0.21869667327579737,
+                "mean_predicted_over_probability": 0.38244781535725636,
+                "actual_over_rate": 0.36093023255813955
+              }
+            },
+            "bias": -0.17093807110721687
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.0014421621420970254,
+            "rmse": -0.01308539800869779,
+            "negative_binomial_negative_log_loss": -0.005413586930719028,
+            "mean_brier_score": -0.00205972714292757
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.003105491871402605,
+              "upper_95": -0.001086629701306905,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.008864337824666032,
+              "upper_95": -0.0017927343875927247,
+              "fraction_below_zero": 0.9995
+            },
+            "mae": {
+              "lower_95": -0.01696256713815578,
+              "upper_95": 0.013775602245716966,
+              "fraction_below_zero": 0.605
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.27355525658395036,
+              0.1314257446269256
+            ],
+            "candidate": [
+              -0.37305873507310067,
+              0.03015826910932039
+            ],
+            "candidate_minus_baseline": [
+              -0.10606121697033759,
+              -0.09451905363455702
+            ]
+          }
+        },
+        "away": {
+          "baseline": {
+            "evaluated_team_observations": 1075,
+            "mean_predicted_corners": 4.539358193515963,
+            "mean_actual_corners": 4.465116279069767,
+            "mae": 1.905174070965629,
+            "rmse": 2.4512242484981015,
+            "negative_binomial_negative_log_loss": 2.2517121570942624,
+            "mean_brier_score": 0.20218592137215316,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.22762317381481814,
+                "mean_predicted_over_probability": 0.607620639788775,
+                "actual_over_rate": 0.6102325581395349
+              },
+              "4.5": {
+                "brier_score": 0.23622744548131086,
+                "mean_predicted_over_probability": 0.45085524373430896,
+                "actual_over_rate": 0.4381395348837209
+              },
+              "5.5": {
+                "brier_score": 0.19941783643345606,
+                "mean_predicted_over_probability": 0.31507904297743083,
+                "actual_over_rate": 0.28651162790697676
+              },
+              "6.5": {
+                "brier_score": 0.14547522975902755,
+                "mean_predicted_over_probability": 0.20908021383878733,
+                "actual_over_rate": 0.1786046511627907
+              }
+            },
+            "bias": -0.07424191444619616
+          },
+          "candidate": {
+            "evaluated_team_observations": 1075,
+            "mean_predicted_corners": 4.486079024206674,
+            "mean_actual_corners": 4.465116279069767,
+            "mae": 1.888317691970891,
+            "rmse": 2.4376333611774474,
+            "negative_binomial_negative_log_loss": 2.246479221811292,
+            "mean_brier_score": 0.2004939484373563,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.22597749998608146,
+                "mean_predicted_over_probability": 0.5980771170171103,
+                "actual_over_rate": 0.6102325581395349
+              },
+              "4.5": {
+                "brier_score": 0.23392869374344658,
+                "mean_predicted_over_probability": 0.4417291744062452,
+                "actual_over_rate": 0.4381395348837209
+              },
+              "5.5": {
+                "brier_score": 0.19760594719501343,
+                "mean_predicted_over_probability": 0.30761475419952466,
+                "actual_over_rate": 0.28651162790697676
+              },
+              "6.5": {
+                "brier_score": 0.14446365282488377,
+                "mean_predicted_over_probability": 0.2036911605713661,
+                "actual_over_rate": 0.1786046511627907
+              }
+            },
+            "bias": -0.02096274513690659
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.01685637899473802,
+            "rmse": -0.013590887320654055,
+            "negative_binomial_negative_log_loss": -0.00523293528297053,
+            "mean_brier_score": -0.0016919729347968648
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0025131526328674323,
+              "upper_95": -0.0008490055584859826,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.0081331696129189,
+              "upper_95": -0.0018830032728372303,
+              "fraction_below_zero": 0.9995
+            },
+            "mae": {
+              "lower_95": -0.02449005371556095,
+              "upper_95": -0.007981904290769616,
+              "fraction_below_zero": 1.0
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.20952627089352407,
+              0.0689179772045899
+            ],
+            "candidate": [
+              -0.1592356253995074,
+              0.12410344019911186
+            ],
+            "candidate_minus_baseline": [
+              0.049282800863195655,
+              0.05713676405282745
+            ]
+          }
+        }
+      },
+      "band": {
+        "lt4": {
+          "baseline": {
+            "evaluated_team_observations": 247,
+            "mean_predicted_corners": 3.6119674866783846,
+            "mean_actual_corners": 3.672064777327935,
+            "mae": 1.6499964010613637,
+            "rmse": 2.139311371176553,
+            "negative_binomial_negative_log_loss": 2.116996210308,
+            "mean_brier_score": 0.17167099658242058,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.24406966920048656,
+                "mean_predicted_over_probability": 0.4662036023547894,
+                "actual_over_rate": 0.4574898785425101
+              },
+              "4.5": {
+                "brier_score": 0.20394264195503084,
+                "mean_predicted_over_probability": 0.3049448869736386,
+                "actual_over_rate": 0.291497975708502
+              },
+              "5.5": {
+                "brier_score": 0.13933549245902427,
+                "mean_predicted_over_probability": 0.18507255748059542,
+                "actual_over_rate": 0.1700404858299595
+              },
+              "6.5": {
+                "brier_score": 0.09933618271514058,
+                "mean_predicted_over_probability": 0.10532661743248177,
+                "actual_over_rate": 0.11336032388663968
+              }
+            },
+            "bias": 0.06009729064955061
+          },
+          "candidate": {
+            "evaluated_team_observations": 247,
+            "mean_predicted_corners": 3.494126847573418,
+            "mean_actual_corners": 3.672064777327935,
+            "mae": 1.6383575212248627,
+            "rmse": 2.131481812307967,
+            "negative_binomial_negative_log_loss": 2.1132168726717064,
+            "mean_brier_score": 0.17044353827814895,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.24264005769802577,
+                "mean_predicted_over_probability": 0.44461626343708394,
+                "actual_over_rate": 0.4574898785425101
+              },
+              "4.5": {
+                "brier_score": 0.20201989934929157,
+                "mean_predicted_over_probability": 0.2855443943743744,
+                "actual_over_rate": 0.291497975708502
+              },
+              "5.5": {
+                "brier_score": 0.1379023971462473,
+                "mean_predicted_over_probability": 0.1700654696428355,
+                "actual_over_rate": 0.1700404858299595
+              },
+              "6.5": {
+                "brier_score": 0.09921179891903113,
+                "mean_predicted_over_probability": 0.09496865582151204,
+                "actual_over_rate": 0.11336032388663968
+              }
+            },
+            "bias": 0.17793792975451703
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.011638879836501026,
+            "rmse": -0.007829558868585718,
+            "negative_binomial_negative_log_loss": -0.003779337636293345,
+            "mean_brier_score": -0.0012274583042716225
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0025615052764750737,
+              "upper_95": 0.00010736345033585259,
+              "fraction_below_zero": 0.9625
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.009724411734029999,
+              "upper_95": 0.0023354426361181318,
+              "fraction_below_zero": 0.883
+            },
+            "mae": {
+              "lower_95": -0.02496817916475031,
+              "upper_95": 0.0025302546071623013,
+              "fraction_below_zero": 0.9455
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.27307269118613964,
+              0.4110919049253848
+            ],
+            "candidate": [
+              -0.1521715952729917,
+              0.5257094258364051
+            ],
+            "candidate_minus_baseline": [
+              0.10832565271584531,
+              0.126804530524082
+            ]
+          }
+        },
+        "4to6": {
+          "baseline": {
+            "evaluated_team_observations": 1440,
+            "mean_predicted_corners": 4.998151370800934,
+            "mean_actual_corners": 4.959027777777778,
+            "mae": 2.1109726878265502,
+            "rmse": 2.6962423078145017,
+            "negative_binomial_negative_log_loss": 2.3486948519504076,
+            "mean_brier_score": 0.21617208819269007,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.2141825439278229,
+                "mean_predicted_over_probability": 0.6729717645551919,
+                "actual_over_rate": 0.6784722222222223
+              },
+              "4.5": {
+                "brier_score": 0.24522972015999295,
+                "mean_predicted_over_probability": 0.5210669108451206,
+                "actual_over_rate": 0.5097222222222222
+              },
+              "5.5": {
+                "brier_score": 0.22659618141511154,
+                "mean_predicted_over_probability": 0.38018441049441704,
+                "actual_over_rate": 0.3611111111111111
+              },
+              "6.5": {
+                "brier_score": 0.17867990726783287,
+                "mean_predicted_over_probability": 0.26308986413936297,
+                "actual_over_rate": 0.24097222222222223
+              }
+            },
+            "bias": -0.0391235930231563
+          },
+          "candidate": {
+            "evaluated_team_observations": 1440,
+            "mean_predicted_corners": 4.992747324219608,
+            "mean_actual_corners": 4.959027777777778,
+            "mae": 2.091783732622393,
+            "rmse": 2.674680635915597,
+            "negative_binomial_negative_log_loss": 2.341111730482128,
+            "mean_brier_score": 0.21388854147410188,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.2119328438150988,
+                "mean_predicted_over_probability": 0.6706159274210702,
+                "actual_over_rate": 0.6784722222222223
+              },
+              "4.5": {
+                "brier_score": 0.24248456775264554,
+                "mean_predicted_over_probability": 0.5191269959995303,
+                "actual_over_rate": 0.5097222222222222
+              },
+              "5.5": {
+                "brier_score": 0.22414119179958789,
+                "mean_predicted_over_probability": 0.37903552575082416,
+                "actual_over_rate": 0.3611111111111111
+              },
+              "6.5": {
+                "brier_score": 0.1769955625290753,
+                "mean_predicted_over_probability": 0.2627615348336914,
+                "actual_over_rate": 0.24097222222222223
+              }
+            },
+            "bias": -0.033719546441830874
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.01918895520415731,
+            "rmse": -0.021561671898904677,
+            "negative_binomial_negative_log_loss": -0.007583121468279774,
+            "mean_brier_score": -0.0022835467185881864
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0029935186398797158,
+              "upper_95": -0.001565881832421298,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.010066788961622924,
+              "upper_95": -0.0051458118691788774,
+              "fraction_below_zero": 1.0
+            },
+            "mae": {
+              "lower_95": -0.025611617704645637,
+              "upper_95": -0.012504068400281064,
+              "fraction_below_zero": 1.0
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.20973293836127235,
+              0.13623527992112716
+            ],
+            "candidate": [
+              -0.2034226694155243,
+              0.13995448222799536
+            ],
+            "candidate_minus_baseline": [
+              0.000807073804994526,
+              0.00956356178364557
+            ]
+          }
+        },
+        "ge6": {
+          "baseline": {
+            "evaluated_team_observations": 463,
+            "mean_predicted_corners": 6.670608744821401,
+            "mean_actual_corners": 6.4233261339092875,
+            "mae": 2.402373174857222,
+            "rmse": 3.037166899744457,
+            "negative_binomial_negative_log_loss": 2.4972754253811704,
+            "mean_brier_score": 0.20456155052014785,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.14856289018226104,
+                "mean_predicted_over_probability": 0.8303229007824273,
+                "actual_over_rate": 0.816414686825054
+              },
+              "4.5": {
+                "brier_score": 0.1926893719140249,
+                "mean_predicted_over_probability": 0.7193356346334538,
+                "actual_over_rate": 0.7321814254859611
+              },
+              "5.5": {
+                "brier_score": 0.23645797634388394,
+                "mean_predicted_over_probability": 0.5953902383746222,
+                "actual_over_rate": 0.591792656587473
+              },
+              "6.5": {
+                "brier_score": 0.24053596364042149,
+                "mean_predicted_over_probability": 0.4717885944595109,
+                "actual_over_rate": 0.4427645788336933
+              }
+            },
+            "bias": -0.2472826109121134
+          },
+          "candidate": {
+            "evaluated_team_observations": 463,
+            "mean_predicted_corners": 6.8589371473770235,
+            "mean_actual_corners": 6.4233261339092875,
+            "mae": 2.4257769914695437,
+            "rmse": 3.0444605468092227,
+            "negative_binomial_negative_log_loss": 2.4981570235037847,
+            "mean_brier_score": 0.20360779650798433,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.14795367540674778,
+                "mean_predicted_over_probability": 0.8413623969656328,
+                "actual_over_rate": 0.816414686825054
+              },
+              "4.5": {
+                "brier_score": 0.1912175672370266,
+                "mean_predicted_over_probability": 0.7351420822659669,
+                "actual_over_rate": 0.7321814254859611
+              },
+              "5.5": {
+                "brier_score": 0.23547932528154727,
+                "mean_predicted_over_probability": 0.614806039020523,
+                "actual_over_rate": 0.591792656587473
+              },
+              "6.5": {
+                "brier_score": 0.2397806181066157,
+                "mean_predicted_over_probability": 0.4930141057771922,
+                "actual_over_rate": 0.4427645788336933
+              }
+            },
+            "bias": -0.43561101346773645
+          },
+          "candidate_minus_baseline": {
+            "mae": 0.023403816612321826,
+            "rmse": 0.0072936470647655405,
+            "negative_binomial_negative_log_loss": 0.0008815981226142355,
+            "mean_brier_score": -0.0009537540121635213
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0029182423266528148,
+              "upper_95": 0.0010085049700373782,
+              "fraction_below_zero": 0.845
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.006101566505187221,
+              "upper_95": 0.007424399208445961,
+              "fraction_below_zero": 0.452
+            },
+            "mae": {
+              "lower_95": -0.009595689328674446,
+              "upper_95": 0.05418680315609703,
+              "fraction_below_zero": 0.0815
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.4693070209535885,
+              0.0016602799127332373
+            ],
+            "candidate": [
+              -0.6535809866998642,
+              -0.18639273616106233
+            ],
+            "candidate_minus_baseline": [
+              -0.20497584629953836,
+              -0.17292413285509625
+            ]
+          }
+        }
+      }
+    },
+    "combined_later": {
+      "overall": {
+        "baseline": {
+          "evaluated_team_observations": 3198,
+          "mean_predicted_corners": 5.217535163154944,
+          "mean_actual_corners": 5.177923702313946,
+          "mae": 2.146942370840715,
+          "rmse": 2.748517838300802,
+          "negative_binomial_negative_log_loss": 2.3712349591796316,
+          "mean_brier_score": 0.20917930540573434,
+          "lines": {
+            "3.5": {
+              "brier_score": 0.19876776414385802,
+              "mean_predicted_over_probability": 0.6861427704232549,
+              "actual_over_rate": 0.6926203877423389
+            },
+            "4.5": {
+              "brier_score": 0.22967033307407492,
+              "mean_predicted_over_probability": 0.5420643159248968,
+              "actual_over_rate": 0.5428392745465916
+            },
+            "5.5": {
+              "brier_score": 0.2215050957435065,
+              "mean_predicted_over_probability": 0.40687642879960806,
+              "actual_over_rate": 0.40306441525953723
+            },
+            "6.5": {
+              "brier_score": 0.18677402866149795,
+              "mean_predicted_over_probability": 0.29206639167016224,
+              "actual_over_rate": 0.27923702313946214
+            }
+          },
+          "bias": -0.03961146084099672
+        },
+        "candidate": {
+          "evaluated_team_observations": 3198,
+          "mean_predicted_corners": 5.241586289658243,
+          "mean_actual_corners": 5.177923702313946,
+          "mae": 2.1393269661711245,
+          "rmse": 2.7364962038985046,
+          "negative_binomial_negative_log_loss": 2.3660671785283363,
+          "mean_brier_score": 0.20758303017229823,
+          "lines": {
+            "3.5": {
+              "brier_score": 0.19705865556307148,
+              "mean_predicted_over_probability": 0.6843849317637628,
+              "actual_over_rate": 0.6926203877423389
+            },
+            "4.5": {
+              "brier_score": 0.22783200070962184,
+              "mean_predicted_over_probability": 0.5419013059756764,
+              "actual_over_rate": 0.5428392745465916
+            },
+            "5.5": {
+              "brier_score": 0.21971989805795486,
+              "mean_predicted_over_probability": 0.40858576415205716,
+              "actual_over_rate": 0.40306441525953723
+            },
+            "6.5": {
+              "brier_score": 0.1857215663585447,
+              "mean_predicted_over_probability": 0.2953078784978732,
+              "actual_over_rate": 0.27923702313946214
+            }
+          },
+          "bias": -0.06366258734429651
+        },
+        "candidate_minus_baseline": {
+          "mae": -0.007615404669590653,
+          "rmse": -0.012021634402297643,
+          "negative_binomial_negative_log_loss": -0.005167780651295306,
+          "mean_brier_score": -0.0015962752334361119
+        },
+        "paired_28_day_intervals": {
+          "mean_brier_score": {
+            "lower_95": -0.0021104149214145867,
+            "upper_95": -0.0010886126433310452,
+            "fraction_below_zero": 1.0
+          },
+          "negative_binomial_negative_log_loss": {
+            "lower_95": -0.00733711501605129,
+            "upper_95": -0.002910081574065551,
+            "fraction_below_zero": 1.0
+          },
+          "mae": {
+            "lower_95": -0.01421586348223263,
+            "upper_95": -0.001167913469355235,
+            "fraction_below_zero": 0.985
+          }
+        },
+        "bias_intervals": {
+          "baseline": [
+            -0.14317313441387164,
+            0.06111904741922397
+          ],
+          "candidate": [
+            -0.16724617397920932,
+            0.037996786908199284
+          ],
+          "candidate_minus_baseline": [
+            -0.025923322635083935,
+            -0.02220216473077014
+          ]
+        }
+      },
+      "venue": {
+        "home": {
+          "baseline": {
+            "evaluated_team_observations": 1599,
+            "mean_predicted_corners": 5.842534129991836,
+            "mean_actual_corners": 5.813633520950594,
+            "mae": 2.3437382380759253,
+            "rmse": 2.9782745994366198,
+            "negative_binomial_negative_log_loss": 2.4675608974737915,
+            "mean_brier_score": 0.21489188351286617,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.17280286436432005,
+                "mean_predicted_over_probability": 0.7583520168260643,
+                "actual_over_rate": 0.7686053783614759
+              },
+              "4.5": {
+                "brier_score": 0.22362105039379657,
+                "mean_predicted_over_probability": 0.6261699358487789,
+                "actual_over_rate": 0.6322701688555347
+              },
+              "5.5": {
+                "brier_score": 0.2402404251416827,
+                "mean_predicted_over_probability": 0.4916722803522043,
+                "actual_over_rate": 0.49906191369606
+              },
+              "6.5": {
+                "brier_score": 0.22290319415166535,
+                "mean_predicted_over_probability": 0.3687943766465737,
+                "actual_over_rate": 0.36460287679799874
+              }
+            },
+            "bias": -0.028900609041240977
+          },
+          "candidate": {
+            "evaluated_team_observations": 1599,
+            "mean_predicted_corners": 5.942531388386967,
+            "mean_actual_corners": 5.813633520950594,
+            "mae": 2.34519376925208,
+            "rmse": 2.96792749646581,
+            "negative_binomial_negative_log_loss": 2.4628011381006747,
+            "mean_brier_score": 0.2132739011782583,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.17107117690704118,
+                "mean_predicted_over_probability": 0.7644341858334548,
+                "actual_over_rate": 0.7686053783614759
+              },
+              "4.5": {
+                "brier_score": 0.22190399909187444,
+                "mean_predicted_over_probability": 0.6349796769934098,
+                "actual_over_rate": 0.6322701688555347
+              },
+              "5.5": {
+                "brier_score": 0.23836851252363597,
+                "mean_predicted_over_probability": 0.5024957352962475,
+                "actual_over_rate": 0.49906191369606
+              },
+              "6.5": {
+                "brier_score": 0.22175191619048162,
+                "mean_predicted_over_probability": 0.380538324479862,
+                "actual_over_rate": 0.36460287679799874
+              }
+            },
+            "bias": -0.1288978674363732
+          },
+          "candidate_minus_baseline": {
+            "mae": 0.0014555311761546008,
+            "rmse": -0.010347102970809985,
+            "negative_binomial_negative_log_loss": -0.00475975937311679,
+            "mean_brier_score": -0.0016179823346078592
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.002466450033463454,
+              "upper_95": -0.0007839503108428049,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.007604813009891535,
+              "upper_95": -0.0018045736667490326,
+              "fraction_below_zero": 0.9995
+            },
+            "mae": {
+              "lower_95": -0.010108531543588173,
+              "upper_95": 0.013790552699330348,
+              "fraction_below_zero": 0.418
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.18490013998908195,
+              0.11943576876134275
+            ],
+            "candidate": [
+              -0.28416681799453375,
+              0.02005881098035941
+            ],
+            "candidate_minus_baseline": [
+              -0.10438676534148476,
+              -0.09590952685264775
+            ]
+          }
+        },
+        "away": {
+          "baseline": {
+            "evaluated_team_observations": 1599,
+            "mean_predicted_corners": 4.592536196318051,
+            "mean_actual_corners": 4.542213883677299,
+            "mae": 1.9501465036055048,
+            "rmse": 2.4977151609553223,
+            "negative_binomial_negative_log_loss": 2.2749090208854716,
+            "mean_brier_score": 0.20346672729860255,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.22473266392339605,
+                "mean_predicted_over_probability": 0.6139335240204453,
+                "actual_over_rate": 0.616635397123202
+              },
+              "4.5": {
+                "brier_score": 0.2357196157543532,
+                "mean_predicted_over_probability": 0.4579586960010147,
+                "actual_over_rate": 0.4534083802376485
+              },
+              "5.5": {
+                "brier_score": 0.20276976634533034,
+                "mean_predicted_over_probability": 0.32208057724701195,
+                "actual_over_rate": 0.3070669168230144
+              },
+              "6.5": {
+                "brier_score": 0.15064486317133058,
+                "mean_predicted_over_probability": 0.21533840669375084,
+                "actual_over_rate": 0.1938711694809256
+              }
+            },
+            "bias": -0.05032231264075246
+          },
+          "candidate": {
+            "evaluated_team_observations": 1599,
+            "mean_predicted_corners": 4.540641190929518,
+            "mean_actual_corners": 4.542213883677299,
+            "mae": 1.9334601630901693,
+            "rmse": 2.483592020365672,
+            "negative_binomial_negative_log_loss": 2.2693332189559974,
+            "mean_brier_score": 0.20189215916633818,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.2230461342191018,
+                "mean_predicted_over_probability": 0.6043356776940708,
+                "actual_over_rate": 0.616635397123202
+              },
+              "4.5": {
+                "brier_score": 0.2337600023273693,
+                "mean_predicted_over_probability": 0.44882293495794306,
+                "actual_over_rate": 0.4534083802376485
+              },
+              "5.5": {
+                "brier_score": 0.2010712835922738,
+                "mean_predicted_over_probability": 0.31467579300786686,
+                "actual_over_rate": 0.3070669168230144
+              },
+              "6.5": {
+                "brier_score": 0.14969121652660777,
+                "mean_predicted_over_probability": 0.21007743251588432,
+                "actual_over_rate": 0.1938711694809256
+              }
+            },
+            "bias": 0.0015726927477801634
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.016686340515335463,
+            "rmse": -0.014123140589650252,
+            "negative_binomial_negative_log_loss": -0.005575801929474267,
+            "mean_brier_score": -0.0015745681322643645
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.002253579720031056,
+              "upper_95": -0.0008165603952379763,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.008167918916441112,
+              "upper_95": -0.0026832134112453583,
+              "fraction_below_zero": 0.9995
+            },
+            "mae": {
+              "lower_95": -0.022907079751250062,
+              "upper_95": -0.009853762593218645,
+              "fraction_below_zero": 1.0
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.1556273596625732,
+              0.06057380899217553
+            ],
+            "candidate": [
+              -0.1037606822871743,
+              0.11236288811356367
+            ],
+            "candidate_minus_baseline": [
+              0.04843803245390719,
+              0.05525122062222311
+            ]
+          }
+        }
+      },
+      "band": {
+        "lt4": {
+          "baseline": {
+            "evaluated_team_observations": 369,
+            "mean_predicted_corners": 3.620797808221707,
+            "mean_actual_corners": 3.6395663956639566,
+            "mae": 1.6624933405540447,
+            "rmse": 2.122621824823955,
+            "negative_binomial_negative_log_loss": 2.125872279189532,
+            "mean_brier_score": 0.17064580507615715,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.2446554799031506,
+                "mean_predicted_over_probability": 0.46813722981754674,
+                "actual_over_rate": 0.46883468834688347
+              },
+              "4.5": {
+                "brier_score": 0.2100874762421322,
+                "mean_predicted_over_probability": 0.3063517799118002,
+                "actual_over_rate": 0.3062330623306233
+              },
+              "5.5": {
+                "brier_score": 0.1388509914975961,
+                "mean_predicted_over_probability": 0.18590051741839933,
+                "actual_over_rate": 0.16802168021680217
+              },
+              "6.5": {
+                "brier_score": 0.08898927266174969,
+                "mean_predicted_over_probability": 0.10571621241429757,
+                "actual_over_rate": 0.1002710027100271
+              }
+            },
+            "bias": 0.01876858744224964
+          },
+          "candidate": {
+            "evaluated_team_observations": 369,
+            "mean_predicted_corners": 3.501787936947561,
+            "mean_actual_corners": 3.6395663956639566,
+            "mae": 1.6512592593166935,
+            "rmse": 2.110604842416473,
+            "negative_binomial_negative_log_loss": 2.120496926707114,
+            "mean_brier_score": 0.16928734250192556,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.242949411379555,
+                "mean_predicted_over_probability": 0.4462923039168085,
+                "actual_over_rate": 0.46883468834688347
+              },
+              "4.5": {
+                "brier_score": 0.20833311887395123,
+                "mean_predicted_over_probability": 0.28671081519630204,
+                "actual_over_rate": 0.3062330623306233
+              },
+              "5.5": {
+                "brier_score": 0.13735011328204016,
+                "mean_predicted_over_probability": 0.17071474155134225,
+                "actual_over_rate": 0.16802168021680217
+              },
+              "6.5": {
+                "brier_score": 0.0885167264721558,
+                "mean_predicted_over_probability": 0.09524937882864004,
+                "actual_over_rate": 0.1002710027100271
+              }
+            },
+            "bias": 0.13777845871639557
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.011234081237351257,
+            "rmse": -0.012016982407482057,
+            "negative_binomial_negative_log_loss": -0.005375352482418272,
+            "mean_brier_score": -0.0013584625742315837
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.002807506206458476,
+              "upper_95": 0.00015865828246471934,
+              "fraction_below_zero": 0.956
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.012209545276987437,
+              "upper_95": 0.0016048150963917577,
+              "fraction_below_zero": 0.937
+            },
+            "mae": {
+              "lower_95": -0.024632278728815335,
+              "upper_95": 0.002131618753782828,
+              "fraction_below_zero": 0.949
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.21060240675326994,
+              0.2770552881942714
+            ],
+            "candidate": [
+              -0.08973611624679206,
+              0.394112732449866
+            ],
+            "candidate_minus_baseline": [
+              0.11172191740913123,
+              0.125672287643125
+            ]
+          }
+        },
+        "4to6": {
+          "baseline": {
+            "evaluated_team_observations": 2112,
+            "mean_predicted_corners": 5.0077999040472925,
+            "mean_actual_corners": 5.042613636363637,
+            "mae": 2.136949791071785,
+            "rmse": 2.7370789586581963,
+            "negative_binomial_negative_log_loss": 2.368322610330683,
+            "mean_brier_score": 0.21694999361151976,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.2101602783643058,
+                "mean_predicted_over_probability": 0.6751276924160123,
+                "actual_over_rate": 0.6860795454545454
+              },
+              "4.5": {
+                "brier_score": 0.24289157707217857,
+                "mean_predicted_over_probability": 0.5230330545255657,
+                "actual_over_rate": 0.5260416666666666
+              },
+              "5.5": {
+                "brier_score": 0.22995326206424824,
+                "mean_predicted_over_probability": 0.3816529574087245,
+                "actual_over_rate": 0.38304924242424243
+              },
+              "6.5": {
+                "brier_score": 0.18479485694534642,
+                "mean_predicted_over_probability": 0.2639904269310487,
+                "actual_over_rate": 0.2547348484848485
+              }
+            },
+            "bias": 0.03481373231634393
+          },
+          "candidate": {
+            "evaluated_team_observations": 2112,
+            "mean_predicted_corners": 5.000172871154986,
+            "mean_actual_corners": 5.042613636363637,
+            "mae": 2.117589033103749,
+            "rmse": 2.7155325396451104,
+            "negative_binomial_negative_log_loss": 2.3606069617951717,
+            "mean_brier_score": 0.21483927500185404,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.20810886097846065,
+                "mean_predicted_over_probability": 0.6724985127683683,
+                "actual_over_rate": 0.6860795454545454
+              },
+              "4.5": {
+                "brier_score": 0.24049897195168043,
+                "mean_predicted_over_probability": 0.5207787725077652,
+                "actual_over_rate": 0.5260416666666666
+              },
+              "5.5": {
+                "brier_score": 0.22757409857609517,
+                "mean_predicted_over_probability": 0.38019531992153666,
+                "actual_over_rate": 0.38304924242424243
+              },
+              "6.5": {
+                "brier_score": 0.1831751685011799,
+                "mean_predicted_over_probability": 0.26339153883498845,
+                "actual_over_rate": 0.2547348484848485
+              }
+            },
+            "bias": 0.04244076520865032
+          },
+          "candidate_minus_baseline": {
+            "mae": -0.019360757968036157,
+            "rmse": -0.02154641901308585,
+            "negative_binomial_negative_log_loss": -0.00771564853551121,
+            "mean_brier_score": -0.0021107186096657182
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.002653521667785715,
+              "upper_95": -0.001530986833532614,
+              "fraction_below_zero": 1.0
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.009651910581802828,
+              "upper_95": -0.005601147382907342,
+              "fraction_below_zero": 1.0
+            },
+            "mae": {
+              "lower_95": -0.024519493725384266,
+              "upper_95": -0.013587212623142358,
+              "fraction_below_zero": 1.0
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.10045804494484138,
+              0.163235594468643
+            ],
+            "candidate": [
+              -0.09155974215495857,
+              0.16929972054304684
+            ],
+            "candidate_minus_baseline": [
+              0.003812525172450626,
+              0.011397637674522065
+            ]
+          }
+        },
+        "ge6": {
+          "baseline": {
+            "evaluated_team_observations": 717,
+            "mean_predicted_corners": 6.6570846069565075,
+            "mean_actual_corners": 6.368200836820083,
+            "mae": 2.425695537713465,
+            "rmse": 3.0509418157065955,
+            "negative_binomial_negative_log_loss": 2.5060881107630713,
+            "mean_brier_score": 0.20612096249219908,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.14159404427110403,
+                "mean_predicted_over_probability": 0.8307841780031743,
+                "actual_over_rate": 0.8270571827057183
+              },
+              "4.5": {
+                "brier_score": 0.20080395489693664,
+                "mean_predicted_over_probability": 0.7194310521371982,
+                "actual_over_rate": 0.7140864714086471
+              },
+              "5.5": {
+                "brier_score": 0.2391575883478781,
+                "mean_predicted_over_probability": 0.5948988595906989,
+                "actual_over_rate": 0.5829846582984658
+              },
+              "6.5": {
+                "brier_score": 0.24292826245287755,
+                "mean_predicted_over_probability": 0.4706712085103604,
+                "actual_over_rate": 0.4435146443514644
+              }
+            },
+            "bias": -0.28888377013642397
+          },
+          "candidate": {
+            "evaluated_team_observations": 717,
+            "mean_predicted_corners": 6.8480726662678935,
+            "mean_actual_corners": 6.368200836820083,
+            "mae": 2.4545396558051307,
+            "rmse": 3.0637207580593135,
+            "negative_binomial_negative_log_loss": 2.5085321724787883,
+            "mean_brier_score": 0.20591764616999095,
+            "lines": {
+              "3.5": {
+                "brier_score": 0.14089167824984375,
+                "mean_predicted_over_probability": 0.8419306731777095,
+                "actual_over_rate": 0.8270571827057183
+              },
+              "4.5": {
+                "brier_score": 0.20055507481580706,
+                "mean_predicted_over_probability": 0.7354523265918796,
+                "actual_over_rate": 0.7140864714086471
+              },
+              "5.5": {
+                "brier_score": 0.23897565689756467,
+                "mean_predicted_over_probability": 0.6146318248975566,
+                "actual_over_rate": 0.5829846582984658
+              },
+              "6.5": {
+                "brier_score": 0.2432481747167483,
+                "mean_predicted_over_probability": 0.4922798390919593,
+                "actual_over_rate": 0.4435146443514644
+              }
+            },
+            "bias": -0.47987182944780993
+          },
+          "candidate_minus_baseline": {
+            "mae": 0.02884411809166565,
+            "rmse": 0.012778942352718037,
+            "negative_binomial_negative_log_loss": 0.002444061715717094,
+            "mean_brier_score": -0.00020331632220813023
+          },
+          "paired_28_day_intervals": {
+            "mean_brier_score": {
+              "lower_95": -0.0016906731421573382,
+              "upper_95": 0.0011696360728292046,
+              "fraction_below_zero": 0.6135
+            },
+            "negative_binomial_negative_log_loss": {
+              "lower_95": -0.0030304912143919874,
+              "upper_95": 0.007613898023553123,
+              "fraction_below_zero": 0.188
+            },
+            "mae": {
+              "lower_95": 0.0053709722473629425,
+              "upper_95": 0.05093211356079465,
+              "fraction_below_zero": 0.007
+            }
+          },
+          "bias_intervals": {
+            "baseline": [
+              -0.460338386502033,
+              -0.11727596767261995
+            ],
+            "candidate": [
+              -0.6454379168336095,
+              -0.3078145422579114
+            ],
+            "candidate_minus_baseline": [
+              -0.20161082673601952,
+              -0.18016558607702565
+            ]
+          }
+        }
+      }
+    }
+  },
+  "seasons": {
+    "2023": {
+      "baseline": {
+        "evaluated_team_observations": 1048,
+        "mean_predicted_corners": 5.255430973047989,
+        "mean_actual_corners": 5.283396946564886,
+        "mae": 2.200642309596683,
+        "rmse": 2.8123720009099524,
+        "negative_binomial_negative_log_loss": 2.4064429644564096,
+        "mean_brier_score": 0.21045121912536108,
+        "lines": {
+          "3.5": {
+            "brier_score": 0.18909028628729577,
+            "mean_predicted_over_probability": 0.6923792423761409,
+            "actual_over_rate": 0.7127862595419847
+          },
+          "4.5": {
+            "brier_score": 0.23069266830287743,
+            "mean_predicted_over_probability": 0.5484842984666685,
+            "actual_over_rate": 0.5639312977099237
+          },
+          "5.5": {
+            "brier_score": 0.22726992868833581,
+            "mean_predicted_over_probability": 0.4125445287443025,
+            "actual_over_rate": 0.43225190839694655
+          },
+          "6.5": {
+            "brier_score": 0.19475199322293535,
+            "mean_predicted_over_probability": 0.29649343746175544,
+            "actual_over_rate": 0.29866412213740456
+          }
+        },
+        "bias": 0.02796597351689606
+      },
+      "candidate": {
+        "evaluated_team_observations": 1048,
+        "mean_predicted_corners": 5.280820206931897,
+        "mean_actual_corners": 5.283396946564886,
+        "mae": 2.1961736717996856,
+        "rmse": 2.802789549476548,
+        "negative_binomial_negative_log_loss": 2.4015941561137315,
+        "mean_brier_score": 0.2094284990748125,
+        "lines": {
+          "3.5": {
+            "brier_score": 0.18757217503074783,
+            "mean_predicted_over_probability": 0.6904628525096612,
+            "actual_over_rate": 0.7127862595419847
+          },
+          "4.5": {
+            "brier_score": 0.22995831291559432,
+            "mean_predicted_over_probability": 0.5482416534077065,
+            "actual_over_rate": 0.5639312977099237
+          },
+          "5.5": {
+            "brier_score": 0.22596574245940235,
+            "mean_predicted_over_probability": 0.41429842519924565,
+            "actual_over_rate": 0.43225190839694655
+          },
+          "6.5": {
+            "brier_score": 0.1942177658935055,
+            "mean_predicted_over_probability": 0.2998999964818028,
+            "actual_over_rate": 0.29866412213740456
+          }
+        },
+        "bias": 0.002576739632989015
+      },
+      "candidate_minus_baseline": {
+        "mae": -0.004468637796997577,
+        "rmse": -0.009582451433404415,
+        "negative_binomial_negative_log_loss": -0.00484880834267809,
+        "mean_brier_score": -0.00102272005054857
+      },
+      "paired_28_day_intervals": {
+        "mean_brier_score": {
+          "lower_95": -0.0018078063085557505,
+          "upper_95": -0.0002760677170829252,
+          "fraction_below_zero": 0.9985
+        },
+        "negative_binomial_negative_log_loss": {
+          "lower_95": -0.009072806952265257,
+          "upper_95": -0.0009479195838971855,
+          "fraction_below_zero": 0.993
+        },
+        "mae": {
+          "lower_95": -0.013712154276285365,
+          "upper_95": 0.00440892571259937,
+          "fraction_below_zero": 0.836
+        }
+      },
+      "bias_intervals": {
+        "baseline": [
+          -0.06665766099751104,
+          0.12940797192108083
+        ],
+        "candidate": [
+          -0.09269184172175281,
+          0.10604272496302546
+        ],
+        "candidate_minus_baseline": [
+          -0.027529904750271873,
+          -0.022993969053327873
+        ]
+      }
+    },
+    "2024": {
+      "baseline": {
+        "evaluated_team_observations": 1066,
+        "mean_predicted_corners": 5.26594188488566,
+        "mean_actual_corners": 5.073170731707317,
+        "mae": 2.1117087451174683,
+        "rmse": 2.6750566040563504,
+        "negative_binomial_negative_log_loss": 2.3406951313576516,
+        "mean_brier_score": 0.20376227155886378,
+        "lines": {
+          "3.5": {
+            "brier_score": 0.19760832322793462,
+            "mean_predicted_over_probability": 0.6891946231406494,
+            "actual_over_rate": 0.6885553470919324
+          },
+          "4.5": {
+            "brier_score": 0.22490115809153605,
+            "mean_predicted_over_probability": 0.546945108596567,
+            "actual_over_rate": 0.5300187617260788
+          },
+          "5.5": {
+            "brier_score": 0.21559105547122004,
+            "mean_predicted_over_probability": 0.4129890301039034,
+            "actual_over_rate": 0.3818011257035647
+          },
+          "6.5": {
+            "brier_score": 0.17694854944476443,
+            "mean_predicted_over_probability": 0.2985759150912264,
+            "actual_over_rate": 0.2598499061913696
+          }
+        },
+        "bias": -0.19277115317834306
+      },
+      "candidate": {
+        "evaluated_team_observations": 1066,
+        "mean_predicted_corners": 5.292246590538204,
+        "mean_actual_corners": 5.073170731707317,
+        "mae": 2.1122366734233973,
+        "rmse": 2.664467533055449,
+        "negative_binomial_negative_log_loss": 2.335558487022727,
+        "mean_brier_score": 0.20205198430690538,
+        "lines": {
+          "3.5": {
+            "brier_score": 0.1956803461955854,
+            "mean_predicted_over_probability": 0.687409123189174,
+            "actual_over_rate": 0.6885553470919324
+          },
+          "4.5": {
+            "brier_score": 0.2226284369126206,
+            "mean_predicted_over_probability": 0.5468934076417882,
+            "actual_over_rate": 0.5300187617260788
+          },
+          "5.5": {
+            "brier_score": 0.21396547329868554,
+            "mean_predicted_over_probability": 0.41491467480962557,
+            "actual_over_rate": 0.3818011257035647
+          },
+          "6.5": {
+            "brier_score": 0.17593368082072997,
+            "mean_predicted_over_probability": 0.302092567563219,
+            "actual_over_rate": 0.2598499061913696
+          }
+        },
+        "bias": -0.2190758588308866
+      },
+      "candidate_minus_baseline": {
+        "mae": 0.0005279283059289597,
+        "rmse": -0.010589071000901562,
+        "negative_binomial_negative_log_loss": -0.005136644334924778,
+        "mean_brier_score": -0.0017102872519584034
+      },
+      "paired_28_day_intervals": {
+        "mean_brier_score": {
+          "lower_95": -0.002633200711676565,
+          "upper_95": -0.0008925760709676113,
+          "fraction_below_zero": 1.0
+        },
+        "negative_binomial_negative_log_loss": {
+          "lower_95": -0.008897809081923318,
+          "upper_95": -0.001468565466320606,
+          "fraction_below_zero": 0.999
+        },
+        "mae": {
+          "lower_95": -0.013455640345519427,
+          "upper_95": 0.012429672748085726,
+          "fraction_below_zero": 0.466
+        }
+      },
+      "bias_intervals": {
+        "baseline": [
+          -0.3700126374319735,
+          0.024012923771285805
+        ],
+        "candidate": [
+          -0.397932695110929,
+          -0.001459892903114024
+        ],
+        "candidate_minus_baseline": [
+          -0.029007164312750664,
+          -0.023439008916678827
+        ]
+      }
+    },
+    "2025": {
+      "baseline": {
+        "evaluated_team_observations": 1084,
+        "mean_predicted_corners": 5.1332949656154065,
+        "mean_actual_corners": 5.178966789667896,
+        "mae": 2.1296743904022715,
+        "rmse": 2.757329045914018,
+        "negative_binomial_negative_log_loss": 2.367228932360598,
+        "mean_brier_score": 0.213276715463479,
+        "lines": {
+          "3.5": {
+            "brier_score": 0.20926403795386878,
+            "mean_predicted_over_probability": 0.6771122375788201,
+            "actual_over_rate": 0.6771217712177122
+          },
+          "4.5": {
+            "brier_score": 0.2333719319777662,
+            "mean_predicted_over_probability": 0.5310577968365418,
+            "actual_over_rate": 0.5350553505535055
+          },
+          "5.5": {
+            "brier_score": 0.2217475514668241,
+            "mean_predicted_over_probability": 0.3953854677918419,
+            "actual_over_rate": 0.39575645756457567
+          },
+          "6.5": {
+            "brier_score": 0.188723340455457,
+            "mean_predicted_over_probability": 0.2813849378358043,
+            "actual_over_rate": 0.279520295202952
+          }
+        },
+        "bias": 0.04567182405248998
+      },
+      "candidate": {
+        "evaluated_team_observations": 1084,
+        "mean_predicted_corners": 5.153836265635339,
+        "mean_actual_corners": 5.178966789667896,
+        "mae": 2.111008612453731,
+        "rmse": 2.7415239449956896,
+        "negative_binomial_negative_log_loss": 2.361722153284319,
+        "mean_brier_score": 0.2112380518352815,
+        "lines": {
+          "3.5": {
+            "brier_score": 0.2075855092379934,
+            "mean_predicted_over_probability": 0.6755348865597134,
+            "actual_over_rate": 0.6771217712177122
+          },
+          "4.5": {
+            "brier_score": 0.23089346179425674,
+            "mean_predicted_over_probability": 0.5308623165985153,
+            "actual_over_rate": 0.5350553505535055
+          },
+          "5.5": {
+            "brier_score": 0.21934035180395503,
+            "mean_predicted_over_probability": 0.3968390044302662,
+            "actual_over_rate": 0.39575645756457567
+          },
+          "6.5": {
+            "brier_score": 0.18713288450492074,
+            "mean_predicted_over_probability": 0.28419623810044065,
+            "actual_over_rate": 0.279520295202952
+          }
+        },
+        "bias": 0.025130524032557524
+      },
+      "candidate_minus_baseline": {
+        "mae": -0.01866577794854063,
+        "rmse": -0.015805100918328208,
+        "negative_binomial_negative_log_loss": -0.005506779076279056,
+        "mean_brier_score": -0.002038663628197518
+      },
+      "paired_28_day_intervals": {
+        "mean_brier_score": {
+          "lower_95": -0.002895139865769056,
+          "upper_95": -0.0010719921362863636,
+          "fraction_below_zero": 1.0
+        },
+        "negative_binomial_negative_log_loss": {
+          "lower_95": -0.00867161513752221,
+          "upper_95": -0.0021673693014324425,
+          "fraction_below_zero": 1.0
+        },
+        "mae": {
+          "lower_95": -0.027048656002575684,
+          "upper_95": -0.00995128634361774,
+          "fraction_below_zero": 1.0
+        }
+      },
+      "bias_intervals": {
+        "baseline": [
+          -0.09629257303413692,
+          0.18690095092296055
+        ],
+        "candidate": [
+          -0.11685368730906416,
+          0.1663178995700472
+        ],
+        "candidate_minus_baseline": [
+          -0.023266043496236212,
+          -0.01797435174689307
+        ]
+      }
+    }
+  },
+  "retained_main": {
+    "validation": {
+      "evaluated_team_observations": 1048,
+      "mean_predicted_corners": 5.13314501566754,
+      "mean_actual_corners": 5.283396946564886,
+      "mae": 2.2447841156023514,
+      "rmse": 2.855804509242483,
+      "negative_binomial_negative_log_loss": 2.425426569195546,
+      "mean_brier_score": 0.21642781647149817,
+      "lines": {
+        "3.5": {
+          "brier_score": 0.19426594599728317,
+          "mean_predicted_over_probability": 0.695378430348476,
+          "actual_over_rate": 0.7127862595419847
+        },
+        "4.5": {
+          "brier_score": 0.23617006186879538,
+          "mean_predicted_over_probability": 0.5446631016627287,
+          "actual_over_rate": 0.5639312977099237
+        },
+        "5.5": {
+          "brier_score": 0.23498138636455523,
+          "mean_predicted_over_probability": 0.4011168430269683,
+          "actual_over_rate": 0.43225190839694655
+        },
+        "6.5": {
+          "brier_score": 0.2002938716553589,
+          "mean_predicted_over_probability": 0.27925049311415207,
+          "actual_over_rate": 0.29866412213740456
+        }
+      }
+    },
+    "test": {
+      "evaluated_team_observations": 2150,
+      "mean_predicted_corners": 5.135505235675637,
+      "mean_actual_corners": 5.126511627906977,
+      "mae": 2.130974832708844,
+      "rmse": 2.7248464515157624,
+      "negative_binomial_negative_log_loss": 2.3585249729034077,
+      "mean_brier_score": 0.21092678681837668,
+      "lines": {
+        "3.5": {
+          "brier_score": 0.20659589757097438,
+          "mean_predicted_over_probability": 0.6911177096987515,
+          "actual_over_rate": 0.6827906976744186
+        },
+        "4.5": {
+          "brier_score": 0.23192969566251898,
+          "mean_predicted_over_probability": 0.5417064847335957,
+          "actual_over_rate": 0.5325581395348837
+        },
+        "5.5": {
+          "brier_score": 0.22098467971031188,
+          "mean_predicted_over_probability": 0.40024089757236037,
+          "actual_over_rate": 0.38883720930232557
+        },
+        "6.5": {
+          "brier_score": 0.18419687432970153,
+          "mean_predicted_over_probability": 0.28036467436222023,
+          "actual_over_rate": 0.26976744186046514
+        }
+      }
+    },
+    "combined_later": {
+      "evaluated_team_observations": 3198,
+      "mean_predicted_corners": 5.134731780213321,
+      "mean_actual_corners": 5.177923702313946,
+      "mae": 2.1682706827627514,
+      "rmse": 2.7684445256136025,
+      "negative_binomial_negative_log_loss": 2.380448948173627,
+      "mean_brier_score": 0.21272950072596622,
+      "lines": {
+        "3.5": {
+          "brier_score": 0.20255531306527447,
+          "mean_predicted_over_probability": 0.6925139683732078,
+          "actual_over_rate": 0.6926203877423389
+        },
+        "4.5": {
+          "brier_score": 0.23331928408784033,
+          "mean_predicted_over_probability": 0.5426753823388901,
+          "actual_over_rate": 0.5428392745465916
+        },
+        "5.5": {
+          "brier_score": 0.22557146788218402,
+          "mean_predicted_over_probability": 0.40052794911595924,
+          "actual_over_rate": 0.40306441525953723
+        },
+        "6.5": {
+          "brier_score": 0.1894719378685661,
+          "mean_predicted_over_probability": 0.2799995518018777,
+          "actual_over_rate": 0.27923702313946214
+        }
+      }
+    }
+  },
+  "baseline_training_checkpoint": {
+    "evaluated_team_observations": 4224,
+    "mean_predicted_corners": 4.996910538787597,
+    "mean_actual_corners": 4.9609375,
+    "mae": 2.056153204180917,
+    "rmse": 2.587139197106504,
+    "negative_binomial_negative_log_loss": 2.3334969038912616,
+    "mean_brier_score": 0.2166881321733423,
+    "lines": {
+      "3.5": {
+        "brier_score": 0.21043937541813607,
+        "mean_predicted_over_probability": 0.6699269732909238,
+        "actual_over_rate": 0.6827651515151515
+      },
+      "4.5": {
+        "brier_score": 0.2413383640224946,
+        "mean_predicted_over_probability": 0.5183175310355382,
+        "actual_over_rate": 0.5267518939393939
+      },
+      "5.5": {
+        "brier_score": 0.2272495895723039,
+        "mean_predicted_over_probability": 0.37847050705309515,
+        "actual_over_rate": 0.38115530303030304
+      },
+      "6.5": {
+        "brier_score": 0.1877251996804346,
+        "mean_predicted_over_probability": 0.26267429166743367,
+        "actual_over_rate": 0.26325757575757575
+      }
+    }
+  },
+  "data_quality": {
+    "rows_read": 4968,
+    "corner_rows": 4967,
+    "valid_odds_fixtures": 3864,
+    "excluded_quotes": [],
+    "later_baseline_observations_before_odds_filter": 3198,
+    "paired_evaluation_observations": 3198
+  },
+  "source_hashes": {
+    "data/E1_1718.csv": "04d07d578d818bdcd6b95d43e79f10a6a26be01b45be6190b09ebdeaeba0a7ce",
+    "data/E1_1819.csv": "112eedf787e26e00aac1442ef86e7fee5d4a43f86552ff2dac31ceb95a849487",
+    "data/E1_1920.csv": "f31450c623c0b74b89692584a85924cc652d33ec89757acf4b2dda5e26261d57",
+    "data/E1_2021.csv": "cf93295e310c60e5b97ae7466d772f8ec6a908ad401e38fceb7e8617369d5073",
+    "data/E1_2122.csv": "a181451be4801b9f838daf5f6aaf21e9f09d36042be9e6c15388e71001e772ea",
+    "data/E1_2223.csv": "cd38ab0586ea8cb4d573c363ff70749117f116da5b2741e5b0ea37da05860b1b",
+    "data/E1_2324.csv": "5737f6cc95c95092b28317f41d3123e2fb09345434efc1c84bbdf15830849ab3",
+    "data/E1_2425.csv": "f34c340446c916374be66bdc2fb25b87ee7f2662712ca009653d03ac705535f9",
+    "data/E1_2526.csv": "98954c319950f19158624b17a154ef1c56eb7b8d169ef317f28f06d11d0b9a74"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "spec_sha256": "0fe1b4c003225319a9f96f72068dfec211a5a553b55995b72935277f83dd86e1",
+  "code_sha256": "b8b840884cb1d0f7c47f2f890bc98a9afa4e624a3193456e35d1ddb721614d06",
+  "gates": {
+    "brier_material_improvement": true,
+    "brier_interval_below_zero": true,
+    "each_later_season_improves": true,
+    "nll_not_worse": true,
+    "nll_upper_bound": true,
+    "venue_guardrail": true,
+    "halve_bias_lt4": false,
+    "halve_bias_ge6": false
+  },
+  "test_only_gates": {
+    "brier_material_improvement": true,
+    "brier_interval_below_zero": true,
+    "each_later_season_improves": true,
+    "nll_not_worse": true,
+    "nll_upper_bound": true,
+    "venue_guardrail": true,
+    "halve_bias_lt4": false,
+    "halve_bias_ge6": false
+  },
+  "decision": "reject_candidate_under_frozen_gates"
+}

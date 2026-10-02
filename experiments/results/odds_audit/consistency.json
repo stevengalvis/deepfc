@@ -1,0 +1,218 @@
+[
+  {
+    "season": "E1_1718",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.008160448570262213,
+    "max_normalized_probability_difference": 0.03207640989556193,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1718",
+    "market": "goals",
+    "bookmaker_comparable": 0,
+    "median_max_normalized_probability_difference": null,
+    "max_normalized_probability_difference": null,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1718",
+    "market": "ah",
+    "bookmaker_comparable": 0,
+    "median_max_normalized_probability_difference": null,
+    "max_normalized_probability_difference": null,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1819",
+    "market": "1x2",
+    "bookmaker_comparable": 551,
+    "median_max_normalized_probability_difference": 0.007554916051085159,
+    "max_normalized_probability_difference": 0.029569564636128032,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1819",
+    "market": "goals",
+    "bookmaker_comparable": 0,
+    "median_max_normalized_probability_difference": null,
+    "max_normalized_probability_difference": null,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1819",
+    "market": "ah",
+    "bookmaker_comparable": 0,
+    "median_max_normalized_probability_difference": null,
+    "max_normalized_probability_difference": null,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1920",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.007981297718537755,
+    "max_normalized_probability_difference": 0.02769126183364501,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1920",
+    "market": "goals",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0051482183321627795,
+    "max_normalized_probability_difference": 0.02217916477717785,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_1920",
+    "market": "ah",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.002005983952128365,
+    "max_normalized_probability_difference": 0.01536431905825042,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2021",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.009199317309391164,
+    "max_normalized_probability_difference": 0.03245495628497119,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2021",
+    "market": "goals",
+    "bookmaker_comparable": 551,
+    "median_max_normalized_probability_difference": 0.00523560209424101,
+    "max_normalized_probability_difference": 0.02316337719298256,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2021",
+    "market": "ah",
+    "bookmaker_comparable": 551,
+    "median_max_normalized_probability_difference": 0.002323717948718107,
+    "max_normalized_probability_difference": 0.01978837433008107,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2122",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.008706503258804066,
+    "max_normalized_probability_difference": 0.026535487908593947,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2122",
+    "market": "goals",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0050517274880022,
+    "max_normalized_probability_difference": 0.03106191448160356,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2122",
+    "market": "ah",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.002829812674372323,
+    "max_normalized_probability_difference": 0.028782894736842035,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2223",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.007750938503534699,
+    "max_normalized_probability_difference": 0.024332791473411608,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2223",
+    "market": "goals",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0040463138900661555,
+    "max_normalized_probability_difference": 0.0247436773752564,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2223",
+    "market": "ah",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0025841346153846756,
+    "max_normalized_probability_difference": 0.022244422244422246,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2324",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.00786954057860531,
+    "max_normalized_probability_difference": 0.028205157173531614,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2324",
+    "market": "goals",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0038679375604365185,
+    "max_normalized_probability_difference": 0.018942606728866274,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2324",
+    "market": "ah",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0024971892200296164,
+    "max_normalized_probability_difference": 0.018146973301612523,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2425",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0075385012168581456,
+    "max_normalized_probability_difference": 0.027782524021132127,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2425",
+    "market": "goals",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.003680608603216895,
+    "max_normalized_probability_difference": 0.018259241681168548,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2425",
+    "market": "ah",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.0023493086320311996,
+    "max_normalized_probability_difference": 0.07667499609558037,
+    "average_above_max_cells": 1
+  },
+  {
+    "season": "E1_2526",
+    "market": "1x2",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.008672980690845267,
+    "max_normalized_probability_difference": 0.028994356526478027,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2526",
+    "market": "goals",
+    "bookmaker_comparable": 552,
+    "median_max_normalized_probability_difference": 0.005631378772142592,
+    "max_normalized_probability_difference": 0.029614978902953615,
+    "average_above_max_cells": 0
+  },
+  {
+    "season": "E1_2526",
+    "market": "ah",
+    "bookmaker_comparable": 551,
+    "median_max_normalized_probability_difference": 0.004100299637281202,
+    "max_normalized_probability_difference": 0.2219805881923667,
+    "average_above_max_cells": 0
+  }
+]

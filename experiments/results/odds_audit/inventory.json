@@ -1,0 +1,2422 @@
+[
+  {
+    "season": "E1_1718",
+    "rows": 552,
+    "sha256": "04d07d578d818bdcd6b95d43e79f10a6a26be01b45be6190b09ebdeaeba0a7ce",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0192743764172336,
+          "median": 1.0266517241823498,
+          "p95": 1.0334921729680022,
+          "max": 1.0718182316465676
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.018960251624696,
+          "median": 1.0250390783792827,
+          "p95": 1.0268210261658788,
+          "max": 1.0352134153542547
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "BbAvH",
+          "BbAvD",
+          "BbAvA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0503357456789189,
+          "median": 1.058139591307202,
+          "p95": 1.0619738998985642,
+          "max": 1.0652776317584731
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0176649136257458,
+          "median": 1.0215945666116042,
+          "p95": 1.0262692200765595,
+          "max": 1.0310170741305582
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      },
+      "average_pre_goals": {
+        "columns": [
+          "BbAv>2.5",
+          "BbAv<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0526315789473684,
+          "median": 1.0601004010432735,
+          "p95": 1.0655624568668047,
+          "max": 1.0724289715886355
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      },
+      "average_pre_ah": {
+        "columns": [
+          "BbAvAHH",
+          "BbAvAHA"
+        ],
+        "line_column": "BbAHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0309552278464196,
+          "median": 1.0401469714162208,
+          "p95": 1.0476190476190474,
+          "max": 1.0560675883256527
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "LBH",
+      "LBD",
+      "LBA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "Bb1X2",
+      "BbMxH",
+      "BbAvH",
+      "BbMxD",
+      "BbAvD",
+      "BbMxA",
+      "BbAvA",
+      "BbOU",
+      "BbMx>2.5",
+      "BbAv>2.5",
+      "BbMx<2.5",
+      "BbAv<2.5",
+      "BbAH",
+      "BbAHh",
+      "BbMxAHH",
+      "BbAvAHH",
+      "BbMxAHA",
+      "BbAvAHA",
+      "PSCH",
+      "PSCD",
+      "PSCA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.00016864193801308103,
+      "median": 0.008160448570262213,
+      "p95": 0.019064352458682765,
+      "max": 0.03207640989556193
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 552,
+    "pinnacle_pre_close_identical_triplets": 1,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": false
+  },
+  {
+    "season": "E1_1819",
+    "rows": 552,
+    "sha256": "112eedf787e26e00aac1442ef86e7fee5d4a43f86552ff2dac31ceb95a849487",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 551,
+        "missing_or_invalid": 1,
+        "implied_probability_sum": {
+          "n": 551,
+          "min": 1.0200177632028422,
+          "median": 1.0264550264550265,
+          "p95": 1.0517961570593148,
+          "max": 1.0822322285376835
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 551,
+        "missing_or_invalid": 1,
+        "implied_probability_sum": {
+          "n": 551,
+          "min": 1.0222180742411957,
+          "median": 1.025996887445588,
+          "p95": 1.0313017092319516,
+          "max": 1.0347873778121846
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "BbAvH",
+          "BbAvD",
+          "BbAvA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0473834756621643,
+          "median": 1.0535309764227412,
+          "p95": 1.0574222382479646,
+          "max": 1.0604166188717337
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0201425840614473,
+          "median": 1.025918050403424,
+          "p95": 1.0314578365469504,
+          "max": 1.036534388131462
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      },
+      "average_pre_goals": {
+        "columns": [
+          "BbAv>2.5",
+          "BbAv<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0499338624338626,
+          "median": 1.0565035816024562,
+          "p95": 1.0617283950617282,
+          "max": 1.0977721682467934
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      },
+      "average_pre_ah": {
+        "columns": [
+          "BbAvAHH",
+          "BbAvAHA"
+        ],
+        "line_column": "BbAHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0344274564310916,
+          "median": 1.0434406509339604,
+          "p95": 1.0492528456600314,
+          "max": 1.0555250137438152
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": false,
+        "valid_complete": 0,
+        "missing_or_invalid": 552,
+        "implied_probability_sum": null
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "Bb1X2",
+      "BbMxH",
+      "BbAvH",
+      "BbMxD",
+      "BbAvD",
+      "BbMxA",
+      "BbAvA",
+      "BbOU",
+      "BbMx>2.5",
+      "BbAv>2.5",
+      "BbMx<2.5",
+      "BbAv<2.5",
+      "BbAH",
+      "BbAHh",
+      "BbMxAHH",
+      "BbAvAHH",
+      "BbMxAHA",
+      "BbAvAHA",
+      "PSCH",
+      "PSCD",
+      "PSCA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 551,
+      "min": 0.0002495891213647461,
+      "median": 0.007554916051085159,
+      "p95": 0.01851470931547758,
+      "max": 0.029569564636128032
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 551,
+    "pinnacle_pre_close_identical_triplets": 1,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": false
+  },
+  {
+    "season": "E1_1920",
+    "rows": 552,
+    "sha256": "f31450c623c0b74b89692584a85924cc652d33ec89757acf4b2dda5e26261d57",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0200534759358288,
+          "median": 1.0527597402597402,
+          "p95": 1.0629665692956831,
+          "max": 1.069934640522876
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 551,
+        "missing_or_invalid": 1,
+        "implied_probability_sum": {
+          "n": 551,
+          "min": 1.0220193714723713,
+          "median": 1.0324610324610324,
+          "p95": 1.040345978633623,
+          "max": 1.0574229947249323
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.04812788641535,
+          "median": 1.0543831139176985,
+          "p95": 1.0581005855995191,
+          "max": 1.0628659603959805
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.048302632784782,
+          "median": 1.0528588707546502,
+          "p95": 1.057261627965496,
+          "max": 1.06033447272617
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0217911781175093,
+          "median": 1.0322449217442107,
+          "p95": 1.0404340894066406,
+          "max": 1.0579873841614162
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.018074912891986,
+          "median": 1.0549749163879598,
+          "p95": 1.0603935568872456,
+          "max": 1.0705128205128205
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.047235244126436,
+          "median": 1.053067993366501,
+          "p95": 1.0561846689895469,
+          "max": 1.0594356828666451
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0475798711092827,
+          "median": 1.0536823425022184,
+          "p95": 1.0571107423861263,
+          "max": 1.0617580365479524
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0336538461538463,
+          "median": 1.0402910658940845,
+          "p95": 1.044963439921423,
+          "max": 1.04815475373851
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0331513779789643,
+          "median": 1.0398098633392752,
+          "p95": 1.044735406437534,
+          "max": 1.048063538852043
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "IWCH",
+      "IWCD",
+      "IWCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "WHCH",
+      "WHCD",
+      "WHCA",
+      "VCCH",
+      "VCCD",
+      "VCCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.0,
+      "median": 0.007981297718537755,
+      "p95": 0.01719571139428383,
+      "max": 0.02769126183364501
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 551,
+    "pinnacle_pre_close_identical_triplets": 0,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  },
+  {
+    "season": "E1_2021",
+    "rows": 552,
+    "sha256": "cf93295e310c60e5b97ae7466d772f8ec6a908ad401e38fceb7e8617369d5073",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0367201426024955,
+          "median": 1.0527597402597402,
+          "p95": 1.0617997198879552,
+          "max": 1.0708502024291497
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 551,
+        "missing_or_invalid": 1,
+        "implied_probability_sum": {
+          "n": 551,
+          "min": 1.0260252831342647,
+          "median": 1.028298208034664,
+          "p95": 1.0333877523182147,
+          "max": 1.0491334511946855
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0495647750061954,
+          "median": 1.0545992350640503,
+          "p95": 1.0576476610798236,
+          "max": 1.0599682241473287
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0484437863627527,
+          "median": 1.053664530517032,
+          "p95": 1.056697544768334,
+          "max": 1.058806697492829
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 550,
+        "missing_or_invalid": 2,
+        "implied_probability_sum": {
+          "n": 550,
+          "min": 1.025956479582916,
+          "median": 1.0282076267379552,
+          "p95": 1.0319260415219473,
+          "max": 1.0441436968249282
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.041025641025641,
+          "median": 1.0549029191344181,
+          "p95": 1.0616605616605617,
+          "max": 1.0747520976353928
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0478384902348035,
+          "median": 1.0533515731874146,
+          "p95": 1.0575139146567718,
+          "max": 1.0617659395973154
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0478384902348035,
+          "median": 1.0542712278020083,
+          "p95": 1.0588174381277828,
+          "max": 1.061923583662714
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.034849694067571,
+          "median": 1.0417510053167085,
+          "p95": 1.045362220717671,
+          "max": 1.0507446221731935
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0351468464130957,
+          "median": 1.041497592382189,
+          "p95": 1.045324401707093,
+          "max": 1.048951048951049
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "IWCH",
+      "IWCD",
+      "IWCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "WHCH",
+      "WHCD",
+      "WHCA",
+      "VCCH",
+      "VCCD",
+      "VCCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.0005770182457035811,
+      "median": 0.009199317309391164,
+      "p95": 0.018980529333426754,
+      "max": 0.03245495628497119
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 549,
+    "pinnacle_pre_close_identical_triplets": 0,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  },
+  {
+    "season": "E1_2122",
+    "rows": 552,
+    "sha256": "a181451be4801b9f838daf5f6aaf21e9f09d36042be9e6c15388e71001e772ea",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0380184331797235,
+          "median": 1.053030303030303,
+          "p95": 1.0628403854210307,
+          "max": 1.0793460925039873
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0260302311119007,
+          "median": 1.028838399755982,
+          "p95": 1.034205658199497,
+          "max": 1.0618466520331211
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0466950119734486,
+          "median": 1.0516671997832554,
+          "p95": 1.0550252494149526,
+          "max": 1.060266349897493
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0461721615008646,
+          "median": 1.0504510298499439,
+          "p95": 1.0534986401604105,
+          "max": 1.0557754410069453
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0162811629372908,
+          "median": 1.0285219566897887,
+          "p95": 1.0322522533297254,
+          "max": 1.0404521311050654
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0378510378510377,
+          "median": 1.0549038774845227,
+          "p95": 1.0666666666666667,
+          "max": 1.0762273901808785
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.04524862180012,
+          "median": 1.0525623652863796,
+          "p95": 1.0559866962305988,
+          "max": 1.0584530708369717
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.04524862180012,
+          "median": 1.0533478497550355,
+          "p95": 1.0575139146567718,
+          "max": 1.0605002457256667
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0309552278464196,
+          "median": 1.0396466278819219,
+          "p95": 1.0434406509339604,
+          "max": 1.04815475373851
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0336538461538463,
+          "median": 1.0396466278819219,
+          "p95": 1.043360433604336,
+          "max": 1.0457409821816601
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "IWCH",
+      "IWCD",
+      "IWCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "WHCH",
+      "WHCD",
+      "WHCA",
+      "VCCH",
+      "VCCD",
+      "VCCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.0007254857965922068,
+      "median": 0.008706503258804066,
+      "p95": 0.018863123213258393,
+      "max": 0.026535487908593947
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 552,
+    "pinnacle_pre_close_identical_triplets": 0,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  },
+  {
+    "season": "E1_2223",
+    "rows": 552,
+    "sha256": "cd38ab0586ea8cb4d573c363ff70749117f116da5b2741e5b0ea37da05860b1b",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0322128851540615,
+          "median": 1.053030303030303,
+          "p95": 1.0626780626780628,
+          "max": 1.0814762130551603
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0186104218362284,
+          "median": 1.0283426221871026,
+          "p95": 1.0331842439204744,
+          "max": 1.039901960685954
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0496311244913488,
+          "median": 1.0541113973413188,
+          "p95": 1.0570719602977667,
+          "max": 1.0592962545076436
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0481840282928572,
+          "median": 1.0522495783546606,
+          "p95": 1.0551526044923154,
+          "max": 1.0579617250257995
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0027093819720518,
+          "median": 1.0282206375050302,
+          "p95": 1.032523927685218,
+          "max": 1.0388701697919127
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0350806451612904,
+          "median": 1.0545596876842684,
+          "p95": 1.065490851513019,
+          "max": 1.0765494667933693
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0489606502457642,
+          "median": 1.0540220060996819,
+          "p95": 1.057582588850853,
+          "max": 1.0643103156230591
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0478384902348035,
+          "median": 1.053067993366501,
+          "p95": 1.0566402059643853,
+          "max": 1.0619514981565144
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0362972508591066,
+          "median": 1.0417797069994574,
+          "p95": 1.046448087431694,
+          "max": 1.0506050605060506
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0365198711063373,
+          "median": 1.041497592382189,
+          "p95": 1.0455910455910455,
+          "max": 1.0499986256562492
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "IWCH",
+      "IWCD",
+      "IWCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "WHCH",
+      "WHCD",
+      "WHCA",
+      "VCCH",
+      "VCCD",
+      "VCCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.0004165063213951714,
+      "median": 0.007750938503534699,
+      "p95": 0.01658259922779537,
+      "max": 0.024332791473411608
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 552,
+    "pinnacle_pre_close_identical_triplets": 0,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  },
+  {
+    "season": "E1_2324",
+    "rows": 552,
+    "sha256": "5737f6cc95c95092b28317f41d3123e2fb09345434efc1c84bbdf15830849ab3",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0371973705307038,
+          "median": 1.053425885831507,
+          "p95": 1.0634920634920635,
+          "max": 1.078544061302682
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0260905806020486,
+          "median": 1.029256507153339,
+          "p95": 1.037967008116262,
+          "max": 1.051419533541248
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.048932210031348,
+          "median": 1.0535327412090405,
+          "p95": 1.0562086598914362,
+          "max": 1.0635185971246754
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0468376620017745,
+          "median": 1.0512455118466182,
+          "p95": 1.054014941068519,
+          "max": 1.057035195344618
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0247207400291725,
+          "median": 1.029062756247487,
+          "p95": 1.0385036795844829,
+          "max": 1.0495239193093227
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.025978407557355,
+          "median": 1.0551699012968085,
+          "p95": 1.0661881977671452,
+          "max": 1.0852130325814535
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0486850684633775,
+          "median": 1.0536187113857016,
+          "p95": 1.0585492938434116,
+          "max": 1.0667041936391781
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0455910455910455,
+          "median": 1.0525454694189187,
+          "p95": 1.0566402059643853,
+          "max": 1.0655950220378534
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0363247863247862,
+          "median": 1.0459908236836355,
+          "p95": 1.0504549214226633,
+          "max": 1.0559866962305988
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.036089098307989,
+          "median": 1.0439605252426394,
+          "p95": 1.0473788111427944,
+          "max": 1.0509031198686372
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "IWH",
+      "IWD",
+      "IWA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "VCH",
+      "VCD",
+      "VCA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "IWCH",
+      "IWCD",
+      "IWCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "WHCH",
+      "WHCD",
+      "WHCA",
+      "VCCH",
+      "VCCD",
+      "VCCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.000268830238561113,
+      "median": 0.00786954057860531,
+      "p95": 0.01743686838044961,
+      "max": 0.028205157173531614
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 552,
+    "pinnacle_pre_close_identical_triplets": 1,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  },
+  {
+    "season": "E1_2425",
+    "rows": 552,
+    "sha256": "f34c340446c916374be66bdc2fb25b87ee7f2662712ca009653d03ac705535f9",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.046506734006734,
+          "median": 1.063390758533862,
+          "p95": 1.072166903745851,
+          "max": 1.0905760905760906
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0321537290715372,
+          "median": 1.0495424471838863,
+          "p95": 1.056325772896669,
+          "max": 1.0645052475802372
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.049745767584751,
+          "median": 1.0568131287677165,
+          "p95": 1.064149116436698,
+          "max": 1.0664129630398895
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0473887520750393,
+          "median": 1.053943361459209,
+          "p95": 1.058998927901367,
+          "max": 1.0616615067079465
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.024676253216439,
+          "median": 1.034104108087329,
+          "p95": 1.0389947293786397,
+          "max": 1.048373687374493
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0292207792207793,
+          "median": 1.0634860554341654,
+          "p95": 1.0729562737642586,
+          "max": 1.0826650826650825
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0471204188481675,
+          "median": 1.0548983263370224,
+          "p95": 1.0632313231323134,
+          "max": 1.0695187165775402
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0439605252426394,
+          "median": 1.0525885241831436,
+          "p95": 1.057900432900433,
+          "max": 1.065117404986686
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0179764803398434,
+          "median": 1.0471491228070176,
+          "p95": 1.0554163185742134,
+          "max": 1.062690269477957
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0284475465313028,
+          "median": 1.0416666666666667,
+          "p95": 1.0464640959258755,
+          "max": 1.0530983261279236
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BWH",
+      "BWD",
+      "BWA",
+      "BFH",
+      "BFD",
+      "BFA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "WHH",
+      "WHD",
+      "WHA",
+      "1XBH",
+      "1XBD",
+      "1XBA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "BFEH",
+      "BFED",
+      "BFEA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "BFE>2.5",
+      "BFE<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "BFEAHH",
+      "BFEAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "BFCH",
+      "BFCD",
+      "BFCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "WHCH",
+      "WHCD",
+      "WHCA",
+      "1XBCH",
+      "1XBCD",
+      "1XBCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "BFECH",
+      "BFECD",
+      "BFECA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "BFEC>2.5",
+      "BFEC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA",
+      "BFECAHH",
+      "BFECAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.0003339112671522648,
+      "median": 0.0075385012168581456,
+      "p95": 0.017561938726492782,
+      "max": 0.027782524021132127
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 552,
+    "pinnacle_pre_close_identical_triplets": 0,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  },
+  {
+    "season": "E1_2526",
+    "rows": 552,
+    "sha256": "98954c319950f19158624b17a154ef1c56eb7b8d169ef317f28f06d11d0b9a74",
+    "groups": {
+      "bet365_pre_1x2": {
+        "columns": [
+          "B365H",
+          "B365D",
+          "B365A"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0521927953778742,
+          "median": 1.0765494667933693,
+          "p95": 1.090078037904125,
+          "max": 1.133877285147493
+        }
+      },
+      "pinnacle_pre_1x2": {
+        "columns": [
+          "PSH",
+          "PSD",
+          "PSA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 260,
+        "missing_or_invalid": 292,
+        "implied_probability_sum": {
+          "n": 260,
+          "min": 1.0320952883881946,
+          "median": 1.0500295902778043,
+          "p95": 1.0556027033574114,
+          "max": 1.068817727686141
+        }
+      },
+      "average_pre_1x2": {
+        "columns": [
+          "AvgH",
+          "AvgD",
+          "AvgA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0583657236275164,
+          "median": 1.063869269478423,
+          "p95": 1.069945806410066,
+          "max": 1.0755550299485812
+        }
+      },
+      "average_close_1x2": {
+        "columns": [
+          "AvgCH",
+          "AvgCD",
+          "AvgCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0023716758875472,
+          "median": 1.0635165280822227,
+          "p95": 1.0679908538483556,
+          "max": 1.072540236209301
+        }
+      },
+      "pinnacle_close_1x2": {
+        "columns": [
+          "PSCH",
+          "PSCD",
+          "PSCA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 271,
+        "missing_or_invalid": 281,
+        "implied_probability_sum": {
+          "n": 271,
+          "min": 0.933544633734387,
+          "median": 1.0340417546665328,
+          "p95": 1.043057473058176,
+          "max": 1.0594934014474244
+        }
+      },
+      "bet365_close_1x2": {
+        "columns": [
+          "B365CH",
+          "B365CD",
+          "B365CA"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0432900432900434,
+          "median": 1.0773443705840546,
+          "p95": 1.0910121624407338,
+          "max": 1.136521604819091
+        }
+      },
+      "average_pre_goals": {
+        "columns": [
+          "Avg>2.5",
+          "Avg<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0624841892233747,
+          "median": 1.0691717445271949,
+          "p95": 1.0733752620545074,
+          "max": 1.0765673175745119
+        }
+      },
+      "average_close_goals": {
+        "columns": [
+          "AvgC>2.5",
+          "AvgC<2.5"
+        ],
+        "line_column": null,
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 0.9780346820809249,
+          "median": 1.067585264476456,
+          "p95": 1.0715914272685818,
+          "max": 1.0755202244563946
+        }
+      },
+      "average_pre_ah": {
+        "columns": [
+          "AvgAHH",
+          "AvgAHA"
+        ],
+        "line_column": "AHh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 0.735070702348954,
+          "median": 1.066848257859494,
+          "p95": 1.0810023310023311,
+          "max": 1.096766481381866
+        }
+      },
+      "average_close_ah": {
+        "columns": [
+          "AvgCAHH",
+          "AvgCAHA"
+        ],
+        "line_column": "AHCh",
+        "present": true,
+        "valid_complete": 552,
+        "missing_or_invalid": 0,
+        "implied_probability_sum": {
+          "n": 552,
+          "min": 1.0411622276029056,
+          "median": 1.0657995986589572,
+          "p95": 1.0785510785510786,
+          "max": 1.0977443609022557
+        }
+      }
+    },
+    "all_odds_fields": [
+      "B365H",
+      "B365D",
+      "B365A",
+      "BFDH",
+      "BFDD",
+      "BFDA",
+      "BMGMH",
+      "BMGMD",
+      "BMGMA",
+      "BVH",
+      "BVD",
+      "BVA",
+      "BWH",
+      "BWD",
+      "BWA",
+      "CLH",
+      "CLD",
+      "CLA",
+      "LBH",
+      "LBD",
+      "LBA",
+      "PSH",
+      "PSD",
+      "PSA",
+      "MaxH",
+      "MaxD",
+      "MaxA",
+      "AvgH",
+      "AvgD",
+      "AvgA",
+      "BFEH",
+      "BFED",
+      "BFEA",
+      "B365>2.5",
+      "B365<2.5",
+      "P>2.5",
+      "P<2.5",
+      "Max>2.5",
+      "Max<2.5",
+      "Avg>2.5",
+      "Avg<2.5",
+      "BFE>2.5",
+      "BFE<2.5",
+      "AHh",
+      "B365AHH",
+      "B365AHA",
+      "PAHH",
+      "PAHA",
+      "MaxAHH",
+      "MaxAHA",
+      "AvgAHH",
+      "AvgAHA",
+      "BFEAHH",
+      "BFEAHA",
+      "B365CH",
+      "B365CD",
+      "B365CA",
+      "BFDCH",
+      "BFDCD",
+      "BFDCA",
+      "BMGMCH",
+      "BMGMCD",
+      "BMGMCA",
+      "BVCH",
+      "BVCD",
+      "BVCA",
+      "BWCH",
+      "BWCD",
+      "BWCA",
+      "CLCH",
+      "CLCD",
+      "CLCA",
+      "LBCH",
+      "LBCD",
+      "LBCA",
+      "PSCH",
+      "PSCD",
+      "PSCA",
+      "MaxCH",
+      "MaxCD",
+      "MaxCA",
+      "AvgCH",
+      "AvgCD",
+      "AvgCA",
+      "BFECH",
+      "BFECD",
+      "BFECA",
+      "B365C>2.5",
+      "B365C<2.5",
+      "PC>2.5",
+      "PC<2.5",
+      "MaxC>2.5",
+      "MaxC<2.5",
+      "AvgC>2.5",
+      "AvgC<2.5",
+      "BFEC>2.5",
+      "BFEC<2.5",
+      "AHCh",
+      "B365CAHH",
+      "B365CAHA",
+      "PCAHH",
+      "PCAHA",
+      "MaxCAHH",
+      "MaxCAHA",
+      "AvgCAHH",
+      "AvgCAHA",
+      "BFECAHH",
+      "BFECAHA"
+    ],
+    "bet365_vs_average_max_normalized_probability_difference": {
+      "n": 552,
+      "min": 0.0002282714147120446,
+      "median": 0.008672980690845267,
+      "p95": 0.019006492932737817,
+      "max": 0.028994356526478027
+    },
+    "average_exceeds_max_1x2_cells": 0,
+    "pinnacle_pre_close_comparable": 260,
+    "pinnacle_pre_close_identical_triplets": 13,
+    "quote_timestamp_fields": [],
+    "kickoff_time_present": true
+  }
+]
