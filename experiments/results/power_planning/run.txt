@@ -1,0 +1,135 @@
+{
+  "blocks": {
+    "14": {
+      "n": 1599,
+      "blocks": 61,
+      "se": 0.00031127243619286104,
+      "sigma_effective": 0.012447005934117995,
+      "sigma_resample_p025_p975": [
+        0.010199102357116208,
+        0.014285830315324042
+      ]
+    },
+    "28": {
+      "n": 1599,
+      "blocks": 33,
+      "se": 0.0002711184353707578,
+      "sigma_effective": 0.010841347904694444,
+      "sigma_resample_p025_p975": [
+        0.008454890321028256,
+        0.012677698248888886
+      ]
+    },
+    "56": {
+      "n": 1599,
+      "blocks": 18,
+      "se": 0.00023929243676659208,
+      "sigma_effective": 0.009568705847689951,
+      "sigma_resample_p025_p975": [
+        0.006029802715083589,
+        0.011899907228587197
+      ]
+    }
+  },
+  "sigma_cases": {
+    "blocks_14": 0.012447005934117995,
+    "blocks_28": 0.010841347904694444,
+    "blocks_56": 0.009568705847689951,
+    "variance_x2": 0.01533198124122402,
+    "variance_x4": 0.021682695809388888,
+    "joint_candidate_CI_proxy": 0.044366976970271435
+  },
+  "secondary": {
+    "calibration/home/3.5": {
+      "observations": 1599,
+      "sigma_effective": 0.4202158366762427,
+      "epsilon": 0.02,
+      "fixtures_80": 7850,
+      "fixtures_90": 9261
+    },
+    "calibration/home/4.5": {
+      "observations": 1599,
+      "sigma_effective": 0.5092696159701087,
+      "epsilon": 0.02,
+      "fixtures_80": 11529,
+      "fixtures_90": 13602
+    },
+    "calibration/home/5.5": {
+      "observations": 1599,
+      "sigma_effective": 0.5451626954618697,
+      "epsilon": 0.02,
+      "fixtures_80": 13212,
+      "fixtures_90": 15586
+    },
+    "calibration/home/6.5": {
+      "observations": 1599,
+      "sigma_effective": 0.4773905943825605,
+      "epsilon": 0.02,
+      "fixtures_80": 10131,
+      "fixtures_90": 11952
+    },
+    "calibration/away/3.5": {
+      "observations": 1599,
+      "sigma_effective": 0.37352041239632905,
+      "epsilon": 0.02,
+      "fixtures_80": 6202,
+      "fixtures_90": 7317
+    },
+    "calibration/away/4.5": {
+      "observations": 1599,
+      "sigma_effective": 0.40500997275324674,
+      "epsilon": 0.02,
+      "fixtures_80": 7292,
+      "fixtures_90": 8603
+    },
+    "calibration/away/5.5": {
+      "observations": 1599,
+      "sigma_effective": 0.38997376741693107,
+      "epsilon": 0.02,
+      "fixtures_80": 6761,
+      "fixtures_90": 7976
+    },
+    "calibration/away/6.5": {
+      "observations": 1599,
+      "sigma_effective": 0.4316924037781647,
+      "epsilon": 0.02,
+      "fixtures_80": 8285,
+      "fixtures_90": 9774
+    },
+    "NLL": {
+      "observations": 3198,
+      "sigma_effective": 0.044377980195119675,
+      "margin": 0.005,
+      "fixtures_80": 996,
+      "fixtures_90": 1258
+    },
+    "Brier/home": {
+      "observations": 1599,
+      "sigma_effective": 0.016961031638812747,
+      "margin": 0.001,
+      "fixtures_80": 3635,
+      "fixtures_90": 4591
+    },
+    "Brier/away": {
+      "observations": 1599,
+      "sigma_effective": 0.013989121468915473,
+      "margin": 0.001,
+      "fixtures_80": 2473,
+      "fixtures_90": 3123
+    },
+    "Brier/lt4": {
+      "observations": 369,
+      "sigma_effective": 0.03038827212669787,
+      "margin": 0.001,
+      "fixtures_80": 11669,
+      "fixtures_90": 14736
+    },
+    "Brier/ge6": {
+      "observations": 717,
+      "sigma_effective": 0.02952618992773056,
+      "margin": 0.001,
+      "fixtures_80": 11016,
+      "fixtures_90": 13912
+    }
+  }
+}

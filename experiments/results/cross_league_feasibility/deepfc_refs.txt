@@ -1,0 +1,13 @@
+refs/remotes/origin/HEAD cff381c04b0b6b341b4845fded743c7aa2df6f4b
+refs/remotes/origin/cleanup/csv-match-parsing 268d0f8f17bf5e7820dab68ae3f9ab11473d2b23
+refs/remotes/origin/docs/real-data-baseline 271f34dab14a0c8c7193082610fe7bc9368c7085
+refs/remotes/origin/experiment/championship-team-corners 33b056235f0e768f0389147d5b471203619835aa
+refs/remotes/origin/feature/championship-total-corners-baseline df30cc55730789c10171e6631008db195e35e439
+refs/remotes/origin/main cff381c04b0b6b341b4845fded743c7aa2df6f4b
+refs/remotes/origin/model/negative-binomial 68e9cefb8bdd8c99e3b96db4c629feba9710d8d7
+refs/remotes/origin/model/team-strength 8927eaa398a17e79770c0361250ccc6aabc3a48a
+refs/remotes/origin/research/championship-dispersion 8ab1074e17651f620e166573d2812883c2fae04e
+refs/remotes/origin/research/championship-model-comparison 7c83f8ed1101503b5515e1551fa59dcc04c777e9
+refs/remotes/origin/research/championship-probability-calibration 10dba72593b3c79fa143ec1d7580d856b4eea6be
+refs/remotes/origin/research/championship-shrinkage f63666c1450072bf99654713da7e579d87d98d36
+refs/remotes/origin/research/championship-signal-strength 8af3712a132e97b35acdc56ddbdd0732f77eb815

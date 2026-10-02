@@ -1,0 +1,16 @@
+{
+  "modelfc": {
+    "unique_text_blobs": 775,
+    "D2_paths": [
+      "DATA_REFRESH.md",
+      "src/modelfc/corner_capabilities.py",
+      "src/modelfc/corner_data.py"
+    ],
+    "head": "958d651e4d04993c4036b5bbde562b6416e29a4a"
+  },
+  "deepfc": {
+    "unique_text_blobs": 127,
+    "D2_paths": [],
+    "head": "3782ad73306f66c87a99cbf2c6ee66879b824cc2"
+  }
+}
