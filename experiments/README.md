@@ -45,3 +45,21 @@ Run `python -m experiments.signal_strength` with the same nine CSV paths above.
 The [recorded result](results/championship_signal_strength.md) retains the
 original full-strength formula because the selected damped candidate worsened
 later Brier and count NLL.
+
+## Research test environment
+
+The full suite includes NumPy/SciPy research tests. Use Python 3.12 and install
+the pinned research requirements in addition to the lightweight package/test extra:
+
+```bash
+python -m venv .venv
+.venv/bin/python -m pip install -e ".[test]" -r experiments/joint_strength_requirements.txt
+.venv/bin/python -m pytest -q
+.venv/bin/python -m pip check
+```
+
+CI uses the same dependency inputs. Production dependencies remain unchanged.
+Raw provider datasets are not needed for tests; reproducing historical experiments
+requires the separately documented source files and hashes. The EPL transfer is
+documented in [its report](results/e0_transfer/REPORT.md), including the separate
+2023/24-onward analysis and the limitations of earlier retrospective application.
