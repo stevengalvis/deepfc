@@ -1,0 +1,34 @@
+# Frozen residual-persistence diagnostic
+
+2026-10-02, before inspecting diagnostic effects. Diagnostic only: no corrected corner model, no tuning windows/penalties/thresholds, no promotion or live work. Existing predictions and model outcomes remain unchanged. One recent window of 5 matches versus preceding 15; next eligible match is the sole horizon.
+
+## Prior work and question
+
+DeepFC fixed180 improved over equal weights; subsequent attack/concession shrinkage selected early failed later. ModelFC recency searched 5/10/20/40 windows and 30/60/90/180/365 day decay; no global promotion. ModelFC PR42 is Championship shot-feature diagnostics (selected shot weight zero), not a residual-correction PR. Accessible branch snapshots and PR search did not reveal a distinct residual-correction experiment. Do not claim inaccessible research never happened. This asks whether remaining errors have incremental short-term persistence AFTER the existing forecast and odds, not whether recency ever matters.
+
+## Input chronology and discovery
+
+Use only pinned local source/derived artifacts. Early discovery: Championship source seasons 2021/22 and 2022/23 with saved temporal-fold joint coefficients from distribution_blend/selection.json, each fitted strictly before its season; recompute strictly earlier-date fixed180 predictions and score those held-out seasons. Never use the saved final joint coefficients on their own training outcomes. Later exploratory validation: saved E1 2023/24–2025/26 and E0 2019/20–2025/26 fixed180 and joint forecasts. Primary EPL interpretation is after May2023; earlier EPL is retrospective use of later-trained coefficients. No component refit or new candidate. Both models use identical eligible rows. Existing AvgH/D/A signed strength and normalized Avg>2.5/Avg<2.5 scoring proxy are controls only; no new feature experiment. Quotes validated by goal-total audit; exact timestamps absent.
+
+Run discovery first, save results, then run frozen validation unchanged. No multiple window/lag search regardless of effects. Prior architecture choice/history inspection still makes all evidence exploratory.
+
+## Past-only residual features
+
+Residual is actual corners minus that model's mean, in corners. For each current team-side prediction, attack history is that team's previous scoring residuals; concession history is the residuals of teams previously scoring AGAINST the current opponent. Positive concession residual means the opponent allowed more than predicted. Histories pool venues; venue composition is separately controlled. Exclude all same-date outcomes by batch update. Never cross competition, source season or model/fold boundary. Require at least 20 eligible completed forecast observations in BOTH histories within current source season; each last-20 span must be <=180 days relative to current date. No padding, shrinkage/imputation, first-season carryover or future outcomes. Baseline and joint histories are parallel.
+
+For both attack and concession: R=mean(last5), L=mean(previous15), D=R-L. Store date bounds, counts and venue fractions for audit. R alone may reflect stable bias; D cancels a constant team-specific residual level and compares equal-role history intervals without assuming any observed streak is real. Include L as a nuisance control to avoid mistaking regression to the mean induced by subtracting L for negative dynamics. Errors remain noisy, so attenuation is possible. Seasonal resets rule out claims about adapting across summers/newly promoted teams and restrict applicability to established in-season histories.
+
+## Small predeclared analysis family
+
+For fixed180 and joint separately, fit OLS ASSOCIATION regressions with current residual as outcome (not NB candidate fitting, no corrected forecasts):
+1. Raw recent association: attack R and concession R together, current venue and season intercepts.
+2. Primary incremental association: attack D, concession D, both L, current log(fixed180 mean/5) and square, signed 1X2 probability difference and square, goal over probability minus 0.5, current venue, and attack/concession R/L history home fractions, plus season intercepts. All non-season features available before current match. Report slopes in current corners per one-corner recent-minus-older shift, and joint in-sample partial R-squared of the two D terms; partial R-squared is explanatory fit, NOT out-of-sample accuracy gain.
+3. Stable-bias sensitivity: same controls plus team and opponent fixed effects (constant over analyzed period). These are retrospective nuisance parameters estimated for an association diagnostic, not pre-match inputs or candidate forecasts. Finite-panel lagged-outcome bias can make within-team slopes negative; this check cannot establish anti-persistence or prove absence of changing strength.
+
+Whole periods and each season, plus venue split, use identical definitions. Minimum n=200, full diagnostic design rank; otherwise mark not estimable. Fixed-effect nuisance collinearity removed by SVD; focus slopes must be identified or mark not estimable. No significance-based variable removal. Slopes and partial R2 alone do not establish useful probability-score gains.
+
+## Dependence and decision interpretation
+
+Primary 95% intervals: calendar-block clustered sandwich, 84-day blocks, finite-cluster correction and Student t with G-1 df. Both fixture sides share blocks. Fixed 168-day sensitivity covers longer overlap; 20-match history is bounded to180 days, but no block model captures arbitrary persistence. Report cluster counts, warn where <10. Additional dyadic-team clustered sandwich: sum team score outer products (each observation belongs to both clubs) minus unordered club-pair score outer products to avoid double-counting; Student t with number-of-clubs minus1 df. Flag negative covariance diagonal instead of inventing precision. These are conditional, approximate intervals, not independent-match standard errors. Season-level and few-block results have limited power. No bootstrap or shuffled i.i.d. observations that break team/fixture dependence.
+
+Only the two incremental joint D slopes are the central diagnostic. Raw slopes can reveal calibration bias without indicating slow adaptation. A supported direction would require a positive, non-negligible effect that is consistent in discovery and later E1 and post-May EPL, survives dependence/bias checks, and is not driven by one season. No retroactive numerical gate or window search. If evidence is weak, conflicting or explained by stable calibration, recommend stopping this specific residual-feedback direction. If supported, propose only ONE subsequent correction hypothesis with an early-only fit and frozen proper-score plan; do not implement it. Report all outcomes including negative/uncertain associations, sample selection and limits. Preserve original files; local code/spec/results and tests only; no push/PR/merge.

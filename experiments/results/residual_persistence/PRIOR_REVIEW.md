@@ -1,0 +1,11 @@
+# Prior research reviewed before diagnostic effects
+
+Checkout starts at 909e6464dd6493042cd0982090932d0d29a1c575. No existing residual-persistence artifacts found. No checkout `.agents/skills` directory or applicable AGENTS.md found in earlier workspace inspection.
+
+- DeepFC `experiments/results/championship_time_decay.md`: fixed180 mean Brier .214115 vs equal-weight .216489; retrospective improvement, not future confirmation.
+- DeepFC `experiments/results/championship_signal_strength.md`: early selected attack .75/concession .50, later 2023/24 Brier delta +.001849 and 2024/25–2025/26 +.000952; retain full effects. Thus another generic recency or shrinkage search would duplicate prior work.
+- ModelFC local object database at 958d651e4d04993c4036b5bbde562b6416e29a4a (sparse working tree, read via git show): EXPERIMENTS.md and src/modelfc/corner_recency_experiment.py. Windows 5/10/20/40 and half-lives 30/60/90/180/365 were development-selected, not globally promoted. Championship selected window20 gave holdout NLL delta −.001423, selected180day gave −.012619; EPL window20 worsened NLL +.008686. This diagnostic does not repeat a window sweep.
+- [ModelFC PR42](https://github.com/stevengalvis/modelfc/pull/42), fetched read-only October2: merged shot-feature diagnostics, head cf47f9d4e0d4624be3932a922c148840386f1643. Championship shot weight0; residual/predicted-shot ratio correlation .014; shots+SOT worsened NLL. This is residual association with rolling shot information, not a fitted residual-feedback model.
+- Searched all accessible local remote-ref Python/Markdown snapshots for residual plus correction/corrected and filenames/commit messages for residual. No distinct residual-correction implementation/result found. GitHub PR search `repo:stevengalvis/modelfc is:pull-request residual` returned PR42, PR46 (match-total distribution dependence caveat), PR76 (operational limitations); no residual-correction candidate. DeepFC PR42 returned404. Absence from accessible sources is not proof that no private/deleted/unrecorded experiment exists.
+
+The distinct question is whether short-term errors add information after current fixed180 forecasts and odds and after older residual levels. Raw persistent bias alone is not changing strength. No earlier failure is overturned by an association diagnostic.
