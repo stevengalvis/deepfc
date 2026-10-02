@@ -117,6 +117,7 @@ def compare_models(
     matches: Iterable[Match],
     *,
     evaluation_start: date = EVALUATION_START,
+    competition: str = "E1",
     min_history: int = 100,
     min_venue_history: int = 5,
     time_weighted_attack_strength: float = 1.0,
@@ -124,8 +125,8 @@ def compare_models(
 ) -> ComparedPredictions:
     """Compare three models on one common, leakage-safe fixture cohort."""
     ordered = sorted(matches, key=lambda match: match.match_date)
-    if not ordered or any(match.competition != "E1" for match in ordered):
-        raise ValueError("provide nonempty Championship (E1) history only")
+    if competition not in {"E1", "E0"} or not ordered or any(match.competition != competition for match in ordered):
+        raise ValueError(f"provide nonempty {competition} history only; supported leagues E1/E0")
     fixture_keys = [(m.match_date, m.home_team, m.away_team) for m in ordered]
     if len(set(fixture_keys)) != len(fixture_keys):
         raise ValueError("duplicate fixture; supply non-overlapping season files")

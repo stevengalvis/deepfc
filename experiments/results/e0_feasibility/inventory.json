@@ -1,0 +1,968 @@
+{
+  "files": [
+    {
+      "season": "2017/2018",
+      "path": "data/ENGLAND/Premier league/GAMES/2017-2018.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "4bf936f365715a6c296762610cd0063fc72cd9fbc653428eb8217d37959fe2a7",
+      "bytes": 100353,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2017-2018.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/1718/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2017-08-11",
+        "2018-05-13"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "BbAvH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "BbAvD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "BbAvA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "BbAvH",
+        "BbAvD",
+        "BbAvA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Bournemouth": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Huddersfield": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Southampton": 38,
+        "Stoke": 38,
+        "Swansea": 38,
+        "Tottenham": 38,
+        "Watford": 38,
+        "West Brom": 38,
+        "West Ham": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": false
+    },
+    {
+      "season": "2018/2019",
+      "path": "data/ENGLAND/Premier league/GAMES/2018-2019.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "4a44573970f0f693b98889cf5667aafb422d19f185ee63e20022c31b132fe881",
+      "bytes": 95763,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2018-2019.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/1819/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2018-08-10",
+        "2019-05-12"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "BbAvH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "BbAvD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "BbAvA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "BbAvH",
+        "BbAvD",
+        "BbAvA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Bournemouth": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Cardiff": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Fulham": 38,
+        "Huddersfield": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Southampton": 38,
+        "Tottenham": 38,
+        "Watford": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": false
+    },
+    {
+      "season": "2019/2020",
+      "path": "data/ENGLAND/Premier league/GAMES/2019-2020.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "92bf96bebc4fdd4412c5f99ee40b0a5131815ca07150b17e34690d8fcfa217a8",
+      "bytes": 175094,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2019-2020.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/1920/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2019-08-09",
+        "2020-07-26"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Bournemouth": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Norwich": 38,
+        "Sheffield United": 38,
+        "Southampton": 38,
+        "Tottenham": 38,
+        "Watford": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    },
+    {
+      "season": "2020/2021",
+      "path": "data/ENGLAND/Premier league/GAMES/2020-2021.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "5fe0773d57db8d4598db8e567543bd44bccedd08b4af3f6cb647d25852417ecf",
+      "bytes": 175434,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2020-2021.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/2021/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2020-09-12",
+        "2021-05-23"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Fulham": 38,
+        "Leeds": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Sheffield United": 38,
+        "Southampton": 38,
+        "Tottenham": 38,
+        "West Brom": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    },
+    {
+      "season": "2021/2022",
+      "path": "data/ENGLAND/Premier league/GAMES/2021-2022.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "95d1dd4afacfb96754b232d958b4972929a5828daa7b6a957edd7690edfc0481",
+      "bytes": 174982,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2021-2022.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/2122/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2021-08-13",
+        "2022-05-22"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Brentford": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Leeds": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Norwich": 38,
+        "Southampton": 38,
+        "Tottenham": 38,
+        "Watford": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [
+        {
+          "row": 10,
+          "fixture": [
+            "2021-08-15",
+            "Newcastle",
+            "West Ham"
+          ],
+          "reason": "AST exceeds AS"
+        }
+      ],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    },
+    {
+      "season": "2022/2023",
+      "path": "data/ENGLAND/Premier league/GAMES/2022-2023.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "e51361323bcdcdcec2faf8f58e7bcfc4f5b193ed6017b284c71538ed70d98ea2",
+      "bytes": 175799,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2022-2023.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/2223/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2022-08-05",
+        "2023-05-28"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Bournemouth": 38,
+        "Brentford": 38,
+        "Brighton": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Fulham": 38,
+        "Leeds": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Nott'm Forest": 38,
+        "Southampton": 38,
+        "Tottenham": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    },
+    {
+      "season": "2023/2024",
+      "path": "data/ENGLAND/Premier league/GAMES/2023-2024.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "0b669038e94bf305603d841f02006c7d35ebd41c8722c76e479f2393079b995f",
+      "bytes": 171815,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2023-2024.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/2324/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2023-08-11",
+        "2024-05-19"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Bournemouth": 38,
+        "Brentford": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Fulham": 38,
+        "Liverpool": 38,
+        "Luton": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Nott'm Forest": 38,
+        "Sheffield United": 38,
+        "Tottenham": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    },
+    {
+      "season": "2024/2025",
+      "path": "data/ENGLAND/Premier league/GAMES/2024-2025.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "316173b11634e5fdb836b0f3f9b4728df5044a44e1539361b6bdf18f0d3909a1",
+      "bytes": 196729,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2024-2025.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/2425/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2024-08-16",
+        "2025-05-25"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Bournemouth": 38,
+        "Brentford": 38,
+        "Brighton": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Fulham": 38,
+        "Ipswich": 38,
+        "Leicester": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Nott'm Forest": 38,
+        "Southampton": 38,
+        "Tottenham": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    },
+    {
+      "season": "2025/2026",
+      "path": "data/ENGLAND/Premier league/GAMES/2025-2026.csv",
+      "mirror_commit": "84eb7985dc4b842a62f2169eb6a5c2986834932f",
+      "sha256": "e7b387ac3ee2eda59d9e1f31f95457362e29cfbb956e686e939a58e32b23eb11",
+      "bytes": 203057,
+      "mirror_url": "https://github.com/liammcdade/Footballdata/blob/84eb7985dc4b842a62f2169eb6a5c2986834932f/data/ENGLAND/Premier%20league/GAMES/2025-2026.csv",
+      "primary_url": "https://www.football-data.co.uk/mmz4281/2526/E0.csv",
+      "primary_hash_verified": false,
+      "rows": 380,
+      "dates": [
+        "2025-08-15",
+        "2026-05-24"
+      ],
+      "invalid_dates": [],
+      "wrong_division": 0,
+      "missing_columns": [],
+      "fields": {
+        "HC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AC": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AS": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "HST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AST": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgH": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgD": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        },
+        "AvgA": {
+          "present": true,
+          "blank": 0,
+          "invalid": 0
+        }
+      },
+      "quote_family": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ],
+      "complete_corner_rows": 380,
+      "valid_odds_triplets": 380,
+      "team_appearances": {
+        "Arsenal": 38,
+        "Aston Villa": 38,
+        "Bournemouth": 38,
+        "Brentford": 38,
+        "Brighton": 38,
+        "Burnley": 38,
+        "Chelsea": 38,
+        "Crystal Palace": 38,
+        "Everton": 38,
+        "Fulham": 38,
+        "Leeds": 38,
+        "Liverpool": 38,
+        "Man City": 38,
+        "Man United": 38,
+        "Newcastle": 38,
+        "Nott'm Forest": 38,
+        "Sunderland": 38,
+        "Tottenham": 38,
+        "West Ham": 38,
+        "Wolves": 38
+      },
+      "team_count": 20,
+      "duplicate_fixture_keys": 0,
+      "unique_ordered_team_pairs": 380,
+      "pair_count_not_one": 0,
+      "blank_or_identical_teams": 0,
+      "anomalies": [],
+      "timestamp_fields": [],
+      "kickoff_time_present": true
+    }
+  ],
+  "team_names": [
+    "Arsenal",
+    "Aston Villa",
+    "Bournemouth",
+    "Brentford",
+    "Brighton",
+    "Burnley",
+    "Cardiff",
+    "Chelsea",
+    "Crystal Palace",
+    "Everton",
+    "Fulham",
+    "Huddersfield",
+    "Ipswich",
+    "Leeds",
+    "Leicester",
+    "Liverpool",
+    "Luton",
+    "Man City",
+    "Man United",
+    "Newcastle",
+    "Norwich",
+    "Nott'm Forest",
+    "Sheffield United",
+    "Southampton",
+    "Stoke",
+    "Sunderland",
+    "Swansea",
+    "Tottenham",
+    "Watford",
+    "West Brom",
+    "West Ham",
+    "Wolves"
+  ],
+  "normalized_name_collisions": [],
+  "scope": "Schema, missingness and validity only. No model fitting/prediction/scoring."
+}

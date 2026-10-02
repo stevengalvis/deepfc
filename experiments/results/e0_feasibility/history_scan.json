@@ -1,0 +1,54 @@
+{
+  "deepfc": {
+    "unique_text_blobs": 136,
+    "matches": {
+      "original_coefficient": [
+        "experiments/joint_market_calibration_spec.md",
+        "experiments/results/cross_league_feasibility/AUDIT.md",
+        "experiments/results/market_strength/REPORT.md",
+        "experiments/results/market_strength/results.json",
+        "experiments/results/market_strength_diagnostic/REPORT.md",
+        "experiments/results/market_strength_diagnostic/results.json"
+      ],
+      "joint_coefficient": [
+        "experiments/results/cross_league_feasibility/AUDIT.md",
+        "experiments/results/joint_market_calibration/REPORT.md",
+        "experiments/results/joint_market_calibration/results.json"
+      ],
+      "exact_module_names": [
+        "experiments/joint_market_calibration.py",
+        "experiments/market_strength_diagnostic.py",
+        "experiments/power_planning.py",
+        "experiments/results/RESEARCH_INDEX_2026-10-02.md",
+        "experiments/results/cross_league_feasibility/AUDIT.md",
+        "experiments/results/joint_market_calibration/REPORT.md",
+        "experiments/results/market_strength/REPORT.md",
+        "experiments/results/market_strength_diagnostic/REPORT.md",
+        "tests/test_joint_market_calibration.py",
+        "tests/test_market_strength.py",
+        "tests/test_market_strength_diagnostic.py"
+      ],
+      "avg_fields": [
+        "experiments/joint_market_calibration_spec.md",
+        "experiments/market_strength.py",
+        "experiments/market_strength_spec.md",
+        "experiments/odds_data_audit.py",
+        "experiments/results/cross_league_feasibility/AUDIT.md",
+        "experiments/results/joint_market_calibration/REPORT.md",
+        "experiments/results/market_strength/REPORT.md",
+        "experiments/results/odds_audit/AUDIT.md",
+        "experiments/results/odds_audit/inventory.json",
+        "tests/test_market_strength.py"
+      ]
+    }
+  },
+  "modelfc": {
+    "unique_text_blobs": 775,
+    "matches": {
+      "original_coefficient": [],
+      "joint_coefficient": [],
+      "exact_module_names": [],
+      "avg_fields": []
+    }
+  }
+}

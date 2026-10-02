@@ -1,0 +1,4 @@
+Complete: 5142 team observations; no coefficients fitted.
+joint_vs_fixed180 {'mae_delta': -0.05338324699953142, 'nll_delta': -0.017259962104861453, 'brier_delta': -0.004045899307316042}
+original_vs_fixed180 {'mae_delta': -0.010321022617033031, 'nll_delta': -0.005921213717011378, 'brier_delta': -0.0019177750538106003}
+joint_vs_original {'mae_delta': -0.04306222438249839, 'nll_delta': -0.01133874838785007, 'brier_delta': -0.0021281242535054414}
