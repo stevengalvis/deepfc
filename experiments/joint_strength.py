@@ -63,6 +63,34 @@ def objective(theta, arrays, alpha):
     return float(np.dot(w,loss)+.5*np.sum(effects**2)),grad
 
 
+def solve_newton(fun, hess, difference, initial):
+    """Damped Newton with a score/curvature certificate, not a progress flag."""
+    x=initial.copy()
+    for iteration in range(100):
+        value,gradient=fun(x);matrix=hess(x)
+        if not np.isfinite(value) or not np.all(np.isfinite(matrix)):
+            raise RuntimeError('nonfinite Newton objective/curvature')
+        np.linalg.cholesky(matrix)  # Positive definite on identifiable coordinates.
+        step=np.linalg.solve(matrix,-gradient)
+        decrement=float(-gradient@step)
+        residual=float(np.max(np.abs(matrix@step+gradient)))
+        if (np.max(np.abs(gradient))<=1e-8 and np.max(np.abs(step))<=1e-8
+                and 0<=decrement<=1e-12 and residual<=1e-10):
+            return x,{'iterations':iteration,'success':True,'message':'independent score/curvature certified',
+                'reduced_gradient_max':float(np.max(np.abs(gradient))),
+                'newton_step_max':float(np.max(np.abs(step))),'newton_decrement_squared':decrement,
+                'linear_solve_residual':residual}
+        if decrement<=0 or not np.all(np.isfinite(step)):raise RuntimeError('invalid Newton direction')
+        for backtrack in range(60):
+            scale=2.0**(-backtrack)
+            change=difference(x,scale*step)
+            if np.isfinite(change) and change<=-1e-4*scale*decrement:
+                x+=scale*step
+                break
+        else:raise RuntimeError('Newton line search failed')
+    raise RuntimeError('Newton iteration limit; no fallback')
+
+
 def fit(history, when, alpha):
     if not np.isfinite(alpha) or alpha<0:raise ValueError('invalid dispersion')
     teams,arrays=design(history,when);y,w,v,_,_=arrays
@@ -92,14 +120,38 @@ def fit(history, when, alpha):
             for right in columns:np.add.at(full,(left,right),curvature)
         full[2:,2:]+=np.eye(4*n)
         return transform.T@full@transform
-    result=minimize(reduced,initial,jac=True,hess=hessian,method='trust-exact',
-        options={'maxiter':1000,'gtol':1e-6})
-    result.x=transform@result.x
-    loss,grad=objective(result.x,arrays,alpha);norm=float(np.max(np.abs(grad)))
-    info={'date':str(when),'history_fixtures':len(history),'teams':len(teams),'iterations':int(result.nit),
-          'objective':loss,'gradient_max':norm,'success':bool(result.success),'message':str(result.message)}
-    if not result.success or not np.isfinite(loss) or not np.all(np.isfinite(result.x)) or norm>1e-4:
-        raise RuntimeError('fit failure: '+json.dumps(info))
+    def difference(x, step):
+        # Exact objective change, without subtracting two large summed losses.
+        theta=transform@x; change=transform@step
+        eta=theta[v]+theta[2+arrays[3]]+theta[2+arrays[4]]
+        deta=change[v]+change[2+arrays[3]]+change[2+arrays[4]]
+        if alpha<=1e-12:
+            delta=np.exp(eta)*np.expm1(deta)-y*deta
+        else:
+            probability=expit(eta+np.log(alpha))
+            delta=(y+1/alpha)*np.log1p(probability*np.expm1(deta))-y*deta
+        return float(np.dot(w,delta)+np.dot(theta[2:],change[2:])+.5*np.dot(change[2:],change[2:]))
+    x,certificate=solve_newton(reduced,hessian,difference,initial)
+    theta=transform@x
+    loss,grad=objective(theta,arrays,alpha);norm=float(np.max(np.abs(grad)))
+    # Independent score formula, long-double accumulation in raw coordinates.
+    eta=theta[v]+theta[2+arrays[3]]+theta[2+arrays[4]]
+    mu=np.exp(eta.astype(np.longdouble))
+    score=w.astype(np.longdouble)*(mu-y)/(1+alpha*mu)
+    independent=np.zeros(len(theta),dtype=np.longdouble)
+    for indices in [v,2+arrays[3],2+arrays[4]]:np.add.at(independent,indices,score)
+    independent[2:]+=theta[2:]
+    effects_gradient=independent[2:].reshape(4,n)
+    effects_gradient-=effects_gradient.mean(axis=1,keepdims=True)
+    agreement=float(np.max(np.abs(independent-grad)))
+    independent_norm=float(np.max(np.abs(independent)))
+    info={'date':str(when),'history_fixtures':len(history),'teams':len(teams),
+          'objective':loss,'gradient_max':norm,'independent_gradient_max':independent_norm,
+          'gradient_agreement':agreement,**certificate}
+    if not np.isfinite(loss) or norm>1e-8 or independent_norm>1e-8 or agreement>1e-9:
+        raise RuntimeError('fit certificate failure: '+json.dumps(info))
+    from types import SimpleNamespace
+    result=SimpleNamespace(x=theta)
     effects=result.x[2:].reshape(4,len(teams));effects=effects-effects.mean(axis=1,keepdims=True)
     return Fit(teams,result.x[:2],effects,info)
 

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 180, in <module>
+    try:print(json.dumps(run(),indent=2))
+                         ^^^^^
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 155, in run
+    candidate, fits=generate(loaded.matches,baseline)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 114, in generate
+    model=fit(history,day,alpha);fits.append(model.diagnostics)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/deepfc-shot-reconstruction/experiments/joint_strength.py", line 102, in fit
+    raise RuntimeError('fit failure: '+json.dumps(info))
+RuntimeError: fit failure: {"date": "2018-10-24", "history_fixtures": 715, "teams": 30, "iterations": 4, "objective": -1587.3046269739946, "gradient_max": 9.874791574437936e-07, "success": false, "message": "A bad approximation caused failure to predict improvement."}

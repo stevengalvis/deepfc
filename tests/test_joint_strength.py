@@ -52,7 +52,8 @@ def test_fit_identifiability_and_unseen_effects():
 
 def test_failure_is_not_silently_substituted(monkeypatch):
     import experiments.joint_strength as joint
-    monkeypatch.setattr(joint,'minimize',lambda f,x,**kw:SimpleNamespace(x=x,success=False,message='forced failure',nit=0))
+    def failed(*args):raise RuntimeError('forced failure')
+    monkeypatch.setattr(joint,'solve_newton',failed)
     with pytest.raises(RuntimeError,match='forced failure'):fit(history(),date(2018,7,1),.15)
 
 
@@ -69,12 +70,23 @@ def test_same_day_and_future_outcomes_leave_forecasts_unchanged():
 
 def test_reduced_hessian_matches_gradient_derivative(monkeypatch):
     import experiments.joint_strength as joint
-    original=joint.minimize
-    def checked(fun,x,**kwargs):
-        analytic=kwargs['hess'](x)
+    original=joint.solve_newton
+    def checked(fun,hess,difference,x):
+        analytic=hess(x)
         numeric=approx_derivative(lambda z:fun(z)[1],x)
         assert np.allclose(analytic,numeric,atol=1e-6)
         assert np.all(np.linalg.eigvalsh(analytic)>0)
-        return original(fun,x,**kwargs)
-    monkeypatch.setattr(joint,'minimize',checked)
+        perturb=np.linspace(-.001,.001,len(x))
+        assert difference(x,perturb)==pytest.approx(fun(x+perturb)[0]-fun(x)[0],abs=1e-10)
+        return original(fun,hess,difference,x)
+    monkeypatch.setattr(joint,'solve_newton',checked)
     fit(history(),date(2018,7,1),.15)
+
+
+def test_deterministic_balanced_recovery():
+    h=[Match(date(2018,1,1)+timedelta(days=i),'E1','A' if i%2 else 'B','B' if i%2 else 'A',6,4) for i in range(60)]
+    m=fit(h,date(2018,7,1),.15)
+    assert np.max(np.abs(m.effects))<1e-8
+    assert m.predict('A','B','home')==pytest.approx(6,abs=1e-8)
+    assert m.predict('B','A','away')==pytest.approx(4,abs=1e-8)
+    assert m.diagnostics['independent_gradient_max']<1e-8

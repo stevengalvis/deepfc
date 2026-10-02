@@ -85,3 +85,39 @@ unchanged. This is a new frozen numerical implementation, not a per-date fallbac
 or alternate statistical candidate. Both failed development attempts are retained.
 The raw centered objective is retained for audit; its restriction to contrasts
 is the identical constrained model. Final dependency versions unchanged.
+
+## Authorized numerical repair and final convergence contract
+
+Before any candidate evaluation: validate on 2018-08-31, 2018-10-24,
+2021-04-25 and 2022-08-01 only (all development). Objective/gradient/Hessian
+finite differences, independent BFGS solution comparison, perturbed Newton starts,
+and long-double alternative score accumulation are recorded in numerical_repair/.
+A deterministic balanced toy recovers exact home6/away4 and zero effects.
+
+Statistical objective/regularization unchanged. Keep identifiable orthonormal
+contrasts and exact positive Hessian. Replace generic trust stopping with a
+self-contained damped Newton algorithm: at most100 iterations, Cholesky positive-
+definiteness check on every Hessian, direct Newton solve, at most60 halvings,
+Armijo coefficient1e-4. Evaluate objective DIFFERENCES directly using expm1/log1p,
+not subtraction of large objective sums:
+NB delta=(y+r)*log1p(p*expm1(deta))-y*deta,
+where p=expit(eta-log(r)); plus exact Gaussian penalty difference.
+This avoids cancellation in near-optimum improvement estimates. No objective
+rescaling, normalized weights, altered priors, or statistical fallback.
+
+Numeric success requires ALL: reduced gradient max<=1e-8, Newton step max<=1e-8,
+0<=Newton decrement squared<=1e-12, solve residual<=1e-10, finite objective,
+positive-definite Hessian. Independently accumulate the score as
+w*(mu-y)/(1+alpha*mu) in long double, add penalty and project; require raw and
+independent projected gradient max<=1e-8 and gradient agreement<=1e-9.
+Fail hard otherwise. These are stricter first-order limits than previous1e-4
+acceptance; generic optimizer success flags are replaced by explicit certificates,
+not ignored. Strict convexity in identifiable coordinates (positive weights,
+nondegenerate venue intercepts, Gaussian effect penalty) makes the stationary
+point unique. No solver retries/fallback forecasts during evaluation.
+
+Development comparisons must show different-start parameters agreeing within1e-7,
+independent BFGS parameters within1e-5 and objective within1e-8; finite-difference
+gradient and Hessian max error<1e-5. BFGS termination flag is logged as diagnostic,
+never used to accept a forecast. Freeze this contract before end-to-end rerun.
+All performance gates and baseline-defined bands remain unchanged.

@@ -1,0 +1,115 @@
+{
+  "status": "blocked_by_convergence_failure",
+  "candidate_metrics": null,
+  "statistical_gates": "not_evaluated",
+  "decision": "research_only_numerically_unvalidated_do_not_adopt",
+  "baseline_metrics_from_verified_prior_run": {
+    "selection": {
+      "evaluated_team_observations": 5218,
+      "mean_predicted_corners": 5.050821425843975,
+      "mean_actual_corners": 5.0231889612878495,
+      "mae": 2.073609095204529,
+      "rmse": 2.6073962040860663,
+      "negative_binomial_negative_log_loss": 2.338688671457362,
+      "mean_brier_score": 0.2171396552716589,
+      "lines": {
+        "3.5": {
+          "brier_score": 0.2083851007077368,
+          "mean_predicted_over_probability": 0.6762816002643964,
+          "actual_over_rate": 0.6901111536987351
+        },
+        "4.5": {
+          "brier_score": 0.24108354483420544,
+          "mean_predicted_over_probability": 0.5257532264579546,
+          "actual_over_rate": 0.5304714449980835
+        },
+        "5.5": {
+          "brier_score": 0.22835804629897447,
+          "mean_predicted_over_probability": 0.3859578806507256,
+          "actual_over_rate": 0.3875047911077041
+        },
+        "6.5": {
+          "brier_score": 0.19073192924571886,
+          "mean_predicted_over_probability": 0.2694070427646638,
+          "actual_over_rate": 0.26906860866232274
+        }
+      }
+    },
+    "validation": {
+      "evaluated_team_observations": 1048,
+      "mean_predicted_corners": 5.255430973047989,
+      "mean_actual_corners": 5.283396946564886,
+      "mae": 2.200642309596683,
+      "rmse": 2.8123720009099524,
+      "negative_binomial_negative_log_loss": 2.4064429644564096,
+      "mean_brier_score": 0.21045121912536108,
+      "lines": {
+        "3.5": {
+          "brier_score": 0.18909028628729577,
+          "mean_predicted_over_probability": 0.6923792423761409,
+          "actual_over_rate": 0.7127862595419847
+        },
+        "4.5": {
+          "brier_score": 0.23069266830287743,
+          "mean_predicted_over_probability": 0.5484842984666685,
+          "actual_over_rate": 0.5639312977099237
+        },
+        "5.5": {
+          "brier_score": 0.22726992868833581,
+          "mean_predicted_over_probability": 0.4125445287443025,
+          "actual_over_rate": 0.43225190839694655
+        },
+        "6.5": {
+          "brier_score": 0.19475199322293535,
+          "mean_predicted_over_probability": 0.29649343746175544,
+          "actual_over_rate": 0.29866412213740456
+        }
+      }
+    },
+    "later_test": {
+      "evaluated_team_observations": 2150,
+      "mean_predicted_corners": 5.199063159076844,
+      "mean_actual_corners": 5.126511627906977,
+      "mae": 2.1207667727866437,
+      "rmse": 2.716848642180642,
+      "negative_binomial_negative_log_loss": 2.3540731035842533,
+      "mean_brier_score": 0.2085593214158884,
+      "lines": {
+        "3.5": {
+          "brier_score": 0.20348497195487072,
+          "mean_predicted_over_probability": 0.6831028529318015,
+          "actual_over_rate": 0.6827906976744186
+        },
+        "4.5": {
+          "brier_score": 0.22917200408812835,
+          "mean_predicted_over_probability": 0.5389349476905821,
+          "actual_over_rate": 0.5325581395348837
+        },
+        "5.5": {
+          "brier_score": 0.21869507484760833,
+          "mean_predicted_over_probability": 0.40411355961726403,
+          "actual_over_rate": 0.38883720930232557
+        },
+        "6.5": {
+          "brier_score": 0.18288523477294616,
+          "mean_predicted_over_probability": 0.2899084642331438,
+          "actual_over_rate": 0.26976744186046514
+        }
+      }
+    },
+    "combined_later": {
+      "evaluated_team_observations": 3198,
+      "mean_brier_score": 0.20917930540573434,
+      "negative_binomial_negative_log_loss": 2.3712349591796316,
+      "mae": 2.146942370840715
+    }
+  },
+  "final_failure": {
+    "error": "fit failure: {\"date\": \"2018-10-24\", \"history_fixtures\": 715, \"teams\": 30, \"iterations\": 4, \"objective\": -1587.3046269739946, \"gradient_max\": 9.874791574437936e-07, \"success\": false, \"message\": \"A bad approximation caused failure to predict improvement.\"}"
+  },
+  "attempts": 3,
+  "tests_passed": 79,
+  "tests_seconds": 0.8,
+  "spec_sha256": "03f6536121e4b73f06b9037e51b788e67d783663c9d5c05ccf859f4603933a36",
+  "code_sha256": "e9738fd1be6c2055398668117a0d5b87bdb4a452b5a994daf7e6fdcb411c10ba"
+}
