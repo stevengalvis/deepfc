@@ -1,0 +1,43 @@
+{
+  "coefficients": {
+    "a_home": -0.00870047867223288,
+    "a_away": -0.01899680404719811,
+    "gamma": 0.3116296486016443,
+    "beta": 0.4215638920715592
+  },
+  "fit_certificate": {
+    "iterations": 3,
+    "success": true,
+    "message": "independent score/curvature certified",
+    "reduced_gradient_max": 1.1853829619268286e-09,
+    "newton_step_max": 5.28427006464095e-13,
+    "newton_decrement_squared": 3.8643971183139247e-22,
+    "linear_solve_residual": 1.0339757656912846e-25,
+    "independent_gradient_max": 1.185358875508205e-09,
+    "hessian_min_eigenvalue": 184.7830884145133,
+    "training_n": 4224,
+    "latest_training_date": "2023-05-08",
+    "cutoff": "2023-07-01"
+  },
+  "gates": {
+    "brier_material_improvement": true,
+    "brier_interval_below_zero": true,
+    "each_later_season_improves": false,
+    "nll_not_worse": true,
+    "nll_upper_bound": true,
+    "venue_guardrail": true,
+    "halve_bias_lt4": false,
+    "halve_bias_ge6": false
+  },
+  "test_only_gates": {
+    "brier_material_improvement": true,
+    "brier_interval_below_zero": true,
+    "each_later_season_improves": true,
+    "nll_not_worse": true,
+    "nll_upper_bound": true,
+    "venue_guardrail": true,
+    "halve_bias_lt4": false,
+    "halve_bias_ge6": false
+  },
+  "decision": "reject_under_frozen_gates"
+}
