@@ -1,0 +1,93 @@
+{
+  "B": [
+    -2.661460822405669,
+    0.0
+  ],
+  "C": [
+    -2.6741754725076747,
+    -0.04421366964196907
+  ],
+  "B_certificate": {
+    "objective": 4991.627698064895,
+    "score_max": 4.1039242316964764e-13,
+    "finite_difference_agreement": 2.1332450289720216e-07,
+    "hessian_min_eigenvalue": 66.06029530902964,
+    "bound_distance": 2.661460822405669,
+    "polish_iterations": 1,
+    "certified": true,
+    "scalar_success": true
+  },
+  "C_start_certificates": [
+    {
+      "objective": 4991.610627153054,
+      "score_max": 2.153399492142022e-08,
+      "finite_difference_agreement": 2.1349355805357767e-07,
+      "hessian_min_eigenvalue": 15.74243954592038,
+      "bound_distance": 2.65206863768669,
+      "polish_iterations": 29,
+      "certified": true,
+      "initial": [
+        -2.661460822405669,
+        0.0
+      ],
+      "slsqp_success": true,
+      "slsqp_message": "Optimization terminated successfully",
+      "theta": [
+        -2.6741754725076747,
+        -0.04421366964196907
+      ]
+    },
+    {
+      "objective": 4991.610627153054,
+      "score_max": 2.731550777191824e-08,
+      "finite_difference_agreement": 2.1349408671532746e-07,
+      "hessian_min_eigenvalue": 15.742439546183894,
+      "bound_distance": 2.652068637597242,
+      "polish_iterations": 29,
+      "certified": true,
+      "initial": [
+        -2.661460822405669,
+        0.25
+      ],
+      "slsqp_success": true,
+      "slsqp_message": "Optimization terminated successfully",
+      "theta": [
+        -2.6741754724229385,
+        -0.04421366965139307
+      ]
+    },
+    {
+      "objective": 4991.610627153054,
+      "score_max": 1.225300243212768e-14,
+      "finite_difference_agreement": 2.1349143449031667e-07,
+      "hessian_min_eigenvalue": 15.742439544921687,
+      "bound_distance": 2.6520686380139304,
+      "polish_iterations": 1,
+      "certified": true,
+      "initial": [
+        -2.661460822405669,
+        -0.25
+      ],
+      "slsqp_success": true,
+      "slsqp_message": "Optimization terminated successfully",
+      "theta": [
+        -2.6741754728313603,
+        -0.044213669634859926
+      ]
+    }
+  ],
+  "objective_spread_per_observation": 0.0,
+  "training_n": 2148,
+  "cutoff": "2023-07-01",
+  "first_training_date": "2021-08-06",
+  "last_training_date": "2023-05-08",
+  "code_sha256": "9f56fe9f18c95a85330b00f4738d57e04b350acd29311d34d5106c43fda60469",
+  "spec_sha256": "ec89379399b89b76f3ca541394260d8df94be15a7e96238cb4c97816685ad893",
+  "plan_sha256": "4f864de70c0adcf99d596251c7b173aafaa594a30e23eac9f00f6d7ebf83f764",
+  "coverage": {
+    "invalid_source_quotes": [],
+    "excluded_forecast_rows": []
+  },
+  "development_sha256": "fff0b78ea747dc26b4c6a41c6cc2498bd93a46b90404c8818ae7fc3190fda040"
+}
+Development2022 deltas {'C_minus_B_brier': -1.979636177669631e-06, 'C_minus_B_nll': 6.707916400688109e-05, 'C_minus_B_mae': 0.0, 'C_minus_B_bias': 0.0, 'B_minus_A_brier': -0.0001128868126498934, 'B_minus_A_nll': -0.0012003086021769138, 'B_minus_A_mae': 0.0, 'B_minus_A_bias': 0.0, 'C_minus_A_brier': -0.00011486644882756303, 'C_minus_A_nll': -0.0011332294381700327, 'C_minus_A_mae': 0.0, 'C_minus_A_bias': 0.0}
