@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-8.4.2, pluggy-1.6.0
+rootdir: /workspace/deepfc-shot-reconstruction
+configfile: pyproject.toml
+testpaths: tests
+collected 70 items
+
+tests/test_corner_distribution.py .........                              [ 12%]
+tests/test_football_data_csv.py .....                                    [ 20%]
+tests/test_match_data.py ........                                        [ 31%]
+tests/test_shot_reconstruction.py ...........                            [ 47%]
+tests/test_signal_strength_experiment.py ....                            [ 52%]
+tests/test_team_corners.py .........                                     [ 65%]
+tests/test_time_decay_experiment.py .................                    [ 90%]
+tests/test_total_corners.py .......                                      [100%]
+
+============================== 70 passed in 0.44s ==============================

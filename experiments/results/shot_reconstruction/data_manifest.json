@@ -1,0 +1,74 @@
+[
+  {
+    "path": "data/E1_1718.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/1718/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.436382+00:00",
+    "archived_sha256": "04d07d578d818bdcd6b95d43e79f10a6a26be01b45be6190b09ebdeaeba0a7ce",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_1819.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/1819/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.449446+00:00",
+    "archived_sha256": "112eedf787e26e00aac1442ef86e7fee5d4a43f86552ff2dac31ceb95a849487",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_1920.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/1920/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.451853+00:00",
+    "archived_sha256": "f31450c623c0b74b89692584a85924cc652d33ec89757acf4b2dda5e26261d57",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_2021.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/2021/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.454501+00:00",
+    "archived_sha256": "cf93295e310c60e5b97ae7466d772f8ec6a908ad401e38fceb7e8617369d5073",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_2122.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/2122/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.456691+00:00",
+    "archived_sha256": "a181451be4801b9f838daf5f6aaf21e9f09d36042be9e6c15388e71001e772ea",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_2223.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/2223/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.458984+00:00",
+    "archived_sha256": "cd38ab0586ea8cb4d573c363ff70749117f116da5b2741e5b0ea37da05860b1b",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_2324.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/2324/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.461290+00:00",
+    "archived_sha256": "5737f6cc95c95092b28317f41d3123e2fb09345434efc1c84bbdf15830849ab3",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_2425.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/2425/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.463591+00:00",
+    "archived_sha256": "f34c340446c916374be66bdc2fb25b87ee7f2662712ca009653d03ac705535f9",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "path": "data/E1_2526.csv",
+    "url": "https://www.football-data.co.uk/mmz4281/2526/E1.csv",
+    "attempted_at": "2026-10-02T13:45:11.465759+00:00",
+    "archived_sha256": "98954c319950f19158624b17a154ef1c56eb7b8d169ef317f28f06d11d0b9a74",
+    "status": "blocked",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  }
+]

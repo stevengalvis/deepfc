@@ -1,0 +1,26 @@
+{
+  "status": "completed_reconstruction",
+  "recorded_at": "2026-10-02T13:54:42.364760+00:00",
+  "branch": "research/shot-pressure-reconstruction",
+  "base_commit": "8af3712a132e97b35acdc56ddbdd0732f77eb815",
+  "design_frozen_before_historical_evaluation": true,
+  "historical_results": "results.json",
+  "tests": {
+    "passed": 70,
+    "existing": 59,
+    "added": 11,
+    "seconds": 0.44
+  },
+  "downloaded_files": 9,
+  "blocked_files": 0,
+  "sha256": {
+    "experiments/shot_reconstruction_spec.md": "347e923b5c212531613abbb7d1cd5cd9b3aa57f0146bf061093f3a90e2d2325c",
+    "experiments/shot_reconstruction.py": "769f958fd9e6d61578e0b6460ad71a74b1b1d2d13a85c97cacd7b7a08f0866ec",
+    "experiments/fetch_shot_data.py": "c6d49a5185b3b1cf29eef79e7038ad004fbbc38f63ab5a5575b0154e11ab721e",
+    "tests/test_shot_reconstruction.py": "33040636f6fab2a69cec7d8a08f7fc294c7ca311aa5ca0af62b8cc139a99e1c8"
+  },
+  "primary_domain_still_proxy_blocked": true,
+  "selected_strength": 0.25,
+  "decision": "retain baseline",
+  "results_sha256": "cafe81183c7478001bdd531fc908e514c6e99c54d257a8c047eddb11baf24eb9"
+}
