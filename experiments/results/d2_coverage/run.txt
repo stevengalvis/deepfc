@@ -1,0 +1,10 @@
+commit 25882a58a736daf7ece3781940eac17ae1117a66 sha256 ef224cf2c252f07a842b3bcfd4ba5c718c25cedd8937ffa174a74b86b5ba4221
+2017 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2018 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2019 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2020 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2021 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2022 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2023 306 18 invalid stats 0 duplicate 0 shot consistency 0
+2024 306 19 invalid stats 0 duplicate 0 shot consistency 0
+2025 306 18 invalid stats 0 duplicate 0 shot consistency 0

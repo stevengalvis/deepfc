@@ -1,0 +1,630 @@
+{
+  "mirror": "https://github.com/xgabora/Club-Football-Match-Data-2000-2025",
+  "commit": "25882a58a736daf7ece3781940eac17ae1117a66",
+  "source_path": "data/Matches.csv",
+  "sha256": "ef224cf2c252f07a842b3bcfd4ba5c718c25cedd8937ffa174a74b86b5ba4221",
+  "bytes": 45370018,
+  "headers": [
+    "Division",
+    "MatchDate",
+    "MatchTime",
+    "HomeTeam",
+    "AwayTeam",
+    "HomeElo",
+    "AwayElo",
+    "Form3Home",
+    "Form5Home",
+    "Form3Away",
+    "Form5Away",
+    "FTHome",
+    "FTAway",
+    "FTResult",
+    "HTHome",
+    "HTAway",
+    "HTResult",
+    "HomeShots",
+    "AwayShots",
+    "HomeTarget",
+    "AwayTarget",
+    "HomeFouls",
+    "AwayFouls",
+    "HomeCorners",
+    "AwayCorners",
+    "HomeYellow",
+    "AwayYellow",
+    "HomeRed",
+    "AwayRed",
+    "OddHome",
+    "OddDraw",
+    "OddAway",
+    "MaxHome",
+    "MaxDraw",
+    "MaxAway",
+    "Over25",
+    "Under25",
+    "MaxOver25",
+    "MaxUnder25",
+    "HandiSize",
+    "HandiHome",
+    "HandiAway",
+    "C_LTH",
+    "C_LTA",
+    "C_VHD",
+    "C_VAD",
+    "C_HTB",
+    "C_PHB"
+  ],
+  "window_labels": "July1-June30 calendar windows; merged file supplies no source season column.",
+  "odds_provenance": "README identifies OddHome/OddDraw/OddAway as Bet365, not AvgH/D/A. Not accepted as a substitution.",
+  "primary_hash_verified": false,
+  "seasons": {
+    "2017": {
+      "rows": 306,
+      "dates": [
+        "2017-07-28",
+        "2018-05-13"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Bochum": 34,
+        "St Pauli": 34,
+        "Bielefeld": 34,
+        "Regensburg": 34,
+        "Darmstadt": 34,
+        "Greuther Furth": 34,
+        "Ingolstadt": 34,
+        "Union Berlin": 34,
+        "Dresden": 34,
+        "Duisburg": 34,
+        "Holstein Kiel": 34,
+        "Sandhausen": 34,
+        "Nurnberg": 34,
+        "Kaiserslautern": 34,
+        "Fortuna Dusseldorf": 34,
+        "Braunschweig": 34,
+        "Heidenheim": 34,
+        "Erzgebirge Aue": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2018": {
+      "rows": 306,
+      "dates": [
+        "2018-08-03",
+        "2019-05-19"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Hamburg": 34,
+        "Holstein Kiel": 34,
+        "Bochum": 34,
+        "FC Koln": 34,
+        "Greuther Furth": 34,
+        "Sandhausen": 34,
+        "Regensburg": 34,
+        "Ingolstadt": 34,
+        "Darmstadt": 34,
+        "Paderborn": 34,
+        "Heidenheim": 34,
+        "Bielefeld": 34,
+        "Magdeburg": 34,
+        "St Pauli": 34,
+        "Union Berlin": 34,
+        "Erzgebirge Aue": 34,
+        "Dresden": 34,
+        "Duisburg": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2019": {
+      "rows": 306,
+      "dates": [
+        "2019-07-26",
+        "2020-06-28"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Stuttgart": 34,
+        "Hannover": 34,
+        "Dresden": 34,
+        "Nurnberg": 34,
+        "Holstein Kiel": 34,
+        "Sandhausen": 34,
+        "Osnabruck": 34,
+        "Heidenheim": 34,
+        "Hamburg": 34,
+        "Darmstadt": 34,
+        "Greuther Furth": 34,
+        "Erzgebirge Aue": 34,
+        "Regensburg": 34,
+        "Bochum": 34,
+        "Wehen": 34,
+        "Karlsruhe": 34,
+        "Bielefeld": 34,
+        "St Pauli": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2020": {
+      "rows": 306,
+      "dates": [
+        "2020-09-18",
+        "2021-05-23"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Hamburg": 34,
+        "Fortuna Dusseldorf": 34,
+        "Regensburg": 34,
+        "Nurnberg": 34,
+        "Hannover": 34,
+        "Karlsruhe": 34,
+        "Sandhausen": 34,
+        "Darmstadt": 34,
+        "Wurzburger Kickers": 34,
+        "Erzgebirge Aue": 34,
+        "Greuther Furth": 34,
+        "Osnabruck": 34,
+        "Heidenheim": 34,
+        "Braunschweig": 34,
+        "Holstein Kiel": 34,
+        "Paderborn": 34,
+        "Bochum": 34,
+        "St Pauli": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2021": {
+      "rows": 306,
+      "dates": [
+        "2021-07-23",
+        "2022-05-15"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Schalke 04": 34,
+        "Hamburg": 34,
+        "Darmstadt": 34,
+        "Regensburg": 34,
+        "Dresden": 34,
+        "Ingolstadt": 34,
+        "Hansa Rostock": 34,
+        "Karlsruhe": 34,
+        "Heidenheim": 34,
+        "Paderborn": 34,
+        "Werder Bremen": 34,
+        "Hannover": 34,
+        "Nurnberg": 34,
+        "Erzgebirge Aue": 34,
+        "Sandhausen": 34,
+        "Fortuna Dusseldorf": 34,
+        "St Pauli": 34,
+        "Holstein Kiel": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2022": {
+      "rows": 306,
+      "dates": [
+        "2022-07-15",
+        "2023-05-28"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Kaiserslautern": 34,
+        "Hannover": 34,
+        "Greuther Furth": 34,
+        "Holstein Kiel": 34,
+        "Regensburg": 34,
+        "Darmstadt": 34,
+        "Sandhausen": 34,
+        "Bielefeld": 34,
+        "St Pauli": 34,
+        "Nurnberg": 34,
+        "Magdeburg": 34,
+        "Fortuna Dusseldorf": 34,
+        "Braunschweig": 34,
+        "Hamburg": 34,
+        "Hansa Rostock": 34,
+        "Heidenheim": 34,
+        "Paderborn": 34,
+        "Karlsruhe": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2023": {
+      "rows": 306,
+      "dates": [
+        "2023-07-28",
+        "2024-05-19"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Hamburg": 34,
+        "Schalke 04": 34,
+        "Hannover": 34,
+        "Elversberg": 34,
+        "Kaiserslautern": 34,
+        "St Pauli": 34,
+        "Osnabruck": 34,
+        "Karlsruhe": 34,
+        "Wehen": 34,
+        "Magdeburg": 34,
+        "Fortuna Dusseldorf": 34,
+        "Hertha": 34,
+        "Braunschweig": 34,
+        "Holstein Kiel": 34,
+        "Greuther Furth": 34,
+        "Paderborn": 34,
+        "Hansa Rostock": 34,
+        "Nurnberg": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2024": {
+      "rows": 306,
+      "dates": [
+        "2024-08-02",
+        "2025-05-18"
+      ],
+      "teams": 19,
+      "team_appearance_counts": {
+        "FC Koln": 34,
+        "Hamburg": 34,
+        "Hannover": 34,
+        "Regensburg": 34,
+        "Hertha": 34,
+        "Paderborn": 34,
+        "Karlsruhe": 34,
+        "Nurnberg": 34,
+        "Magdeburg": 34,
+        "Elversberg": 34,
+        "Schalke 04": 34,
+        "Braunschweig": 34,
+        "Darmstadt": 34,
+        "Fortuna Dusseldorf": 34,
+        "Greuther Furth": 34,
+        "Preussen Munster": 17,
+        "Ulm": 34,
+        "Kaiserslautern": 34,
+        "Preu\u00dfen M\u00fcnster": 17
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    },
+    "2025": {
+      "rows": 306,
+      "dates": [
+        "2025-08-01",
+        "2026-05-17"
+      ],
+      "teams": 18,
+      "team_appearance_counts": {
+        "Schalke 04": 34,
+        "Hertha": 34,
+        "Darmstadt": 34,
+        "Bochum": 34,
+        "Elversberg": 34,
+        "Nurnberg": 34,
+        "Karlsruhe": 34,
+        "Preu\u00dfen M\u00fcnster": 34,
+        "Paderborn": 34,
+        "Holstein Kiel": 34,
+        "Bielefeld": 34,
+        "Fortuna Dusseldorf": 34,
+        "Greuther Furth": 34,
+        "Dresden": 34,
+        "Hannover": 34,
+        "Kaiserslautern": 34,
+        "Magdeburg": 34,
+        "Braunschweig": 34
+      },
+      "duplicate_fixture_rows": 0,
+      "blank_team_rows": 0,
+      "same_team_rows": 0,
+      "fields": {
+        "HomeCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayCorners": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayShots": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "HomeTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        },
+        "AwayTarget": {
+          "blank": 0,
+          "invalid_including_blank": 0
+        }
+      },
+      "shots_on_target_exceeds_shots_rows": 0,
+      "required_market_average_columns_absent": [
+        "AvgH",
+        "AvgD",
+        "AvgA"
+      ]
+    }
+  }
+}

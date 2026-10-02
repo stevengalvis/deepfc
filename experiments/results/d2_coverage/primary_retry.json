@@ -1,0 +1,12 @@
+{
+  "attempt_time_utc": "2026-10-02T16:23:40Z",
+  "url": "https://football-data.co.uk/mmz4281/2526/D2.csv",
+  "prior_retry_after": "Not exposed by previous web fetcher; none in saved audit artifacts. Parent reports over ten minutes elapsed.",
+  "attempts": 1,
+  "curl_exit": 56,
+  "origin_http_status": null,
+  "connect_proxy_status": 403,
+  "headers": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Fri, 02 Oct 2026 16:23:40 GMT\nserver: envoy\nconnection: close\n\n",
+  "retry_after": null,
+  "outcome": "CONNECT tunnel denied before origin response; no CSV obtained; stopped without further requests."
+}
