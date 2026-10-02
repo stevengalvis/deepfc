@@ -1,0 +1,334 @@
+{
+  "files": [
+    {
+      "league": "E1",
+      "season": 2017,
+      "path": "data/E1_1718.csv",
+      "sha256": "04d07d578d818bdcd6b95d43e79f10a6a26be01b45be6190b09ebdeaeba0a7ce",
+      "rows": 552,
+      "columns": [
+        "BbAv>2.5",
+        "BbAv<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": false,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.36453201970443344,
+      "probability_max": 0.6812933025404158,
+      "use": "corner warmup only"
+    },
+    {
+      "league": "E1",
+      "season": 2018,
+      "path": "data/E1_1819.csv",
+      "sha256": "112eedf787e26e00aac1442ef86e7fee5d4a43f86552ff2dac31ceb95a849487",
+      "rows": 552,
+      "columns": [
+        "BbAv>2.5",
+        "BbAv<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": false,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.3636363636363637,
+      "probability_max": 0.6311881188118812,
+      "use": "corner warmup only"
+    },
+    {
+      "league": "E1",
+      "season": 2019,
+      "path": "data/E1_1920.csv",
+      "sha256": "f31450c623c0b74b89692584a85924cc652d33ec89757acf4b2dda5e26261d57",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.355072463768116,
+      "probability_max": 0.6432038834951456,
+      "use": "feature"
+    },
+    {
+      "league": "E1",
+      "season": 2020,
+      "path": "data/E1_2021.csv",
+      "sha256": "cf93295e310c60e5b97ae7466d772f8ec6a908ad401e38fceb7e8617369d5073",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.34128878281622915,
+      "probability_max": 0.5892857142857143,
+      "use": "feature"
+    },
+    {
+      "league": "E1",
+      "season": 2021,
+      "path": "data/E1_2122.csv",
+      "sha256": "a181451be4801b9f838daf5f6aaf21e9f09d36042be9e6c15388e71001e772ea",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.34606205250596656,
+      "probability_max": 0.6595744680851063,
+      "use": "feature"
+    },
+    {
+      "league": "E1",
+      "season": 2022,
+      "path": "data/E1_2223.csv",
+      "sha256": "cd38ab0586ea8cb4d573c363ff70749117f116da5b2741e5b0ea37da05860b1b",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.36341463414634145,
+      "probability_max": 0.5725388601036269,
+      "use": "feature"
+    },
+    {
+      "league": "E1",
+      "season": 2023,
+      "path": "data/E1_2324.csv",
+      "sha256": "5737f6cc95c95092b28317f41d3123e2fb09345434efc1c84bbdf15830849ab3",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.3753086419753087,
+      "probability_max": 0.6893424036281179,
+      "use": "feature"
+    },
+    {
+      "league": "E1",
+      "season": 2024,
+      "path": "data/E1_2425.csv",
+      "sha256": "f34c340446c916374be66bdc2fb25b87ee7f2662712ca009653d03ac705535f9",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.309255079006772,
+      "probability_max": 0.6650943396226415,
+      "use": "feature"
+    },
+    {
+      "league": "E1",
+      "season": 2025,
+      "path": "data/E1_2526.csv",
+      "sha256": "98954c319950f19158624b17a154ef1c56eb7b8d169ef317f28f06d11d0b9a74",
+      "rows": 552,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 552,
+      "invalid": [],
+      "probability_min": 0.35872235872235875,
+      "probability_max": 0.7079646017699115,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2017,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2017-2018.csv",
+      "sha256": "4bf936f365715a6c296762610cd0063fc72cd9fbc653428eb8217d37959fe2a7",
+      "rows": 380,
+      "columns": [
+        "BbAv>2.5",
+        "BbAv<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": false,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.3248259860788863,
+      "probability_max": 0.7679245283018867,
+      "use": "corner warmup only"
+    },
+    {
+      "league": "E0",
+      "season": 2018,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2018-2019.csv",
+      "sha256": "4a44573970f0f693b98889cf5667aafb422d19f185ee63e20022c31b132fe881",
+      "rows": 380,
+      "columns": [
+        "BbAv>2.5",
+        "BbAv<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": false,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.34606205250596656,
+      "probability_max": 0.7736549165120593,
+      "use": "corner warmup only"
+    },
+    {
+      "league": "E0",
+      "season": 2019,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2019-2020.csv",
+      "sha256": "92bf96bebc4fdd4412c5f99ee40b0a5131815ca07150b17e34690d8fcfa217a8",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.35336538461538464,
+      "probability_max": 0.7862190812720848,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2020,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2020-2021.csv",
+      "sha256": "5fe0773d57db8d4598db8e567543bd44bccedd08b4af3f6cb647d25852417ecf",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.3557692307692308,
+      "probability_max": 0.7280334728033473,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2021,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2021-2022.csv",
+      "sha256": "95d1dd4afacfb96754b232d958b4972929a5828daa7b6a957edd7690edfc0481",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.37592137592137587,
+      "probability_max": 0.7495069033530573,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2022,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2022-2023.csv",
+      "sha256": "e51361323bcdcdcec2faf8f58e7bcfc4f5b193ed6017b284c71538ed70d98ea2",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.3840399002493765,
+      "probability_max": 0.7664783427495293,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2023,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2023-2024.csv",
+      "sha256": "0b669038e94bf305603d841f02006c7d35ebd41c8722c76e479f2393079b995f",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.4173027989821883,
+      "probability_max": 0.7909407665505226,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2024,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2024-2025.csv",
+      "sha256": "316173b11634e5fdb836b0f3f9b4728df5044a44e1539361b6bdf18f0d3909a1",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.4025316455696203,
+      "probability_max": 0.7875,
+      "use": "feature"
+    },
+    {
+      "league": "E0",
+      "season": 2025,
+      "path": "/workspace/shot-data-mirror-liam/data/ENGLAND/Premier league/GAMES/2025-2026.csv",
+      "sha256": "e7b387ac3ee2eda59d9e1f31f95457362e29cfbb956e686e939a58e32b23eb11",
+      "rows": 380,
+      "columns": [
+        "Avg>2.5",
+        "Avg<2.5"
+      ],
+      "columns_present": true,
+      "closing_columns_present": true,
+      "usable_pairs_and_1x2_if_2019plus": 380,
+      "invalid": [],
+      "probability_min": 0.3863636363636363,
+      "probability_max": 0.7237687366167023,
+      "use": "feature"
+    }
+  ],
+  "source_documentation": "https://football-data.co.uk/data.php",
+  "documentation_checked": "2026-10-02",
+  "schema": "BbAv Betbrain before 2019; Avg Oddsportal from 2019. Only 2019+ Avg fields modeled; AvgC never used.",
+  "continuity_limit": "Provider excludes Pinnacle from market averages from 2025-07-23 after stale public API odds; bookmaker pool is not constant.",
+  "timing_limit": "Documented pre-closing snapshots, not exact quote timestamps or a verified fixed pre-kickoff horizon.",
+  "provenance": "Existing pinned mirror files. E1 matches archived primary hashes; E0 lacks independent primary-hash verification."
+}

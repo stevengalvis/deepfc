@@ -1,0 +1,25 @@
+{
+  "theta": [
+    0.008354417576116272,
+    -0.004653377447948676,
+    -0.7197742006439348,
+    0.4278832235893763,
+    0.44730128520776335
+  ],
+  "certificate": {
+    "iterations": 3,
+    "success": true,
+    "message": "independent score/curvature certified",
+    "reduced_gradient_max": 1.104813590439846e-09,
+    "newton_step_max": 7.392040810260242e-13,
+    "newton_decrement_squared": 3.9950183265998987e-22,
+    "linear_solve_residual": 1.0339757656912846e-25,
+    "independent_gradient_max": 1.104923607361634e-09,
+    "hessian_min_eigenvalue": 33.89082055576127,
+    "training_n": 4224,
+    "latest_training_date": "2023-05-08",
+    "cutoff": "2023-07-01"
+  }
+}
+early fold 2021 {'goal_minus_joint_brier': 0.00029180970760342195, 'goal_minus_joint_nll': 0.0008188194075981251, 'goal_minus_joint_mae': 0.0016080012421642487, 'goal_minus_joint_bias': 0.01260466807540452}
+early fold 2022 {'goal_minus_joint_brier': -0.0002537676798874007, 'goal_minus_joint_nll': -0.000960939026784663, 'goal_minus_joint_mae': -0.0044815135312446285, 'goal_minus_joint_bias': 0.017934798509870887}

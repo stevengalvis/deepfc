@@ -1,0 +1,1 @@
+281c155ce435ec2f1c5132364eabce5014fd7439285c7ce674b45112b7143ff3  experiments/results/goal_total_extension/fit.json
