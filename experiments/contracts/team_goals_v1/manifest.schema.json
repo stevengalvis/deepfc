@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:deepfc:exchange:1:manifest.schema.json",
+  "type": "object",
+  "properties": {
+    "contract_version": {
+      "const": "deepfc.exchange/1.0.0"
+    },
+    "created_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "permitted_use": {
+      "const": {
+        "private_research": true,
+        "public_posting": false,
+        "commercial_redistribution": false,
+        "production_promotion": false
+      }
+    },
+    "forecast_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result_tail": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "const": "EMPTY"
+        }
+      ]
+    },
+    "policy": {
+      "const": {
+        "id": "three-league-o15-v1",
+        "league_order": [
+          "E0",
+          "E1",
+          "SP1"
+        ],
+        "target_lead_hours": 24,
+        "lead_tolerance_hours": 1,
+        "max_snapshot_age_hours": 24,
+        "max_fixture_check_age_hours": 24,
+        "minimum_history_fixtures": 100,
+        "minimum_venue_appearances": 5,
+        "primary_comparison": "fixed180_minus_plain",
+        "context_model": "venue_frequency",
+        "smoothing_matches": 5,
+        "half_life_days": 180,
+        "research_only": true,
+        "automatic_promotion": false
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "bytes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evidence_delivery": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "contract_version",
+    "created_at_utc",
+    "permitted_use",
+    "forecast_count",
+    "result_count",
+    "result_tail",
+    "policy",
+    "files",
+    "evidence_delivery",
+    "manifest_id"
+  ],
+  "additionalProperties": false
+}

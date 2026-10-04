@@ -1,0 +1,45 @@
+DeepFC research exchange1.0.0: public consumer handoff
+
+Scope: private research integration for E0/E1/SP1 regulation team goals over1.5. This publication contains code, schemas, tests and deliberately synthetic consumer fixtures. It contains NO genuine forecasts, results, raw evidence, odds or source datasets. Genuine-data delivery remains a separate authorized transfer. Do not render synthetic fixtures as real forecasts or enable production fallback.
+
+Read forecast.schema.json, result.schema.json, manifest.schema.json, odds-reference.schema.json, policy.json, PUBLIC_READINESS.json and PUBLIC_PROTOCOL.txt. SHA256SUMS.json covers exact bytes of the newly published implementation/dependencies/tests/docs/examples except itself. Pin the Git commit and verify these hashes.
+
+Runtime: Python3.12; install the existing test extra and experiments/joint_strength_requirements.txt in an isolated environment. Run python -m pytest -q from the repository root. No dataset download is required. A legacy integration test skips without the private snapshots. pilot_outcomes.py retains local-only legacy lookup defaults/hashes for compatibility; those are not downloadable data or credentials. Exporting legacy forecasts requires the original separately retained evidence and fails without it. The contract verifier itself does not require those private files.
+
+Identity and hashes
+- fixture_id is SHA256 of canonical JSON of competition,season,home,away. Domestic league pairings occur once per home-away orientation per season. Kickoff is excluded so postponements do not mutate identity. Provider ID is genuine or null. Team identity changes need an explicit reviewed amendment, never fuzzy joins.
+- record_id hashes canonical JSON excluding record_id. Encoding: Python json.dumps(sort_keys=True,separators=(',', ':'),allow_nan=False), default ensure_ascii=True, then UTF8. Other languages must match Python numeric serialization or preserve supplied bytes and transport hashes.
+- Manifest files[].sha256 and bytes cover exact member bytes including newline. manifest_id hashes canonical manifest excluding manifest_id. Whole ZIP SHA256 must arrive through a trusted handoff; internally consistent hashes do not authenticate an exporter.
+
+Forecasts
+Schema version1 and contract deepfc.exchange/1.0.0 only. Issued records contain paired plain,fixed180,venue_frequency probability arrays in home,away order; abstentions contain no probabilities and retain reasons. One immutable capture per cohort/fixture. Model versions pin unchanged estimator sources; smoothing5, half-life180, Poisson P(goals>=2), Beta(1,1) venue-frequency context. No model fit or selection in the exchange layer.
+Actual issuance clock is distinct from export time. CLI has no backdating option. New sources carry complete-through cutoff,retrieved_at_utc,fixture_checked_at_utc,latest_match_date,local evidence hashes and named review. All history calendar dates strictly precede issuance and target dates. Source attestation is accountability, not independent provider authentication. Unknown/malformed/future data fail intake; stale/incomplete/unsupported captures abstain. Genuine legacy records retain original issuance, exact probabilities and date-only cutoff precision, and remain separate from the new prospective cohort.
+
+Result joins and corrections
+Join results by exact forecast_record_id. Original schedule/probabilities never change. Nonfinal events may provide revised scheduled_kickoff_utc; final results provide actual_kickoff_utc and completed_at_utc. Actual kickoff must follow issuance. played_final means regulation goals excluding extra time/penalties. Nonfinal/awarded/cancelled/conflicting/missing outcomes do not score; no fabricated0-0. All evidence requires hashes, UTC capture/review times, named attestation and official league HTTPS domains: E0premierleague.com/thefa.com, E1efl.com/thefa.com, SP1laliga.com/rfef.es (www accepted).
+Corrections supersede the current result record_id with reason and nondecreasing observation time. Retain all versions. Global sequence/previous_record_id plus externally retained tail detect stale writes/rollback. A corrected award removes a previously final result from all models' shared score cohort. Outcome evidence is separate; issued outcome_evidence_refs stays empty forever.
+
+Import boundary
+Call experiments.research_exchange.verify_bundle(path,expected_sha256=TRUSTED_SHA). This verifies transport hashes/entry set, strict source/cohort/model semantics, permitted-use policy, result chronology/corrections and recomputes descriptive scores from stored probabilities; it never recalculates forecasts. Raw evidence bytes are excluded, so their truth/authenticity is not verified by the importer. Consumer must preserve exact bytes transactionally/idempotently, reject conflicting records and unknown fields/versions, and compare the prior result-chain prefix/manifest receipts to prevent rollback across valid bundles. Old forecasts must not disappear merely because a later snapshot omits them.
+Manifest use flags permit private research only: public_posting,commercial_redistribution,production_promotion are false. Public code availability does not license underlying provider data. New public/commercial data usage needs separate review. No automatic publishing/provider calls/deployment exists here.
+
+Consumer sequence
+1.Pin commit and check SHA256SUMS.json.
+2.Build separate /research/team-goals ingestion/storage using schemas and runtime semantic checks; keep the existing synthetic prototype isolated.
+3.Use examples/SYNTHETIC_ONLY.json only in explicitly synthetic UI/unit tests. Its environment is synthetic_test and it MUST fail the genuine validator; test_forecast_examples.py enforces this. Positive contract semantics use isolated temporary fixtures in tests/test_research_exchange.py, never a real store.
+4.Show per-league readiness. Until separately authorized genuine data is transferred, display an honest empty/pending real-data state, not fabricated examples.
+5.For future genuine bundles verify trusted hashes, exact model probabilities/issuance, joins, immutable corrections and coverage.
+
+Local commands
+python -m experiments.research_exchange issue --store STORE --request REVIEWED_LOCAL_REQUEST
+python -m experiments.research_exchange export-pilot --store NEW_STORE
+python -m experiments.research_exchange append-result --store STORE --outcome OBSERVATION --evidence-map HASH_TO_LOCAL_FILE --expected-tail EMPTY_OR_LAST_RECEIPT
+python -m experiments.research_exchange score --store STORE --expected-tail EMPTY_OR_LAST_RECEIPT
+python -m experiments.research_exchange bundle --store STORE --output NEW_ZIP --expected-tail EMPTY_OR_LAST_RECEIPT
+python -m experiments.research_exchange draft --forecast IMMUTABLE_RECORD
+
+The request keys are schema_version:1,data_kind:real_completed_match_history,fixture,history,source,review. Fixture fields match forecast schema. History rows are competition,date,home,away,home_goals,away_goals,status. Source has history_evidence/fixture_evidence each path+sha256, plus retrieved_at_utc,fixture_checked_at_utc,complete_through_utc. Review has reviewer,source_url,rights_basis and booleans real_data_verified,history_complete,fixture_identity_checked,private_research_use_reviewed. Missing booleans mean false/abstention; corrupt structure is a hard intake failure. Preserve a separate complete due-roster/intake incident inventory; the single-fixture issuer cannot establish all-eligible coverage itself.
+
+Drafts repeat fixture context and complete research/non-value qualification in every post; legacy posts also carry source/freshness/non-prospective limits. Whole semantic units are preserved; an overlong unit fails explicitly. Limit is280Unicodecodepoints, not a guarantee of platform weighted length. Text is private draft only. Optional odds schema/validator requires exact market/fixture/team and genuine timestamps after issuance/before kickoff; persistent quote storage and betting-value evaluation are not implemented.
+
+Code provenance: estimator excerpts retain ModelFC commit/source attribution from the same repository owner. Scientific libraries are dependencies, not bundled source or datasets. This commit makes no new third-party dataset license or public forecast claim.

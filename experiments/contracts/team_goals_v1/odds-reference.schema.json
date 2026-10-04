@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:deepfc:exchange:1:odds-reference.schema.json",
+  "type": "object",
+  "properties": {
+    "forecast_record_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "team": {
+      "enum": [
+        "home",
+        "away"
+      ]
+    },
+    "market": {
+      "const": {
+        "type": "team_goals",
+        "period": "regulation",
+        "selection": "over",
+        "line": 1.5,
+        "team_order": [
+          "home",
+          "away"
+        ]
+      }
+    },
+    "decimal_odds": {
+      "type": "number",
+      "exclusiveMinimum": 1
+    },
+    "bookmaker": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quoted_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "captured_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evidence_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "forecast_record_id",
+    "team",
+    "market",
+    "decimal_odds",
+    "bookmaker",
+    "quoted_at_utc",
+    "captured_at_utc",
+    "evidence_sha256"
+  ],
+  "additionalProperties": false
+}

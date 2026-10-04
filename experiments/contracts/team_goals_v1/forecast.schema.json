@@ -1,0 +1,667 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:deepfc:exchange:1:forecast.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "const": "deepfc_research_forecast"
+    },
+    "environment": {
+      "const": "research_real"
+    },
+    "research_only": {
+      "const": true
+    },
+    "fixture": {
+      "type": "object",
+      "properties": {
+        "competition": {
+          "enum": [
+            "E0",
+            "E1",
+            "SP1"
+          ]
+        },
+        "season": {
+          "type": "string",
+          "minLength": 1
+        },
+        "home": {
+          "type": "string",
+          "minLength": 1
+        },
+        "away": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kickoff_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "provider_fixture_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "competition",
+        "season",
+        "home",
+        "away",
+        "kickoff_utc",
+        "provider_fixture_id"
+      ],
+      "additionalProperties": false
+    },
+    "fixture_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "market": {
+      "const": {
+        "type": "team_goals",
+        "period": "regulation",
+        "selection": "over",
+        "line": 1.5,
+        "team_order": [
+          "home",
+          "away"
+        ]
+      }
+    },
+    "issued_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exported_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "issuance_kind": {
+      "enum": [
+        "new_capture",
+        "preserved_legacy"
+      ]
+    },
+    "cohort": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "issued",
+        "abstained"
+      ]
+    },
+    "abstention_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "request_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "cutoff_utc": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "cutoff_date": {
+              "type": "null"
+            },
+            "cutoff_precision": {
+              "const": "utc"
+            },
+            "retrieved_at_utc": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "fixture_checked_at_utc": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "latest_match_date": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "evidence_sha256": {
+              "type": "object",
+              "properties": {
+                "history_evidence": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "fixture_evidence": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "history_evidence",
+                "fixture_evidence"
+              ],
+              "additionalProperties": false
+            },
+            "review": {
+              "type": "object",
+              "properties": {
+                "reviewer": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_url": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rights_basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "real_data_verified": {
+                  "type": "boolean"
+                },
+                "history_complete": {
+                  "type": "boolean"
+                },
+                "fixture_identity_checked": {
+                  "type": "boolean"
+                },
+                "private_research_use_reviewed": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "reviewer",
+                "source_url",
+                "rights_basis",
+                "real_data_verified",
+                "history_complete",
+                "fixture_identity_checked",
+                "private_research_use_reviewed"
+              ],
+              "additionalProperties": false
+            },
+            "quarantined_fixtures": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "history_counts": {
+              "type": "object",
+              "properties": {
+                "fixtures": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "home_venue": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "away_venue": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "fixtures",
+                "home_venue",
+                "away_venue"
+              ],
+              "additionalProperties": false
+            },
+            "policy_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "request_sha256",
+            "cutoff_utc",
+            "cutoff_date",
+            "cutoff_precision",
+            "retrieved_at_utc",
+            "fixture_checked_at_utc",
+            "latest_match_date",
+            "evidence_sha256",
+            "review",
+            "quarantined_fixtures",
+            "history_counts",
+            "policy_sha256"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "legacy_reference": {
+              "type": "object"
+            },
+            "legacy_fixture_id": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "snapshot_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "cutoff_utc": {
+              "type": "null"
+            },
+            "cutoff_date": {
+              "type": "string",
+              "format": "date"
+            },
+            "cutoff_precision": {
+              "const": "date"
+            },
+            "limits": {},
+            "primary_cohort_eligible": {
+              "const": false
+            }
+          },
+          "required": [
+            "legacy_reference",
+            "legacy_fixture_id",
+            "snapshot_sha256",
+            "cutoff_utc",
+            "cutoff_date",
+            "cutoff_precision",
+            "limits",
+            "primary_cohort_eligible"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "models": {
+      "type": "object",
+      "properties": {
+        "plain": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "probabilities": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "version",
+            "probabilities"
+          ],
+          "additionalProperties": false
+        },
+        "fixed180": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "probabilities": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "version",
+            "probabilities"
+          ],
+          "additionalProperties": false
+        },
+        "venue_frequency": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "probabilities": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "required": [
+            "version",
+            "probabilities"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "outcome_evidence_refs": {
+      "const": []
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "environment",
+    "research_only",
+    "fixture",
+    "fixture_id",
+    "market",
+    "issued_at_utc",
+    "exported_at_utc",
+    "issuance_kind",
+    "cohort",
+    "status",
+    "abstention_reasons",
+    "source",
+    "models",
+    "outcome_evidence_refs",
+    "record_id"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "issued"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "models": {
+            "required": [
+              "plain",
+              "fixed180",
+              "venue_frequency"
+            ]
+          },
+          "abstention_reasons": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "models": {
+            "maxProperties": 0
+          },
+          "abstention_reasons": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "issuance_kind": {
+            "const": "new_capture"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "source": {
+            "type": "object",
+            "properties": {
+              "request_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "cutoff_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "cutoff_date": {
+                "type": "null"
+              },
+              "cutoff_precision": {
+                "const": "utc"
+              },
+              "retrieved_at_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "fixture_checked_at_utc": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "latest_match_date": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "evidence_sha256": {
+                "type": "object",
+                "properties": {
+                  "history_evidence": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "fixture_evidence": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "history_evidence",
+                  "fixture_evidence"
+                ],
+                "additionalProperties": false
+              },
+              "review": {
+                "type": "object",
+                "properties": {
+                  "reviewer": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "source_url": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "rights_basis": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "real_data_verified": {
+                    "type": "boolean"
+                  },
+                  "history_complete": {
+                    "type": "boolean"
+                  },
+                  "fixture_identity_checked": {
+                    "type": "boolean"
+                  },
+                  "private_research_use_reviewed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "reviewer",
+                  "source_url",
+                  "rights_basis",
+                  "real_data_verified",
+                  "history_complete",
+                  "fixture_identity_checked",
+                  "private_research_use_reviewed"
+                ],
+                "additionalProperties": false
+              },
+              "quarantined_fixtures": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "history_counts": {
+                "type": "object",
+                "properties": {
+                  "fixtures": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "home_venue": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "away_venue": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "fixtures",
+                  "home_venue",
+                  "away_venue"
+                ],
+                "additionalProperties": false
+              },
+              "policy_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "request_sha256",
+              "cutoff_utc",
+              "cutoff_date",
+              "cutoff_precision",
+              "retrieved_at_utc",
+              "fixture_checked_at_utc",
+              "latest_match_date",
+              "evidence_sha256",
+              "review",
+              "quarantined_fixtures",
+              "history_counts",
+              "policy_sha256"
+            ],
+            "additionalProperties": false
+          },
+          "cohort": {
+            "const": "three-league-o15-v1"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "source": {
+            "type": "object",
+            "properties": {
+              "legacy_reference": {
+                "type": "object"
+              },
+              "legacy_fixture_id": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "snapshot_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "cutoff_utc": {
+                "type": "null"
+              },
+              "cutoff_date": {
+                "type": "string",
+                "format": "date"
+              },
+              "cutoff_precision": {
+                "const": "date"
+              },
+              "limits": {},
+              "primary_cohort_eligible": {
+                "const": false
+              }
+            },
+            "required": [
+              "legacy_reference",
+              "legacy_fixture_id",
+              "snapshot_sha256",
+              "cutoff_utc",
+              "cutoff_date",
+              "cutoff_precision",
+              "limits",
+              "primary_cohort_eligible"
+            ],
+            "additionalProperties": false
+          },
+          "cohort": {
+            "enum": [
+              "legacy/original_five",
+              "legacy/additive_three"
+            ]
+          },
+          "status": {
+            "const": "issued"
+          }
+        }
+      }
+    }
+  ]
+}

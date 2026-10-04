@@ -1,0 +1,25 @@
+{
+  "algorithm": "SHA256",
+  "scope": "Exact bytes of new public files except this manifest. Pin remote Git commit separately. No genuine forecasts or raw datasets included.",
+  "files": {
+    "experiments/research_exchange.py": "89f8e731e14ce2b133437253a5473b6675dd6229271ba012be1c5d1d1bfab8aa",
+    "experiments/pilot_outcomes.py": "47c095e03bd9fe5bd5e29769c3790911d788df6270ae43066581332a38d36f8d",
+    "experiments/goals_plain_poisson.py": "8b31f03a613f382e3ec8f13c43e8840bbdde9b955f0f1eeca22eceea959342c2",
+    "experiments/team_goals_over15.py": "c44a0ab13d54b9f636b18595a4592617039e967da1a65897dd27539341390b2c",
+    "experiments/vendor_modelfc_goal_estimator.py": "ffe417a8ad21783b9cc654d013cc187a6aebc8a74117ea2d62f16a5662a774d5",
+    "experiments/vendor_modelfc_decay_estimator.py": "e623f0fc33c94296f4a8219b20823207586f64baa347ed510036bb3d176a2cb5",
+    "tests/test_research_exchange.py": "52e0e1ebef9c74149bce42c0673c9857e9124945782f32f17584c1c0d3008837",
+    "tests/test_research_exchange_review.py": "cdc6dcd8305ed194f6b781fe766f8a7e8ce85f602d31acfbe5e3bd224eef9e66",
+    "tests/test_pilot_outcomes.py": "7d0cdf084dfc75d7d52909c8e09a29be73700cb634c699722d6a5576db703142",
+    "tests/test_forecast_examples.py": "cb1fc27b6ff31fa533e1ba69f10c70510a13057740c05fb5268fc13c236f1794",
+    "experiments/contracts/team_goals_v1/forecast.schema.json": "cb024c9ce4cb7105a5f9463818dd9ed4516b7aa5a2c969395fa697b245b6feba",
+    "experiments/contracts/team_goals_v1/result.schema.json": "5dd5cddd8381e37acfc951866a8042880087c33f3166384e75fb8eea2d3dc2c1",
+    "experiments/contracts/team_goals_v1/manifest.schema.json": "486df047e3ccd74f214568ab46cf58bc1d1765d1de235130f4221173d76ca313",
+    "experiments/contracts/team_goals_v1/odds-reference.schema.json": "af605413671b35df0a0b5a514d99f9dab26bdd68c0cb1a1f73a3714eccb405ff",
+    "experiments/contracts/team_goals_v1/policy.json": "6d0ab07abb643693226a129c03f42fb1ec784f0ce934432e38c5326d418e85ea",
+    "experiments/contracts/team_goals_v1/PUBLIC_HANDOFF.txt": "2d193be22988b9e855cc6b139f897cb5e101c8382113edcc2fe34e2f2f930f4a",
+    "experiments/contracts/team_goals_v1/PUBLIC_PROTOCOL.txt": "7adb13be573b5d262140fbc9043ea0bbf0844af0ce8aab931688fc9e03dfe90b",
+    "experiments/contracts/team_goals_v1/PUBLIC_READINESS.json": "97953783ec035ce2e34b0d693e1da79025877917f6cd557f568b6951f9a01c03",
+    "experiments/contracts/team_goals_v1/examples/SYNTHETIC_ONLY.json": "c0bf4e41d59210c47668a56f8026ce7d74f03cd80de039c0618bef1fc6b2983f"
+  }
+}

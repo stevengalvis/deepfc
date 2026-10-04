@@ -1,0 +1,184 @@
+{
+  "kind": "deepfc_consumer_test_fixtures",
+  "environment": "synthetic_test",
+  "warning": "FICTIONAL TEST DATA. Never ingest as genuine forecasts. Genuine validator must reject every record.",
+  "records": [
+    {
+      "schema_version": 1,
+      "kind": "deepfc_research_forecast",
+      "environment": "synthetic_test",
+      "research_only": true,
+      "fixture": {
+        "competition": "E0",
+        "season": "2020/21",
+        "home": "Fictional Test Home",
+        "away": "Fictional Test Away",
+        "kickoff_utc": "2020-10-05T12:00:00Z",
+        "provider_fixture_id": null
+      },
+      "market": {
+        "type": "team_goals",
+        "period": "regulation",
+        "selection": "over",
+        "line": 1.5,
+        "team_order": [
+          "home",
+          "away"
+        ]
+      },
+      "issued_at_utc": "2020-10-04T12:00:00Z",
+      "exported_at_utc": "2020-10-04T12:00:00Z",
+      "issuance_kind": "new_capture",
+      "cohort": "synthetic-consumer-only",
+      "status": "issued",
+      "abstention_reasons": [],
+      "source": {
+        "synthetic_test_only": true
+      },
+      "models": {
+        "plain": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        },
+        "fixed180": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        },
+        "venue_frequency": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        }
+      },
+      "outcome_evidence_refs": [],
+      "fixture_id": "NOT-A-GENUINE-ID",
+      "record_id": "NOT-A-GENUINE-ID"
+    },
+    {
+      "schema_version": 1,
+      "kind": "deepfc_research_forecast",
+      "environment": "synthetic_test",
+      "research_only": true,
+      "fixture": {
+        "competition": "E1",
+        "season": "2020/21",
+        "home": "Fictional Test Home",
+        "away": "Fictional Test Away",
+        "kickoff_utc": "2020-10-05T12:00:00Z",
+        "provider_fixture_id": null
+      },
+      "market": {
+        "type": "team_goals",
+        "period": "regulation",
+        "selection": "over",
+        "line": 1.5,
+        "team_order": [
+          "home",
+          "away"
+        ]
+      },
+      "issued_at_utc": "2020-10-04T12:00:00Z",
+      "exported_at_utc": "2020-10-04T12:00:00Z",
+      "issuance_kind": "new_capture",
+      "cohort": "synthetic-consumer-only",
+      "status": "issued",
+      "abstention_reasons": [],
+      "source": {
+        "synthetic_test_only": true
+      },
+      "models": {
+        "plain": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        },
+        "fixed180": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        },
+        "venue_frequency": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        }
+      },
+      "outcome_evidence_refs": [],
+      "fixture_id": "NOT-A-GENUINE-ID",
+      "record_id": "NOT-A-GENUINE-ID"
+    },
+    {
+      "schema_version": 1,
+      "kind": "deepfc_research_forecast",
+      "environment": "synthetic_test",
+      "research_only": true,
+      "fixture": {
+        "competition": "SP1",
+        "season": "2020/21",
+        "home": "Fictional Test Home",
+        "away": "Fictional Test Away",
+        "kickoff_utc": "2020-10-05T12:00:00Z",
+        "provider_fixture_id": null
+      },
+      "market": {
+        "type": "team_goals",
+        "period": "regulation",
+        "selection": "over",
+        "line": 1.5,
+        "team_order": [
+          "home",
+          "away"
+        ]
+      },
+      "issued_at_utc": "2020-10-04T12:00:00Z",
+      "exported_at_utc": "2020-10-04T12:00:00Z",
+      "issuance_kind": "new_capture",
+      "cohort": "synthetic-consumer-only",
+      "status": "issued",
+      "abstention_reasons": [],
+      "source": {
+        "synthetic_test_only": true
+      },
+      "models": {
+        "plain": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        },
+        "fixed180": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        },
+        "venue_frequency": {
+          "version": "synthetic-test-only",
+          "probabilities": [
+            0.25,
+            0.5
+          ]
+        }
+      },
+      "outcome_evidence_refs": [],
+      "fixture_id": "NOT-A-GENUINE-ID",
+      "record_id": "NOT-A-GENUINE-ID"
+    }
+  ]
+}

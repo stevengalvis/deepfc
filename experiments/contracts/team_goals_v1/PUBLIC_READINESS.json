@@ -1,0 +1,54 @@
+{
+  "as_of": "2026-10-04",
+  "scope": "Readiness for private contract integration, not a current provider verification",
+  "live_capture_activated": false,
+  "genuine_records_in_publication": 0,
+  "leagues": {
+    "E0": {
+      "status": "BLOCKED_NEW_CAPTURE",
+      "ready_for": [
+        "schema integration",
+        "isolated synthetic consumer tests"
+      ],
+      "blockers": [
+        "Current reviewed complete-through history unavailable",
+        "Complete verified official due-fixture roster/identity/kickoff/status reconciliation unavailable",
+        "Official outcome evidence still requires review"
+      ],
+      "public_posting_permitted": false
+    },
+    "E1": {
+      "status": "BLOCKED_NEW_CAPTURE",
+      "ready_for": [
+        "schema integration",
+        "isolated synthetic consumer tests"
+      ],
+      "blockers": [
+        "Current reviewed complete-through history unavailable",
+        "Complete verified official due-fixture roster/identity/kickoff/status reconciliation unavailable",
+        "Official outcome evidence still requires review"
+      ],
+      "public_posting_permitted": false
+    },
+    "SP1": {
+      "status": "BLOCKED_NEW_CAPTURE",
+      "ready_for": [
+        "schema integration",
+        "isolated synthetic consumer tests"
+      ],
+      "blockers": [
+        "Current reviewed complete-through history unavailable",
+        "Complete verified official due-fixture roster/identity/kickoff/status reconciliation unavailable",
+        "Official outcome evidence still requires review"
+      ],
+      "public_posting_permitted": false
+    }
+  },
+  "global_limits": [
+    "No automated fixture collection or roster reconciliation",
+    "No public/commercial data-use clearance established",
+    "Formal superiority endpoint/margin/precision budget outstanding",
+    "Genuine forecast/result data require separate authorized transfer",
+    "No synthetic fallback for missing genuine records"
+  ]
+}

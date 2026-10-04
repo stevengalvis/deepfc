@@ -1,0 +1,20 @@
+{
+  "id": "three-league-o15-v1",
+  "league_order": [
+    "E0",
+    "E1",
+    "SP1"
+  ],
+  "target_lead_hours": 24,
+  "lead_tolerance_hours": 1,
+  "max_snapshot_age_hours": 24,
+  "max_fixture_check_age_hours": 24,
+  "minimum_history_fixtures": 100,
+  "minimum_venue_appearances": 5,
+  "primary_comparison": "fixed180_minus_plain",
+  "context_model": "venue_frequency",
+  "smoothing_matches": 5,
+  "half_life_days": 180,
+  "research_only": true,
+  "automatic_promotion": false
+}
