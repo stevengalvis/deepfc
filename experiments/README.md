@@ -33,3 +33,17 @@ The concise recorded result and its limitations are in
 [`results/championship_time_decay.md`](results/championship_time_decay.md).
 
 Normal `pytest` runs the experiment's focused tests with the rest of DeepFC.
+
+## Championship shot pressure
+
+[`shot_pressure.py`](shot_pressure.py) tests whether venue-specific historical
+shots and shots on target add information beyond the fixed 180-day corner
+model. It uses only results from dates strictly before each prediction, selects
+one predeclared adjustment strength before 2023/24, and freezes it for later
+evaluation. The retained model is not changed by this research experiment.
+
+Run `python -m experiments.shot_pressure` with the same nine CSV paths above.
+The [recorded result](results/championship_shot_pressure.md) is inconclusive:
+the weak 0.25-strength signal improved later retrospective periods but did not
+beat the baseline during selection. It is not approved for a Zeno shadow or
+the retained model.
