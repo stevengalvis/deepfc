@@ -33,3 +33,10 @@ The concise recorded result and its limitations are in
 [`results/championship_time_decay.md`](results/championship_time_decay.md).
 
 Normal `pytest` runs the experiment's focused tests with the rest of DeepFC.
+
+## Prospective evaluation
+
+The [frozen prospective protocol](championship_180_day_prospective.md) defines
+how the retained venue-opponent model and fixed 180-day candidate will be
+compared on new Championship team-corner predictions beginning October 9, 2026.
+It predeclares the scope, metrics, checkpoints, decision rule and agent limits.
