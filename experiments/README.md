@@ -47,7 +47,10 @@ Dixon-Coles low-score corrections. Same-date results are excluded from every
 prediction and dependence estimate. The recent two-season report is a
 retrospective pseudo-holdout, not an untouched prospective test.
 
-Run with the same nine ignored CSV files:
+The repository does not distribute the nine gitignored source CSVs, so a clean
+checkout cannot independently reproduce the recorded metrics. Authorized
+holders of the exact files listed and hashed in the provenance manifest can
+place them under `data/` and run:
 
 ```bash
 python -m experiments.goals_btts \
