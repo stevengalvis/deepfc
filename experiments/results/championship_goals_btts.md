@@ -158,7 +158,14 @@ The companion `championship_goals_btts_data.json` records HTTP/provenance and by
 
 **CONTINUE RESEARCH** with the arithmetic baseline as the reference candidate, not as a selected production model. Any further shrinkage/decay/calibration or joint-rate/DC choices must be learned only on earlier data, followed by independently held-out/prospective evaluation and trustworthy market-price comparisons before promotion.
 
-## Reproduce
+## Run with the same local inputs
+
+This checkout is not self-contained for exact reproduction: the nine source
+CSVs are intentionally gitignored and are not distributed by this repository.
+Four inputs came from read-only Model FC history paths that are not public.
+The hashes above allow an authorized holder of the same files to verify byte
+identity, but they do not make the raw data recoverable. With those exact files
+placed under `data/`, run:
 
 ```bash
 python -m experiments.goals_btts \
