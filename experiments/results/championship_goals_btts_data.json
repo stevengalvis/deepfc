@@ -252,6 +252,6 @@
   "csv_git_status_empty": true,
   "oddspapi_requests": 0,
   "successful_static_csv_downloads": 5,
-  "www_redirect_responses_before_acceptance": 6,
-  "network_note": "Five initial www-host GETs returned redirects; one same-resource header inspection; five canonical-host successful CSV GETs. No other Football-Data resources requested."
+  "network_note": "Initial www-host download batch failed on HTTP 302; a same-CSV header inspection confirmed the redirect to the canonical official host. All five canonical-host CSV downloads then returned HTTP 200. No other Football-Data resources requested; unsuccessful batch response counts were not independently logged.",
+  "initial_www_download_batch_failed_on_redirect": true
 }
